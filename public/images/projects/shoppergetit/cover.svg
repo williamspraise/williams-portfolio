@@ -1,0 +1,29 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Screenshot slot: replace with an approved Shoppergetit product export. -->
+  <rect width="1200" height="760" rx="32" fill="#091722"/>
+  <rect x="44" y="42" width="1112" height="676" rx="22" fill="#102330" stroke="#264354"/>
+  <circle cx="76" cy="75" r="8" fill="#15B887"/><circle cx="101" cy="75" r="8" fill="#284553"/>
+  <rect x="70" y="113" width="218" height="576" rx="16" fill="#0C1B25"/>
+  <text x="95" y="158" fill="#F5F2EA" font-family="Arial" font-weight="700" font-size="26">Shoppergetit</text>
+  <text x="95" y="207" fill="#78909A" font-family="Arial" font-size="16">Marketplace</text>
+  <rect x="88" y="233" width="180" height="48" rx="10" fill="#173846"/>
+  <text x="110" y="263" fill="#F5F2EA" font-family="Arial" font-size="15">Operations</text>
+  <text x="95" y="324" fill="#78909A" font-family="Arial" font-size="15">Vendors</text>
+  <text x="95" y="373" fill="#78909A" font-family="Arial" font-size="15">Orders</text>
+  <text x="95" y="422" fill="#78909A" font-family="Arial" font-size="15">Disputes</text>
+  <text x="326" y="153" fill="#F5F2EA" font-family="Arial" font-size="30" font-weight="700">Commerce command center</text>
+  <text x="326" y="184" fill="#8FA2A9" font-family="Arial" font-size="15">Verified SME marketplace performance</text>
+  <rect x="326" y="222" width="245" height="128" rx="15" fill="#142D3A"/>
+  <text x="349" y="253" fill="#83A0AA" font-family="Arial" font-size="14">Orders routed</text>
+  <text x="349" y="305" fill="#F5F2EA" font-family="Arial" font-size="40" font-weight="700">1,248</text>
+  <rect x="590" y="222" width="245" height="128" rx="15" fill="#142D3A"/>
+  <text x="613" y="253" fill="#83A0AA" font-family="Arial" font-size="14">Verified vendors</text>
+  <text x="613" y="305" fill="#F5F2EA" font-family="Arial" font-size="40" font-weight="700">86</text>
+  <rect x="854" y="222" width="260" height="128" rx="15" fill="#142D3A"/>
+  <text x="877" y="253" fill="#83A0AA" font-family="Arial" font-size="14">Resolution rate</text>
+  <text x="877" y="305" fill="#15B887" font-family="Arial" font-size="40" font-weight="700">96%</text>
+  <rect x="326" y="381" width="788" height="276" rx="15" fill="#142D3A"/>
+  <text x="350" y="418" fill="#F5F2EA" font-family="Arial" font-size="18" font-weight="700">Fulfilment health</text>
+  <path d="M367 588L454 528L527 552L618 458L700 500L784 444L867 475L969 404L1074 429" stroke="#15B887" stroke-width="4"/>
+  <path d="M367 604H1074" stroke="#274653" stroke-width="2"/>
+</svg>

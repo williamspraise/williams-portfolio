@@ -18,6 +18,36 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Contact Form Delivery
+
+The contact form sends inquiries to `williamspraise01@gmail.com` through the Resend Email API. Add the server-only environment variable below in `.env.local` for development and in the deployment environment for production:
+
+```bash
+RESEND_API_KEY=re_your_api_key
+```
+
+When the Resend account uses `williamspraise01@gmail.com`, the default `onboarding@resend.dev` sender can deliver test inquiries to that inbox. To send from a branded address after verifying a domain in Resend, also set:
+
+```bash
+CONTACT_FROM_EMAIL="Williams Praise Portfolio <contact@your-domain.com>"
+```
+
+## Product Screenshots
+
+The project gallery uses stable screenshot slots. Export approved SVG captures directly to these paths to replace the current presentation assets without updating code:
+
+```txt
+public/images/projects/shoppergetit/cover.svg
+public/images/projects/shoppergetit/shopper-dashboard.svg
+public/images/projects/shoppergetit/vendor-console.svg
+public/images/projects/shoppergetit/admin-operations.svg
+public/images/projects/pam-ai/cover.svg
+public/images/projects/pendulum-school/cover.svg
+public/images/projects/springboard-mentorship/cover.svg
+```
+
+Keep exports at a consistent `1200 x 760` aspect ratio where possible so cards and case-study images remain visually stable.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

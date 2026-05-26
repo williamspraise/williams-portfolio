@@ -1,0 +1,21 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Screenshot slot: replace with an approved mentoring artifact export. -->
+  <rect width="1200" height="760" rx="32" fill="#091722"/>
+  <rect x="72" y="66" width="1056" height="628" rx="25" fill="#112633" stroke="#243F4C"/>
+  <text x="111" y="128" fill="#F4F1E8" font-family="Arial" font-size="28" font-weight="700">Global mentorship</text>
+  <text x="111" y="170" fill="#819BA5" font-family="Arial" font-size="17">Product thinking and career readiness</text>
+  <text x="111" y="346" fill="#F4F1E8" font-family="Arial" font-size="112" font-weight="700">900+</text>
+  <text x="117" y="396" fill="#15B887" font-family="Arial" font-size="21" font-weight="700">SESSIONS DELIVERED</text>
+  <rect x="670" y="205" width="378" height="90" rx="18" fill="#172F3C"/>
+  <circle cx="714" cy="250" r="22" fill="#C69C55"/>
+  <text x="757" y="245" fill="#F4F1E8" font-family="Arial" font-size="16">Research interpretation</text>
+  <text x="757" y="269" fill="#8099A4" font-family="Arial" font-size="13">Decision clarity</text>
+  <rect x="670" y="323" width="378" height="90" rx="18" fill="#172F3C"/>
+  <circle cx="714" cy="368" r="22" fill="#15B887"/>
+  <text x="757" y="363" fill="#F4F1E8" font-family="Arial" font-size="16">Portfolio strategy</text>
+  <text x="757" y="387" fill="#8099A4" font-family="Arial" font-size="13">Career narrative</text>
+  <rect x="670" y="441" width="378" height="90" rx="18" fill="#172F3C"/>
+  <circle cx="714" cy="486" r="22" fill="#367FF5"/>
+  <text x="757" y="481" fill="#F4F1E8" font-family="Arial" font-size="16">Remote collaboration</text>
+  <text x="757" y="505" fill="#8099A4" font-family="Arial" font-size="13">Global cohorts</text>
+</svg>
