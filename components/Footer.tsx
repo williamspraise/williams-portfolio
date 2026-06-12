@@ -6,9 +6,12 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <strong>Williams Praise</strong>
-          <p>Product Builder / Founding Product Lead</p>
+          <p>Systems Thinker / Founder / Product Builder</p>
         </div>
         <div className="footer-links">
+          <Link href="/frameworks">Frameworks</Link>
+          <Link href="/ventures">Ventures</Link>
+          <Link href="/portfolio">Portfolio</Link>
           <a href="mailto:williamspraise01@gmail.com">Email</a>
           <a
             href="https://www.linkedin.com/in/iam-williams/"
@@ -24,7 +27,7 @@ export default function Footer() {
           >
             GitHub
           </a>
-          <Link href="/#contact">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </div>
         <p className="copyright">
           &copy; {new Date().getFullYear()} Williams Praise. All rights

@@ -4,15 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { navigationLinks } from "@/data/navigation";
 import ThemeToggle from "./ThemeToggle";
-
-const links = [
-  { label: "Work", href: "/#work" },
-  { label: "About", href: "/#about" },
-  { label: "Capabilities", href: "/#capabilities" },
-  { label: "Resume", href: "/#resume" },
-  { label: "Contact", href: "/#contact" },
-];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,12 +17,12 @@ export default function Navbar() {
           <span className="brand-mark">WP</span>
           <span>
             <strong>Williams Praise</strong>
-            <small>Product Builder</small>
+            <small>Systems Thinker</small>
           </span>
         </Link>
 
         <div className="desktop-links">
-          {links.map((link) => (
+          {navigationLinks.map((link) => (
             <Link key={link.label} href={link.href}>
               {link.label}
             </Link>
@@ -60,7 +53,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
           >
             <div className="container mobile-menu-links">
-              {links.map((link) => (
+              {navigationLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}

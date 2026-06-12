@@ -57,7 +57,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
       <main className="case-page">
         <section className="case-hero">
           <div className="container">
-            <Link href="/#work" className="case-back">
+            <Link href="/portfolio#work" className="case-back">
               <ArrowLeft size={16} />
               Selected Product Work
             </Link>
@@ -171,7 +171,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
                 work, and get a credible product shipped.
               </p>
             </div>
-            <ButtonLink href="/#contact">Contact Williams</ButtonLink>
+            <ButtonLink href="/portfolio#contact">Contact Williams</ButtonLink>
           </div>
         </section>
 

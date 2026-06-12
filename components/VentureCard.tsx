@@ -1,0 +1,44 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+
+type VentureCardProps = {
+  venture: {
+    title: string;
+    description: string;
+    problem: string;
+    systemResponse: string;
+    cta: string;
+    href: string;
+  };
+};
+
+export default function VentureCard({ venture }: VentureCardProps) {
+  const isExternal = venture.href.startsWith("http");
+
+  return (
+    <article className="venture-card">
+      <p className="card-meta">Venture</p>
+      <h3>{venture.title}</h3>
+      <p className="venture-description">{venture.description}</p>
+      <div className="venture-notes">
+        <div>
+          <strong>Problem</strong>
+          <p>{venture.problem}</p>
+        </div>
+        <div>
+          <strong>System response</strong>
+          <p>{venture.systemResponse}</p>
+        </div>
+      </div>
+      <Link
+        className="text-link"
+        href={venture.href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noreferrer" : undefined}
+      >
+        {venture.cta}
+        <ArrowUpRight size={15} />
+      </Link>
+    </article>
+  );
+}

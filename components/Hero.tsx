@@ -22,7 +22,7 @@ export default function Hero() {
             operations.
           </p>
           <div className="hero-actions">
-            <ButtonLink href="/#work">View Product Work</ButtonLink>
+            <ButtonLink href="/portfolio#work">View Product Work</ButtonLink>
             <ButtonLink
               href="/resume/Williams_Praise_Technical_Product_Resume.pdf"
               variant="secondary"
@@ -30,7 +30,7 @@ export default function Hero() {
             >
               Download Resume
             </ButtonLink>
-            <ButtonLink href="/#contact" variant="quiet">
+            <ButtonLink href="/portfolio#contact" variant="quiet">
               Contact Me
             </ButtonLink>
           </div>

@@ -10,7 +10,7 @@ export default function NotFound() {
         <p className="eyebrow">404</p>
         <h1>That product story is not here.</h1>
         <p>Return to the selected work and explore the available case studies.</p>
-        <Link className="button button-primary" href="/#work">
+        <Link className="button button-primary" href="/portfolio#work">
           View Product Work
         </Link>
       </main>
