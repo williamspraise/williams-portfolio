@@ -1,5 +1,7 @@
 "use server";
 
+import { sendResendEmail } from "@/lib/resend";
+
 export type InquiryFormState = {
   status: "idle" | "success" | "error";
   message: string;
@@ -59,16 +61,6 @@ export async function sendInquiry(
     };
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-
-  if (!apiKey) {
-    return {
-      status: "error",
-      message:
-        "Email delivery is being configured. Please email williamspraise01@gmail.com directly.",
-    };
-  }
-
   const text = [
     "New portfolio inquiry",
     "",
@@ -81,28 +73,20 @@ export async function sendInquiry(
   ].join("\n");
 
   try {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: process.env.CONTACT_FROM_EMAIL || defaultSender,
-        to: [recipientEmail],
-        reply_to: email,
-        subject: `Portfolio inquiry from ${name}`,
-        text,
-      }),
+    const result = await sendResendEmail({
+      from: process.env.CONTACT_FROM_EMAIL || defaultSender,
+      to: [recipientEmail],
+      replyTo: email,
+      subject: `Portfolio inquiry from ${name}`,
+      text,
     });
 
-    if (!response.ok) {
-      console.error("Resend rejected an inquiry submission.", response.status);
-
+    if (!result.ok) {
       return {
         status: "error",
-        message:
-          "The message could not be sent right now. Please email williamspraise01@gmail.com directly.",
+        message: result.error.includes("configured")
+          ? "Email delivery is being configured. Please email williamspraise01@gmail.com directly."
+          : "The message could not be sent right now. Please email williamspraise01@gmail.com directly.",
       };
     }
   } catch (error) {
