@@ -1,5 +1,13 @@
 export const essays = [
   {
+    title: "Why America Became Rich (And Why Nigeria Should Care)",
+    description:
+      "A long-form interactive essay on national wealth, Silicon Valley, technology exports, and what African builders should learn.",
+    category: "National Wealth",
+    href: "/essays/why-america-became-rich",
+    status: "Read Essay",
+  },
+  {
     title: "Why Love Needs Systems",
     description:
       "A note on treating love as balance, conduct, value exchange, and interpretation.",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowUpRight, BookOpen, Boxes, Brain, Building2 } from "lucide-react";
+import Image from "next/image";
 import AudienceModalPrompt from "@/components/AudienceModalPrompt";
 import ButtonLink from "@/components/ButtonLink";
 import CTASection from "@/components/CTASection";
@@ -104,26 +105,43 @@ export default function Home() {
               </div>
             </MotionReveal>
 
-            <MotionReveal className="hq-hero-panel" delay={0.08}>
-              <p className="panel-kicker">Operating thesis</p>
-              <h2>
-                Better outcomes emerge when people can see the system clearly
-                enough to repair it.
-              </h2>
-              <div className="thesis-list">
-                {["Observe", "Structure", "Build", "Resolve"].map(
-                  (item, index) => (
-                    <div key={item}>
-                      <span>{String(index + 1).padStart(2, "0")}</span>
-                      <strong>{item}</strong>
-                    </div>
-                  )
-                )}
+            <MotionReveal className="hq-identity-card" delay={0.08}>
+              <div className="hq-portrait-card">
+                <Image
+                  src="/images/C208(1).jpg"
+                  alt="Portrait of Williams Praise"
+                  width={1080}
+                  height={1920}
+                  sizes="(max-width: 1050px) min(100vw, 520px), 390px"
+                  priority
+                />
+                <div className="hq-portrait-caption">
+                  <span>Williams Praise</span>
+                  <strong>Founder / Product Builder / Systems Thinker</strong>
+                </div>
               </div>
-              <a className="text-link" href="mailto:williamspraise01@gmail.com">
-                Start a conversation
-                <ArrowUpRight size={15} />
-              </a>
+
+              <div className="hq-thesis-card">
+                <p className="panel-kicker">Operating thesis</p>
+                <h2>
+                  Better outcomes emerge when people can see the system clearly
+                  enough to repair it.
+                </h2>
+                <div className="thesis-list">
+                  {["Observe", "Structure", "Build", "Resolve"].map(
+                    (item, index) => (
+                      <div key={item}>
+                        <span>{String(index + 1).padStart(2, "0")}</span>
+                        <strong>{item}</strong>
+                      </div>
+                    )
+                  )}
+                </div>
+                <a className="text-link" href="mailto:williamspraise01@gmail.com">
+                  Start a conversation
+                  <ArrowUpRight size={15} />
+                </a>
+              </div>
             </MotionReveal>
           </div>
           <MotionReveal className="container credibility-bar" delay={0.12}>
