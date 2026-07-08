@@ -1231,6 +1231,7 @@ button {
 .diligence-progress span,
 .diligence-timeline span,
 .diligence-asset-track span,
+.diligence-optimise-grid span,
 .diligence-loop-ring span {
   color: var(--accent);
   font-family: var(--font-geist-mono);
@@ -1256,6 +1257,16 @@ button {
   line-height: 0.94;
   margin: 0;
   max-width: 980px;
+}
+
+.diligence-hero-reveal {
+  color: var(--foreground);
+  font-size: clamp(1.45rem, 2.7vw, 2.1rem);
+  font-weight: 570;
+  letter-spacing: -0.052em;
+  line-height: 1.2;
+  margin: 28px 0 0;
+  max-width: 760px;
 }
 
 .diligence-hero-subcopy {
@@ -1364,6 +1375,7 @@ button {
 
 .diligence-timeline h3,
 .diligence-asset-track h3,
+.diligence-optimise-grid h3,
 .diligence-comparison h3 {
   font-size: 1.08rem;
   font-weight: 590;
@@ -1372,7 +1384,8 @@ button {
 }
 
 .diligence-timeline p,
-.diligence-asset-track p {
+.diligence-asset-track p,
+.diligence-optimise-grid p {
   color: var(--muted);
   font-size: 0.94rem;
   line-height: 1.68;
@@ -1437,6 +1450,61 @@ button {
   line-height: 1.7;
   margin: 0;
   padding: 20px 24px 24px;
+}
+
+.diligence-optimise-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.diligence-optimise-grid article {
+  background: var(--background-raised);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  display: grid;
+  gap: 16px;
+  height: 100%;
+  min-height: 245px;
+  padding: 25px;
+}
+
+.diligence-cycle-line {
+  align-items: center;
+  border-block: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 18px 0;
+}
+
+.diligence-cycle-line span {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
+
+.diligence-cycle-line svg {
+  color: var(--accent);
+  transform: rotate(-90deg);
+}
+
+.diligence-statement,
+.diligence-recovery-note {
+  color: var(--foreground);
+  font-size: clamp(1.15rem, 2vw, 1.38rem);
+  font-weight: 570;
+  letter-spacing: -0.044em;
+  line-height: 1.45;
+  margin-top: 28px;
+  max-width: 910px;
 }
 
 .diligence-asset-track {
@@ -1576,8 +1644,35 @@ button {
   color: var(--accent);
 }
 
+.diligence-recovery-note {
+  display: grid;
+  gap: 15px;
+}
+
+.diligence-recovery-note p {
+  margin: 0;
+}
+
+.diligence-recovery-note p + p {
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75;
+  max-width: 840px;
+}
+
 .diligence-loop {
   padding: 30px;
+}
+
+.diligence-loop-lead {
+  color: #f7f2e9;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 570;
+  letter-spacing: -0.045em;
+  line-height: 1.28;
+  margin: 0 0 24px;
 }
 
 .diligence-loop-ring {
@@ -1609,6 +1704,21 @@ button {
   letter-spacing: -0.035em;
 }
 
+.diligence-loop-note {
+  border-top: 1px solid var(--panel-line);
+  color: #a9b8bd;
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 22px;
+}
+
+.diligence-loop-note p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
 .diligence-final {
   padding-block: 96px;
 }
@@ -1620,6 +1730,20 @@ button {
 .diligence-final h2 {
   margin-bottom: 34px;
   max-width: 920px;
+}
+
+.diligence-final-copy {
+  color: var(--muted);
+  display: grid;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  gap: 16px;
+  line-height: 1.72;
+  margin-bottom: 34px;
+  max-width: 840px;
+}
+
+.diligence-final-copy p {
+  margin: 0;
 }
 
 .capital-page {
@@ -3235,6 +3359,10 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .diligence-optimise-grid {
+    grid-template-columns: 1fr;
+  }
+
   .capital-question-grid,
   .capital-diagram-grid,
   .silicon-lesson-panel,
@@ -3387,6 +3515,7 @@ button {
   }
 
   .diligence-capability-grid,
+  .diligence-optimise-grid,
   .diligence-comparison,
   .diligence-loop-ring {
     grid-template-columns: 1fr;
@@ -3398,6 +3527,20 @@ button {
 
   .diligence-asset-track {
     grid-auto-columns: minmax(260px, 86vw);
+  }
+
+  .diligence-cycle-line {
+    align-items: stretch;
+    display: grid;
+  }
+
+  .diligence-cycle-line span {
+    text-align: center;
+  }
+
+  .diligence-cycle-line svg {
+    justify-self: center;
+    transform: none;
   }
 
   .diligence-system-diagram,

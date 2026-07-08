@@ -11,8 +11,8 @@ import {
   Repeat2,
   ShieldCheck,
 } from "lucide-react";
-import ButtonLink from "@/components/ButtonLink";
 import Footer from "@/components/Footer";
+import InvestmentMemoRequestModal from "@/components/InvestmentMemoRequestModal";
 import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 
@@ -70,7 +70,7 @@ const capabilities = [
     summary:
       "Everything I build should make the next thing easier: technology, knowledge, audience, capital, and relationships.",
     detail:
-      "A single company can be fragile. A compounding engine preserves learning, code, judgment, customer insight, and reputation so the next build starts ahead.",
+      "A single company can be fragile. A capital allocation engine preserves learning, code, judgment, customer insight, and reputation so the next deployment starts ahead.",
   },
   {
     title: "Execution",
@@ -79,6 +79,24 @@ const capabilities = [
       "Ideas become software. Software becomes businesses. Businesses become reusable assets.",
     detail:
       "The operating standard is not theory for its own sake. The work must be converted into shipped interfaces, working workflows, real users, business logic, and assets that can be inspected.",
+  },
+];
+
+const optimisationPrinciples = [
+  {
+    label: "01",
+    title: "Grow the Capital Base",
+    text: "A successful deployment should aim to return more productive capital than entered it.",
+  },
+  {
+    label: "02",
+    title: "Increase Productive Capital Velocity",
+    text: "The question is not only what return the capital earned. It is also how efficiently that capital can complete a productive cycle and become available for the next evidence-led deployment.",
+  },
+  {
+    label: "03",
+    title: "Make Each Cycle Strengthen the Next",
+    text: "Every successful cycle should leave behind evidence, data, distribution, operating knowledge, reusable assets, relationships, and reputation. The next cycle should not begin from zero.",
   },
 ];
 
@@ -121,40 +139,40 @@ const accumulationStack = [
 
 const failureComparison = [
   {
-    title: "Traditional View",
-    items: ["Business fails", "Everything disappears"],
+    title: "Weak Allocation",
+    items: ["Preserve Cash", "Stop or Hold Weak Allocation"],
   },
   {
-    title: "My Engine",
+    title: "Recovery Discipline",
     items: [
-      "Business",
-      "Technology",
-      "Knowledge",
-      "Customers",
-      "Brand",
-      "Reputation",
-      "Next Venture Starts Ahead",
+      "Identify Reusable Assets",
+      "Monetise or Redeploy Those Assets",
+      "Reduce Capital Required for the Next Deployment",
+      "Regenerate Cash Flow",
     ],
   },
 ];
 
 const compoundingEngine = [
   "Capital",
-  "Companies",
-  "Cash Flow",
-  "Knowledge",
-  "Better Companies",
-  "Larger Capital",
+  "Evidence-Led Allocation",
+  "Productive Assets + Cash Flow",
+  "Larger Capital Base",
+  "Early Settlement When Capacity Is Achieved",
+  "Stronger Engine",
+  "Next Productive Cycle",
   "Repeat",
 ];
 
 const sectionLinks = [
   ["Why", "#why"],
   ["Operate", "#operate"],
+  ["Optimise", "#optimise"],
   ["Assets", "#assets"],
   ["Moat", "#replicate"],
   ["Failure", "#failure"],
   ["Engine", "#compounding-engine"],
+  ["Partners", "#partners"],
 ];
 
 function FlowStack({ items }: { items: string[] }) {
@@ -187,11 +205,14 @@ export default function WhyWilliamsPage() {
         <section className="diligence-hero">
           <div className="container diligence-hero-grid">
             <MotionReveal className="diligence-hero-copy">
-              <p className="eyebrow">Due Diligence / Operator</p>
+              <p className="eyebrow">Why Williams?</p>
               <h1>
-                I don&apos;t build companies. I build systems that repeatedly
-                create companies.
+                I don&apos;t build companies in isolation.
               </h1>
+              <p className="diligence-hero-reveal">
+                I build systems designed to make capital, assets and operating
+                knowledge more productive with every successful cycle.
+              </p>
               <div className="diligence-hero-subcopy">
                 <p>
                   Most founders ask, &quot;How do I build one successful
@@ -199,10 +220,9 @@ export default function WhyWilliamsPage() {
                 </p>
                 <p>I became obsessed with a different question.</p>
                 <p>
-                  &quot;What kind of system makes successful companies more
-                  likely?&quot;
+                  &quot;What kind of system makes capital, assets and operating
+                  knowledge compound across multiple companies?&quot;
                 </p>
-                <p>This page explains why.</p>
               </div>
             </MotionReveal>
 
@@ -222,8 +242,8 @@ export default function WhyWilliamsPage() {
                 <h2>Williams Praise</h2>
                 <p>
                   Founder-operator, product builder, and systems thinker
-                  accumulating software, frameworks, trust, and operating
-                  judgment into a reusable venture engine.
+                  accumulating software, frameworks, trust, capital allocation
+                  discipline, and operating judgment into a reusable engine.
                 </p>
               </div>
             </MotionReveal>
@@ -280,10 +300,50 @@ export default function WhyWilliamsPage() {
           </div>
         </section>
 
-        <section className="section" id="assets">
+        <section className="section" id="optimise">
           <div className="container">
             <MotionReveal className="diligence-section-head">
               <p className="eyebrow">Question 03</p>
+              <h2>What am I actually optimising for?</h2>
+              <p>
+                The Engine is not only about deploying capital. It is about
+                making each completed cycle leave the system more capable than
+                it was before.
+              </p>
+            </MotionReveal>
+            <div className="diligence-optimise-grid">
+              {optimisationPrinciples.map((principle, index) => (
+                <MotionReveal key={principle.title} delay={index * 0.05}>
+                  <article>
+                    <span>{principle.label}</span>
+                    <h3>{principle.title}</h3>
+                    <p>{principle.text}</p>
+                  </article>
+                </MotionReveal>
+              ))}
+            </div>
+            <MotionReveal className="diligence-cycle-line" delay={0.12}>
+              <span>Grow</span>
+              <ArrowDown size={16} aria-hidden="true" />
+              <span>Accelerate</span>
+              <ArrowDown size={16} aria-hidden="true" />
+              <span>Strengthen</span>
+              <ArrowDown size={16} aria-hidden="true" />
+              <span>Repeat</span>
+            </MotionReveal>
+            <MotionReveal className="diligence-statement" delay={0.16}>
+              The objective is not simply to generate one return. It is to build
+              an Engine where successful cycles can grow the capital base,
+              strengthen the system and create the opportunity for the next
+              productive cycle.
+            </MotionReveal>
+          </div>
+        </section>
+
+        <section className="section section-contrast" id="assets">
+          <div className="container">
+            <MotionReveal className="diligence-section-head">
+              <p className="eyebrow">Question 04</p>
               <h2>What have I already built?</h2>
               <p>
                 Not a resume. The engine&apos;s existing assets - the parts that can
@@ -302,10 +362,10 @@ export default function WhyWilliamsPage() {
           </div>
         </section>
 
-        <section className="section section-contrast" id="replicate">
+        <section className="section" id="replicate">
           <div className="container diligence-diagram-grid">
             <MotionReveal>
-              <p className="eyebrow">Question 04</p>
+              <p className="eyebrow">Question 05</p>
               <h2>Why is this difficult to replicate?</h2>
               <p>
                 The point is not that I am unique. The point is that the engine
@@ -323,14 +383,15 @@ export default function WhyWilliamsPage() {
           </div>
         </section>
 
-        <section className="section" id="failure">
+        <section className="section section-contrast" id="failure">
           <div className="container">
             <MotionReveal className="diligence-section-head">
-              <p className="eyebrow">Question 05</p>
+              <p className="eyebrow">Question 06</p>
               <h2>What happens if one company fails?</h2>
               <p>
-                A single company can end. The engine is designed so useful
-                assets remain.
+                Recovery does not begin only after final repayment failure.
+                It begins when an allocation stops justifying additional
+                capital.
               </p>
             </MotionReveal>
             <div className="diligence-comparison">
@@ -346,22 +407,48 @@ export default function WhyWilliamsPage() {
                 </MotionReveal>
               ))}
             </div>
+            <MotionReveal className="diligence-recovery-note" delay={0.14}>
+              <p>
+                An underperforming deployment should not automatically return
+                the Engine to zero.
+              </p>
+              <p>
+                I do not evaluate a deployment only by asking whether the
+                company survived. I ask what cash was preserved, what assets
+                were created, what can be monetised, what can be reused, and how
+                much less the next deployment should cost because of what we now
+                know.
+              </p>
+            </MotionReveal>
           </div>
         </section>
 
-        <section className="section section-contrast" id="compounding-engine">
+        <section className="section" id="compounding-engine">
           <div className="container diligence-question-grid">
             <MotionReveal>
-              <p className="eyebrow">Question 06</p>
-              <h2>What am I ultimately trying to build?</h2>
+              <p className="eyebrow">Question 07</p>
+              <h2>How many productive cycles can your capital complete?</h2>
               <p>
-                Not one isolated company. A disciplined loop where capital,
-                software, knowledge, and operating judgment keep improving the
-                next decision.
+                Traditional investment conversations usually begin with one
+                question: what return will I earn? The Engine introduces
+                another: how efficiently can capital be deployed, returned as a
+                larger base, and put to productive work again?
+              </p>
+              <p>
+                Traditional instruments often optimise for combinations of
+                preservation, predictability, income and appreciation. The
+                Williams Capital Allocation Engine is designed around active
+                allocation, productive deployment, capital recycling, recurring
+                cycles, and the potential acceleration of net-worth growth.
               </p>
             </MotionReveal>
             <MotionReveal className="diligence-loop" delay={0.08}>
               <p className="panel-kicker">The Compounding Engine</p>
+              <p className="diligence-loop-lead">
+                The objective is not simply to improve return. It is to increase
+                the productive velocity of capital across a series of successful
+                cycles.
+              </p>
               <div className="diligence-loop-ring">
                 {compoundingEngine.map((item, index) => (
                   <div key={item}>
@@ -370,22 +457,62 @@ export default function WhyWilliamsPage() {
                   </div>
                 ))}
               </div>
+              <div className="diligence-loop-note">
+                <p>
+                  The documented timeline provides the outer framework for a
+                  round. But the Engine should not keep partner capital exposed
+                  simply because time remains on the calendar.
+                </p>
+                <p>
+                  If sufficient distributable repayment capacity is achieved
+                  earlier, after obligations and prudent reserves, the Engine
+                  can close the cycle earlier and create the opportunity for
+                  another allocation round.
+                </p>
+                <p>
+                  A larger capital base creates more capacity. A stronger Engine
+                  creates better information. A successfully completed cycle
+                  creates the opportunity to begin again from a stronger
+                  position.
+                </p>
+              </div>
             </MotionReveal>
           </div>
         </section>
 
-        <section className="section diligence-final">
+        <section className="section section-contrast diligence-final" id="partners">
           <div className="container">
             <MotionReveal>
-              <p className="eyebrow">Long-Term Capital</p>
+              <p className="eyebrow">Capital Partners</p>
               <h2>
-                I&apos;m not looking for everyone. I&apos;m looking for long-term
-                capital partners who think in decades instead of transactions.
+                I&apos;m not looking for one-time investors.
               </h2>
+              <div className="diligence-final-copy">
+                <p>
+                  I&apos;m looking for capital partners who understand that wealth
+                  is built not only by the return on one investment, but by what
+                  happens when a larger capital base is successfully put to work
+                  again.
+                </p>
+                <p>
+                  Round 1 is the beginning. The ambition is a stronger Engine, a
+                  larger capital base, better evidence and the opportunity for
+                  increasingly productive cycles.
+                </p>
+                <p>
+                  The return matters. But the larger opportunity is what a
+                  recurring system of successful allocation can do to the
+                  velocity at which net worth grows.
+                </p>
+                <p>
+                  If you are evaluating the Engine seriously, request the
+                  investment memorandum to review the allocation model,
+                  operating routes, capital movement, risk architecture and
+                  recovery policy.
+                </p>
+              </div>
               <div className="hero-actions">
-                <ButtonLink href="/capital-philosophy" variant="secondary">
-                  Request the Investment Memorandum
-                </ButtonLink>
+                <InvestmentMemoRequestModal />
                 <a className="text-link" href="mailto:williamspraise01@gmail.com">
                   Start a quiet conversation
                   <ArrowUpRight size={15} />
