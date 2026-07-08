@@ -133,8 +133,86 @@ const accumulationStack = [
   "Brand",
   "Audience",
   "Operational Knowledge",
+  "Relationships",
   "Capital Allocation Thinking",
-  "Higher Probability of Better Decisions",
+];
+
+const moatComparison = [
+  {
+    title: "Most Allocators",
+    points: [
+      ["Control", "Capital"],
+      ["Depend on", "Other operators"],
+      ["Build value through", "Portfolio selection"],
+      [
+        "Limitation",
+        "They do not directly control execution across the portfolio.",
+      ],
+    ],
+  },
+  {
+    title: "Most Founders",
+    points: [
+      ["Control", "One operating company"],
+      ["Depend on", "Outside capital allocators"],
+      ["Build value through", "Company execution"],
+      [
+        "Limitation",
+        "Their assets and learning often remain trapped inside one company.",
+      ],
+    ],
+  },
+  {
+    title: "The Williams Engine",
+    points: [
+      ["Connects", "Allocation + Operation + Portfolio"],
+      ["Builds value through", "Deployment, execution, signal, leverage"],
+      ["Compounds", "Reusable assets across the Williams-owned ecosystem"],
+      ["Advantage", "The allocator and operator share one strategic brain."],
+    ],
+  },
+];
+
+const strategicThread = [
+  "Capital",
+  "Williams - Allocator + Operator",
+  "Portfolio - Shoppergetit, Williams Trust Engine, PSI, Future Ventures",
+  "Cash + Assets + Signal + Leverage",
+  "Back to the Engine",
+];
+
+const moatLayers = [
+  {
+    title: "Structural Control",
+    text: "The allocator and operator share one strategic brain across the Williams-owned ecosystem.",
+  },
+  {
+    title: "Accumulated Assets",
+    text: "Years of learning, reusable software, brand, audience, operational knowledge, relationships and allocation thinking already exist.",
+  },
+  {
+    title: "Compounding Advantage",
+    text: "Every meaningful deployment can add more evidence, infrastructure, distribution, reputation and strategic options.",
+  },
+];
+
+const optionalityForms = [
+  {
+    title: "Cash Generated",
+    text: "Cash produced through operations.",
+  },
+  {
+    title: "Cash Preserved",
+    text: "Capital not exposed to weak allocation.",
+  },
+  {
+    title: "Reusable Assets Created",
+    text: "Technology, audience, systems, data, knowledge and infrastructure that can serve future deployments.",
+  },
+  {
+    title: "Portfolio Value Retained",
+    text: "Value created inside portfolio companies that may create future strategic or financing optionality.",
+  },
 ];
 
 const failureComparison = [
@@ -363,22 +441,126 @@ export default function WhyWilliamsPage() {
         </section>
 
         <section className="section" id="replicate">
-          <div className="container diligence-diagram-grid">
-            <MotionReveal>
+          <div className="container">
+            <MotionReveal className="diligence-section-head">
               <p className="eyebrow">Question 05</p>
               <h2>Why is this difficult to replicate?</h2>
               <p>
-                The point is not that I am unique. The point is that the engine
-                already has accumulated assets.
+                The moat is not one company, one technology, or one idea. It is
+                the strategic thread connecting the allocator, the operator, the
+                Engine and the portfolio.
+              </p>
+              <p>
+                Most allocators stand outside the companies they fund. Most
+                founders stand inside one company but outside the allocation
+                system. I operate across both.
               </p>
             </MotionReveal>
-            <MotionReveal className="diligence-system-diagram" delay={0.08}>
+
+            <MotionReveal className="diligence-moat-keyline" delay={0.04}>
+              <p>
+                Most allocators control the capital but not the companies. Most
+                founders control the companies but not the allocation system.
+                Williams controls the strategic thread between both.
+              </p>
+            </MotionReveal>
+
+            <div className="diligence-moat-comparison">
+              {moatComparison.map((column, index) => (
+                <MotionReveal key={column.title} delay={index * 0.05}>
+                  <article className={index === 2 ? "engine-view" : undefined}>
+                    <h3>{column.title}</h3>
+                    <div className="diligence-moat-points">
+                      {column.points.map(([label, value]) => (
+                        <div key={`${column.title}-${label}`}>
+                          <span>{label}</span>
+                          <p>{value}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
+                </MotionReveal>
+              ))}
+            </div>
+
+            <MotionReveal className="diligence-thread-panel" delay={0.1}>
               <div className="diligence-orbit">
                 <Layers3 size={34} />
-                <strong>Accumulated Assets</strong>
-                <p>Learning converted into reusable advantage.</p>
+                <strong>Strategic Thread</strong>
+                <p>Williams connects the Engine and the portfolio.</p>
               </div>
-              <FlowStack items={accumulationStack} />
+              <div>
+                <p className="diligence-thread-statement">
+                  Williams is the strategic thread between the Engine and the
+                  portfolio.
+                </p>
+                <FlowStack items={strategicThread} />
+              </div>
+            </MotionReveal>
+
+            <MotionReveal className="diligence-moat-layers" delay={0.14}>
+              {moatLayers.map((layer, index) => (
+                <article key={layer.title}>
+                  <span>Moat Layer {String(index + 1).padStart(2, "0")}</span>
+                  <h3>{layer.title}</h3>
+                  <p>{layer.text}</p>
+                  {index === 1 && (
+                    <div className="diligence-layer-tags">
+                      {accumulationStack.map((item) => (
+                        <span key={item}>{item}</span>
+                      ))}
+                    </div>
+                  )}
+                </article>
+              ))}
+            </MotionReveal>
+
+            <MotionReveal className="diligence-statement" delay={0.18}>
+              The Engine becomes harder to replicate not because the idea is
+              secret, but because the starting position keeps moving.
+            </MotionReveal>
+
+            <MotionReveal className="diligence-optionality-panel" delay={0.2}>
+              <div className="diligence-optionality-copy">
+                <p className="eyebrow">Strategic Optionality</p>
+                <h3>Control creates optionality.</h3>
+                <p>
+                  When the Engine creates value inside a Williams-controlled
+                  portfolio company, that value does not exist in isolation from
+                  the wider system.
+                </p>
+                <p>
+                  Portfolio value is not cash. Its strategic importance is
+                  that, when real value has been created, it may create
+                  additional options for financing, partnership or selective
+                  monetisation.
+                </p>
+              </div>
+              <div className="diligence-optionality-grid">
+                {optionalityForms.map((form) => (
+                  <article key={form.title}>
+                    <h4>{form.title}</h4>
+                    <p>{form.text}</p>
+                  </article>
+                ))}
+              </div>
+            </MotionReveal>
+
+            <MotionReveal className="diligence-moat-final" delay={0.24}>
+              <p>
+                The Engine is difficult to replicate because its advantage does
+                not sit in one company. It sits in the relationship between
+                capital, operator, portfolio and accumulated assets.
+              </p>
+              <p>
+                Most allocators do not operate the assets they fund. Most
+                operators do not control a recurring allocation system. I am
+                building the strategic thread between both.
+              </p>
+              <strong>
+                The idea can be copied. The accumulated system cannot be copied
+                overnight.
+              </strong>
             </MotionReveal>
           </div>
         </section>

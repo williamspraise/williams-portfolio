@@ -1232,6 +1232,7 @@ button {
 .diligence-timeline span,
 .diligence-asset-track span,
 .diligence-optimise-grid span,
+.diligence-moat-layers span,
 .diligence-loop-ring span {
   color: var(--accent);
   font-family: var(--font-geist-mono);
@@ -1376,6 +1377,8 @@ button {
 .diligence-timeline h3,
 .diligence-asset-track h3,
 .diligence-optimise-grid h3,
+.diligence-moat-comparison h3,
+.diligence-moat-layers h3,
 .diligence-comparison h3 {
   font-size: 1.08rem;
   font-weight: 590;
@@ -1385,7 +1388,9 @@ button {
 
 .diligence-timeline p,
 .diligence-asset-track p,
-.diligence-optimise-grid p {
+.diligence-optimise-grid p,
+.diligence-moat-layers p,
+.diligence-optionality-grid p {
   color: var(--muted);
   font-size: 0.94rem;
   line-height: 1.68;
@@ -1530,6 +1535,9 @@ button {
 
 .diligence-system-diagram,
 .diligence-comparison article,
+.diligence-moat-comparison article,
+.diligence-thread-panel,
+.diligence-optionality-panel,
 .diligence-loop {
   background: var(--panel);
   border: 1px solid var(--panel-line);
@@ -1538,7 +1546,8 @@ button {
   overflow: hidden;
 }
 
-.diligence-system-diagram {
+.diligence-system-diagram,
+.diligence-thread-panel {
   align-items: center;
   display: grid;
   gap: 26px;
@@ -1628,6 +1637,199 @@ button {
   background: var(--background-contrast);
   border-color: var(--line);
   color: var(--foreground);
+}
+
+.diligence-moat-comparison {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.diligence-moat-keyline {
+  border-block: 1px solid var(--line);
+  margin: -18px 0 28px;
+  padding: 24px 0;
+}
+
+.diligence-moat-keyline p {
+  color: var(--foreground);
+  font-size: clamp(1.15rem, 2vw, 1.42rem);
+  font-weight: 570;
+  letter-spacing: -0.045em;
+  line-height: 1.38;
+  margin: 0;
+  max-width: 920px;
+}
+
+.diligence-moat-comparison article {
+  background: var(--background-raised);
+  color: var(--foreground);
+  display: grid;
+  gap: 22px;
+  height: 100%;
+  padding: 25px;
+}
+
+.diligence-moat-comparison article.engine-view {
+  background: var(--panel);
+  color: #f7f2e9;
+}
+
+.diligence-moat-points {
+  border-top: 1px solid currentColor;
+  display: grid;
+}
+
+.diligence-moat-points div {
+  border-bottom: 1px solid currentColor;
+  display: grid;
+  gap: 5px;
+  padding: 13px 0;
+}
+
+.diligence-moat-points span {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.diligence-moat-points p {
+  color: inherit;
+  font-size: 0.9rem;
+  line-height: 1.58;
+  margin: 0;
+}
+
+.diligence-thread-panel,
+.diligence-moat-layers,
+.diligence-optionality-panel,
+.diligence-moat-final {
+  margin-top: 18px;
+}
+
+.diligence-thread-statement {
+  color: #f7f2e9;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 570;
+  letter-spacing: -0.045em;
+  line-height: 1.28;
+  margin: 0 0 20px;
+}
+
+.diligence-moat-layers {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.diligence-moat-layers article {
+  background: var(--background-raised);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  display: grid;
+  gap: 14px;
+  min-height: 220px;
+  padding: 24px;
+}
+
+.diligence-layer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 4px;
+}
+
+.diligence-layer-tags span {
+  background: var(--background-contrast);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--font-geist-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0;
+  padding: 6px 9px;
+}
+
+.diligence-optionality-panel {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  padding: 30px;
+}
+
+.diligence-optionality-copy h3 {
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  font-weight: 620;
+  letter-spacing: -0.058em;
+  line-height: 1.08;
+  margin: 0 0 18px;
+}
+
+.diligence-optionality-copy p:not(.eyebrow) {
+  color: #a9b8bd;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 15px;
+}
+
+.diligence-optionality-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.diligence-optionality-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.diligence-optionality-grid article {
+  background: #142e3a;
+  border: 1px solid var(--panel-line);
+  border-radius: 13px;
+  padding: 18px;
+}
+
+.diligence-optionality-grid h4 {
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin: 0 0 10px;
+}
+
+.diligence-optionality-grid p {
+  color: #a9b8bd;
+  font-size: 0.86rem;
+  line-height: 1.58;
+}
+
+.diligence-moat-final {
+  border-block: 1px solid var(--line);
+  display: grid;
+  gap: 15px;
+  padding: 30px 0;
+}
+
+.diligence-moat-final p,
+.diligence-moat-final strong {
+  max-width: 900px;
+}
+
+.diligence-moat-final p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.72;
+  margin: 0;
+}
+
+.diligence-moat-final strong {
+  color: var(--foreground);
+  font-size: clamp(1.18rem, 2vw, 1.42rem);
+  font-weight: 590;
+  letter-spacing: -0.045em;
+  line-height: 1.35;
 }
 
 .diligence-comparison-top {
@@ -3347,7 +3549,9 @@ button {
   .diligence-hero-grid,
   .diligence-question-grid,
   .diligence-diagram-grid,
-  .diligence-system-diagram {
+  .diligence-system-diagram,
+  .diligence-thread-panel,
+  .diligence-optionality-panel {
     grid-template-columns: 1fr;
   }
 
@@ -3360,6 +3564,11 @@ button {
   }
 
   .diligence-optimise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diligence-moat-comparison,
+  .diligence-moat-layers {
     grid-template-columns: 1fr;
   }
 
@@ -3517,6 +3726,7 @@ button {
   .diligence-capability-grid,
   .diligence-optimise-grid,
   .diligence-comparison,
+  .diligence-optionality-grid,
   .diligence-loop-ring {
     grid-template-columns: 1fr;
   }
@@ -3544,7 +3754,10 @@ button {
   }
 
   .diligence-system-diagram,
+  .diligence-thread-panel,
+  .diligence-optionality-panel,
   .diligence-comparison article,
+  .diligence-moat-comparison article,
   .diligence-loop {
     border-radius: 15px;
     padding: 22px;
