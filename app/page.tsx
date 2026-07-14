@@ -27,7 +27,20 @@ import { ventures } from "@/data/ventures";
 export const metadata: Metadata = {
   title: "Williams Praise - Systems Thinker for Human Problems",
   description:
-    "Williams Praise builds frameworks, products, and ventures around systems thinking, human behavior, product strategy, innovation, relationships, and resolve.",
+    "Williams Praise is a systems thinker, founder-operator, product builder, framework creator, and capital allocation thinker building products, ventures, essays, and original frameworks.",
+  keywords: [
+    "Williams Praise",
+    "Williams Praise Emmanuel",
+    "Williams Praise Emmanual",
+    "Systems Thinker",
+    "Founder-Operator",
+    "Product Builder",
+    "Framework Creator",
+    "Capital Allocator",
+    "Investment Philosophy",
+    "Williams Ecosystem",
+    "Shoppergetit",
+  ],
 };
 
 const identityChips = [

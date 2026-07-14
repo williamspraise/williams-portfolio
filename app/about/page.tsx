@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: "About - Williams Praise",
   description:
     "About Williams Praise, a founder, mentor, product builder, technical product lead, and systems thinker.",
+  keywords: [
+    "About Williams Praise",
+    "Williams Praise Emmanuel",
+    "Williams Praise Emmanual",
+    "Williams Praise biography",
+    "Williams Praise founder",
+    "Williams Praise product builder",
+    "Williams Praise systems thinker",
+    "Williams Praise mentor",
+  ],
 };
 
 export default function AboutPage() {

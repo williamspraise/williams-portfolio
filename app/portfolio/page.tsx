@@ -17,6 +17,22 @@ export const metadata: Metadata = {
   title: "Williams Praise - Product Builder & Technical Product Lead Portfolio",
   description:
     "Portfolio of Williams Praise, a Product Builder and Technical Product Lead with work across commerce, AI, education, healthtech, UX systems, and startup execution.",
+  keywords: [
+    "Williams Praise portfolio",
+    "Williams Praise Product Builder",
+    "Product Builder",
+    "Technical Product Lead",
+    "Founding Product Lead",
+    "Technical Product Manager",
+    "Product Strategist",
+    "Founder-Operator portfolio",
+    "Shoppergetit founder",
+    "UX systems",
+    "0 to 1 product execution",
+  ],
+  alternates: {
+    canonical: "/portfolio",
+  },
 };
 
 export default function PortfolioPage() {

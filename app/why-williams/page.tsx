@@ -20,6 +20,18 @@ export const metadata: Metadata = {
   title: "Why Williams - Capital Allocation Engine Due Diligence",
   description:
     "A due diligence page explaining why Williams Praise is positioned to operate a compounding capital allocation engine.",
+  keywords: [
+    "Why Williams",
+    "Williams Praise capital allocator",
+    "Williams Praise capital allocation engine",
+    "Capital Allocator",
+    "Founder-Operator",
+    "Product Builder",
+    "Systems Thinker",
+    "Williams Ecosystem",
+    "investment memorandum Williams Praise",
+    "capital partner Williams Praise",
+  ],
   alternates: {
     canonical: "/why-williams",
   },

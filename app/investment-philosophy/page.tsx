@@ -17,7 +17,19 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "Investment Philosophy - Williams Praise",
   description:
-    "Williams Praise on capital, productive cycles, long-term thinking, cash flow, assets, and signal.",
+    "Williams Praise on capital allocation, productive cycles, long-term thinking, cash flow, assets, signal, and investment philosophy.",
+  keywords: [
+    "Williams Praise investment philosophy",
+    "Williams Praise capital allocator",
+    "Capital Allocator",
+    "Capital Allocation Thinker",
+    "Investment Philosophy",
+    "Productive Capital",
+    "Productive Cycles",
+    "Cash Flow Assets Signal",
+    "Founder-Operator capital",
+    "Williams Ecosystem",
+  ],
   alternates: {
     canonical: "/investment-philosophy",
   },
