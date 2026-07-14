@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CTASection from "@/components/CTASection";
 import EssayCard from "@/components/EssayCard";
 import Footer from "@/components/Footer";
 import MotionReveal from "@/components/MotionReveal";
@@ -37,6 +38,16 @@ export default function EssaysPage() {
             ))}
           </div>
         </section>
+
+        <CTASection
+          eyebrow="Thinking System"
+          title="Essays connect back to frameworks and product work"
+          description="Some essays begin as public thinking. Some become frameworks. Some clarify the product and venture systems I build."
+          primaryHref="/frameworks"
+          primaryLabel="Explore Frameworks"
+          secondaryHref="/investment-philosophy"
+          secondaryLabel="Investment Philosophy"
+        />
 
         <SystemsLetter />
       </main>

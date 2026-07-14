@@ -929,6 +929,14 @@ export default function WealthArticle() {
                   businesses more productive if it existed?&quot;
                 </p>
               </Expandable>
+              <Link
+                className="article-inline-link"
+                href="/investment-philosophy"
+                onClick={() => trackArticleEvent("post_clicked")}
+              >
+                Read the investment philosophy behind productive cycles{" "}
+                <ArrowRight size={16} />
+              </Link>
             </section>
 
             <section id="shoppergetit" className="article-section shoppergetit-panel">

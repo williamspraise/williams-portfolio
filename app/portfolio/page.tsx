@@ -30,8 +30,9 @@ export default function PortfolioPage() {
           <div className="container">
             <MotionReveal className="portfolio-note">
               This page is the professional portfolio for recruiters, founders,
-              and product teams. For broader frameworks and ventures, visit the
-              homepage.
+              and product teams. It is not simply a collection of projects; it
+              is evidence of how I think, build, execute, learn, and turn work
+              into reusable assets.
             </MotionReveal>
           </div>
         </section>
@@ -61,7 +62,7 @@ export default function PortfolioPage() {
               <SectionHeader
                 eyebrow="Selected Product Work"
                 title="Products shaped from strategy through delivery"
-                description="A record of owning systems, not just screens: marketplace operations, intelligent mobility, structured learning, and mentorship at global scale."
+                description="A record of owning systems, not just screens: product judgment, execution, learning loops, and assets created across marketplace operations, intelligent mobility, structured learning, and mentorship."
               />
             </MotionReveal>
             <div className="project-grid">

@@ -45,11 +45,22 @@ export default function FrameworkDetail({ framework }: FrameworkDetailProps) {
             This framework page is a public placeholder for the fuller essay,
             examples, and applications.
           </p>
+          <p>
+            The frameworks connect to the wider Williams Ecosystem: essays show
+            the thinking in public, investment philosophy shows how the same
+            thinking applies to capital, and Why Williams explains the trust
+            architecture behind the operator.
+          </p>
           <div className="hero-actions">
-            <ButtonLink href="/frameworks" variant="secondary">
-              Back to Frameworks
+            <ButtonLink href="/essays" variant="secondary">
+              Read Essays
             </ButtonLink>
-            <ButtonLink href="/contact">Contact / Collaborate</ButtonLink>
+            <ButtonLink href="/investment-philosophy">
+              Investment Philosophy
+            </ButtonLink>
+            <ButtonLink href="/why-williams" variant="quiet">
+              Why Williams
+            </ButtonLink>
           </div>
         </div>
       </section>

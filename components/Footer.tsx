@@ -1,33 +1,78 @@
 import Link from "next/link";
 
+const footerGroups = [
+  {
+    title: "Thinking",
+    links: [
+      { label: "Frameworks", href: "/frameworks" },
+      { label: "Essays", href: "/essays" },
+      { label: "Investment Philosophy", href: "/investment-philosophy" },
+    ],
+  },
+  {
+    title: "Why Williams",
+    links: [
+      { label: "Why Williams", href: "/why-williams" },
+      { label: "About", href: "/about" },
+    ],
+  },
+  {
+    title: "Building",
+    links: [
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Ventures", href: "/ventures" },
+    ],
+  },
+  {
+    title: "Connect",
+    links: [
+      { label: "Contact", href: "/contact" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/iam-williams/",
+        external: true,
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/williamspraise",
+        external: true,
+      },
+      { label: "Request Investment Memorandum", href: "/why-williams#partners" },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-grid">
-        <div>
+        <div className="footer-brand">
           <strong>Williams Praise</strong>
           <p>Systems Thinker / Founder / Product Builder</p>
+          <a href="mailto:williamspraise01@gmail.com">williamspraise01@gmail.com</a>
         </div>
         <div className="footer-links">
-          <Link href="/frameworks">Frameworks</Link>
-          <Link href="/ventures">Ventures</Link>
-          <Link href="/portfolio">Portfolio</Link>
-          <a href="mailto:williamspraise01@gmail.com">Email</a>
-          <a
-            href="https://www.linkedin.com/in/iam-williams/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/williamspraise"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-          <Link href="/contact">Contact</Link>
+          {footerGroups.map((group) => (
+            <div className="footer-link-group" key={group.title}>
+              <p>{group.title}</p>
+              {group.links.map((link) =>
+                link.external ? (
+                  <a
+                    href={link.href}
+                    key={link.label}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link href={link.href} key={link.label}>
+                    {link.label}
+                  </Link>
+                ),
+              )}
+            </div>
+          ))}
         </div>
         <p className="copyright">
           &copy; {new Date().getFullYear()} Williams Praise. All rights

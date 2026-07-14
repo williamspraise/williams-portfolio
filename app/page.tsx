@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, BookOpen, Boxes, Brain, Building2 } from "lucide-react";
+import {
+  ArrowUpRight,
+  BookOpen,
+  Boxes,
+  Brain,
+  Building2,
+  Landmark,
+} from "lucide-react";
 import Image from "next/image";
 import AudienceModalPrompt from "@/components/AudienceModalPrompt";
 import ButtonLink from "@/components/ButtonLink";
@@ -51,6 +58,20 @@ const buildAreas = [
     icon: Brain,
   },
   {
+    title: "Investment Philosophy",
+    description:
+      "How Williams thinks about capital, productive cycles, cash flow, assets, signal, and long-term compounding.",
+    href: "/investment-philosophy",
+    icon: Landmark,
+  },
+  {
+    title: "Products",
+    description:
+      "0->1 product work across marketplace systems, AI mobility, education, and digital platforms.",
+    href: "/portfolio",
+    icon: Boxes,
+  },
+  {
     title: "Ventures",
     description:
       "Products and companies built around trust, education, commerce, capability, and better systems.",
@@ -63,13 +84,6 @@ const buildAreas = [
       "Long-form thinking on psychology, systems, mediocrity, relationships, product thinking, and human progress.",
     href: "/essays",
     icon: BookOpen,
-  },
-  {
-    title: "Products",
-    description:
-      "0->1 product work across marketplace systems, AI mobility, education, and digital platforms.",
-    href: "/portfolio",
-    icon: Boxes,
   },
 ];
 
@@ -94,8 +108,8 @@ export default function Home() {
                 <ButtonLink href="/portfolio" variant="secondary">
                   View Portfolio
                 </ButtonLink>
-                <ButtonLink href="/ventures" variant="quiet">
-                  See Ventures
+                <ButtonLink href="/investment-philosophy" variant="quiet">
+                  Investment Philosophy
                 </ButtonLink>
               </div>
               <div className="trust-row hq-chip-row">
@@ -155,9 +169,9 @@ export default function Home() {
           <div className="container">
             <MotionReveal>
               <SectionHeader
-                eyebrow="What I Build"
-                title="Systems, products, and ideas with operational consequence"
-                description="The work spans original frameworks, venture-building, long-form thinking, and shipped product systems."
+                eyebrow="Williams Ecosystem"
+                title="The public headquarters for my thinking and building"
+                description="The site connects original frameworks, investment philosophy, shipped product work, ventures, and essays without forcing every audience into the same path."
               />
             </MotionReveal>
             <div className="hq-feature-grid">
@@ -201,6 +215,24 @@ export default function Home() {
           </div>
         </section>
 
+        <CTASection
+          eyebrow="Investment Philosophy"
+          title="How I think about capital and productive cycles"
+          description="A public explanation of the philosophy behind cash flow, assets, signal, long-term thinking, and why capital should become progressively more capable."
+          primaryHref="/investment-philosophy"
+          primaryLabel="Read Investment Philosophy"
+          secondaryHref="/why-williams"
+          secondaryLabel="Why Williams"
+        />
+
+        <CTASection
+          eyebrow="For recruiters, founders, and teams"
+          title="Professional product portfolio"
+          description="This is evidence of how I think, build, execute, learn, and turn product work into reusable assets."
+          primaryHref="/portfolio"
+          primaryLabel="View Portfolio"
+        />
+
         <section className="section">
           <div className="container">
             <MotionReveal>
@@ -238,14 +270,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <CTASection
-          eyebrow="For recruiters, founders, and teams"
-          title="Professional product portfolio"
-          description="If you're looking for my product leadership, UX, technical execution, and 0->1 product work, my professional portfolio is preserved here."
-          primaryHref="/portfolio"
-          primaryLabel="View Portfolio"
-        />
 
         <SystemsLetter />
 

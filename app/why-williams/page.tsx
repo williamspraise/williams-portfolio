@@ -671,6 +671,11 @@ export default function WhyWilliamsPage() {
               </h2>
               <div className="diligence-final-copy">
                 <p>
+                  The philosophy explains how I think. The memorandum explains
+                  how the Engine operates. This page explains why I should be
+                  trusted to operate it.
+                </p>
+                <p>
                   I&apos;m looking for capital partners who understand that wealth
                   is built not only by the return on one investment, but by what
                   happens when a larger capital base is successfully put to work

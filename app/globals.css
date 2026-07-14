@@ -235,12 +235,12 @@ button {
 .desktop-links {
   align-items: center;
   display: flex;
-  gap: 22px;
+  gap: 15px;
 }
 
 .desktop-links > a {
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.8rem;
   transition: color 160ms ease;
 }
 
@@ -870,6 +870,16 @@ button {
   flex-shrink: 0;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.hq-cta-card .button-secondary {
+  background: #f7f2e9;
+  border-color: #f7f2e9;
+  color: #10232d;
+}
+
+.hq-cta-card .button-secondary:hover {
+  border-color: #21c28e;
 }
 
 .contact-options-section {
@@ -3155,14 +3165,14 @@ button {
 
 .footer {
   border-top: 1px solid var(--line);
-  padding: 38px 0 35px;
+  padding: 44px 0 38px;
 }
 
 .footer-grid {
-  align-items: center;
+  align-items: start;
   display: grid;
-  gap: 28px;
-  grid-template-columns: 1fr auto auto;
+  gap: 34px;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
 }
 
 .footer-grid > * {
@@ -3180,9 +3190,31 @@ button {
   margin: 4px 0 0;
 }
 
+.footer-brand a {
+  color: var(--muted);
+  display: inline-flex;
+  font-size: 0.8rem;
+  margin-top: 14px;
+}
+
 .footer-links {
-  display: flex;
+  display: grid;
   gap: 22px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.footer-link-group {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-link-group p {
+  color: var(--accent);
+  font-family: var(--font-geist-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  margin: 0 0 5px;
+  text-transform: uppercase;
 }
 
 .footer-links a {
@@ -3195,6 +3227,7 @@ button {
 }
 
 .copyright {
+  grid-column: 1 / -1;
   margin: 0 !important;
 }
 
@@ -3530,7 +3563,33 @@ button {
 
 @media (max-width: 1050px) {
   .desktop-links {
-    gap: 15px;
+    display: none;
+  }
+
+  .mobile-controls {
+    align-items: center;
+    display: flex;
+    gap: 9px;
+  }
+
+  .mobile-menu {
+    background: var(--background);
+    border-top: 1px solid var(--line);
+    display: block;
+    overflow: hidden;
+  }
+
+  .mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+
+  .mobile-menu-links a {
+    color: var(--muted);
+    padding: 12px 0;
   }
 
   .diligence-progress {
@@ -4173,8 +4232,11 @@ button {
   }
 
   .footer-links {
-    flex-wrap: wrap;
-    gap: 12px 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-link-group {
+    align-content: start;
   }
 
   .case-hero {

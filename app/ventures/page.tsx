@@ -8,7 +8,7 @@ import { ventures } from "@/data/ventures";
 export const metadata: Metadata = {
   title: "Ventures - Williams Praise",
   description:
-    "Ventures by Williams Praise across commerce, education, talent systems, and innovation infrastructure.",
+    "Active operating parts of the Williams Ecosystem across commerce, content, talent infrastructure, and future ventures.",
 };
 
 export default function VenturesPage() {
@@ -21,8 +21,9 @@ export default function VenturesPage() {
             <p className="eyebrow">Venture Hub</p>
             <h1>Ventures</h1>
             <p>
-              Products and systems built around commerce, education, capability,
-              trust, and transformation.
+              Active operating parts of the Williams Ecosystem: commerce
+              infrastructure, trust and distribution, talent infrastructure, and
+              future ventures shaped by systems thinking.
             </p>
           </div>
         </section>
