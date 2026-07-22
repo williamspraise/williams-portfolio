@@ -30,8 +30,11 @@ export const metadata: Metadata = {
     "Williams Praise is a systems thinker, founder-operator, product builder, framework creator, and capital allocation thinker building products, ventures, essays, and original frameworks.",
   keywords: [
     "Williams Praise",
+    "Williams Emmanuel Praise",
     "Williams Praise Emmanuel",
     "Williams Praise Emmanual",
+    "Williams Praise website",
+    "Williams Praise portfolio",
     "Systems Thinker",
     "Founder-Operator",
     "Product Builder",
@@ -40,6 +43,9 @@ export const metadata: Metadata = {
     "Investment Philosophy",
     "Williams Ecosystem",
     "Shoppergetit",
+    "Systems of Love",
+    "Why America Became Rich",
+    "The American system to wealth",
   ],
 };
 

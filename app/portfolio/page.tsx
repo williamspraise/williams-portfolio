@@ -19,7 +19,9 @@ export const metadata: Metadata = {
     "Portfolio of Williams Praise, a Product Builder and Technical Product Lead with work across commerce, AI, education, healthtech, UX systems, and startup execution.",
   keywords: [
     "Williams Praise portfolio",
+    "Williams Emmanuel Praise portfolio",
     "Williams Praise Product Builder",
+    "Williams Praise Technical Product Lead",
     "Product Builder",
     "Technical Product Lead",
     "Founding Product Lead",
@@ -32,6 +34,13 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/portfolio",
+  },
+  openGraph: {
+    title: "Williams Praise - Product Builder & Technical Product Lead Portfolio",
+    description:
+      "Portfolio of Williams Praise, a Product Builder and Technical Product Lead with work across commerce, AI, education, healthtech, UX systems, and startup execution.",
+    type: "profile",
+    url: "/portfolio",
   },
 };
 

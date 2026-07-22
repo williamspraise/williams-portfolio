@@ -9,6 +9,20 @@ export const metadata: Metadata = {
   title: "Ventures - Williams Praise",
   description:
     "Active operating parts of the Williams Ecosystem across commerce, content, talent infrastructure, and future ventures.",
+  keywords: [
+    "Williams Praise ventures",
+    "Williams Emmanuel Praise ventures",
+    "Williams Ecosystem",
+    "Shoppergetit",
+    "Williams Content",
+    "Pendulum School of Innovation",
+    "commerce infrastructure",
+    "talent infrastructure",
+    "venture builder",
+  ],
+  alternates: {
+    canonical: "/ventures",
+  },
 };
 
 export default function VenturesPage() {

@@ -5,16 +5,51 @@ import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 import SectionHeader from "@/components/SectionHeader";
 import { frameworks } from "@/data/frameworks";
+import { pageMetadata, siteUrl } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Frameworks - Williams Praise",
+export const metadata: Metadata = pageMetadata({
+  title: "Frameworks by Williams Praise",
   description:
-    "Original frameworks by Williams Praise including Systems of Love, IREE Phases, and Systems of Resolve.",
-};
+    "Original frameworks by Williams Praise including Systems of Love, IREE Phases, and Systems of Resolve for love, resolve, human behavior, performance, and decision-making.",
+  path: "/frameworks",
+  keywords: [
+    "Williams Praise frameworks",
+    "Williams Emmanuel Praise frameworks",
+    "Systems of Love",
+    "Why Love Needs Systems",
+    "IREE Phases",
+    "Systems of Resolve",
+    "human behavior frameworks",
+    "relationship framework",
+    "decision framework",
+    "performance framework",
+  ],
+});
 
 export default function FrameworksPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Frameworks by Williams Praise",
+    url: `${siteUrl}/frameworks`,
+    description: metadata.description,
+    creator: {
+      "@id": `${siteUrl}/#person`,
+    },
+    hasPart: frameworks.map((framework) => ({
+      "@type": "CreativeWork",
+      name: framework.title,
+      url: `${siteUrl}/frameworks/${framework.slug}`,
+      description: framework.description,
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main>
         <section className="page-hero">

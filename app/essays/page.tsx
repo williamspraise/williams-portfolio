@@ -6,16 +6,47 @@ import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 import SystemsLetter from "@/components/SystemsLetter";
 import { essays } from "@/data/essays";
+import { pageMetadata, siteUrl } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Essays & Notes - Williams Praise",
+export const metadata: Metadata = pageMetadata({
+  title: "Essays & Notes by Williams Praise",
   description:
-    "Writing by Williams Praise on systems thinking, human behavior, relationships, product thinking, innovation, and resolve.",
-};
+    "Essays by Williams Praise on systems thinking, human behavior, relationships, product thinking, innovation, national wealth, love, resolve, and execution.",
+  path: "/essays",
+  keywords: [
+    "Williams Praise essays",
+    "Williams Emmanuel Praise essays",
+    "Systems of Love essay",
+    "Why Love Needs Systems",
+    "The American system to wealth",
+    "Why America Became Rich",
+    "The Problem With Mediocrity",
+    "Why Results Matter",
+    "The Economics of Peace",
+    "Trust Competence and Cooperation",
+    "The Psychology of Becoming Extraordinary",
+  ],
+});
 
 export default function EssaysPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Essays & Notes by Williams Praise",
+    url: `${siteUrl}/essays`,
+    description: metadata.description,
+    author: {
+      "@id": `${siteUrl}/#person`,
+    },
+    about: essays.map((essay) => essay.title),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main>
         <section className="page-hero">

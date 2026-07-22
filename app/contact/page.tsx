@@ -11,6 +11,18 @@ export const metadata: Metadata = {
   title: "Contact - Williams Praise",
   description:
     "Work with Williams Praise on speaking, collaborations, consulting, jobs, recruiting, partnerships, and venture conversations.",
+  keywords: [
+    "Contact Williams Praise",
+    "Williams Emmanuel Praise contact",
+    "hire Williams Praise",
+    "Williams Praise consulting",
+    "Williams Praise speaking",
+    "Williams Praise product leader",
+    "Williams Praise partnerships",
+  ],
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 const contactCategories = [

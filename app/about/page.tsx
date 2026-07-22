@@ -11,8 +11,10 @@ export const metadata: Metadata = {
     "About Williams Praise, a founder, mentor, product builder, technical product lead, and systems thinker.",
   keywords: [
     "About Williams Praise",
+    "Williams Emmanuel Praise",
     "Williams Praise Emmanuel",
     "Williams Praise Emmanual",
+    "Williams Praise website",
     "Williams Praise biography",
     "Williams Praise founder",
     "Williams Praise product builder",

@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "Williams Praise on capital allocation, productive cycles, long-term thinking, cash flow, assets, signal, and investment philosophy.",
   keywords: [
     "Williams Praise investment philosophy",
+    "Williams Emmanuel Praise investment philosophy",
     "Williams Praise capital allocator",
     "Capital Allocator",
     "Capital Allocation Thinker",
@@ -32,6 +33,13 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/investment-philosophy",
+  },
+  openGraph: {
+    title: "Investment Philosophy - Williams Praise",
+    description:
+      "Williams Praise on capital allocation, productive cycles, long-term thinking, cash flow, assets, signal, and investment philosophy.",
+    type: "article",
+    url: "/investment-philosophy",
   },
 };
 

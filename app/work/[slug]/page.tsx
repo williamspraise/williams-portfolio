@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 import { projects } from "@/data/projects";
+import { absoluteUrl, siteUrl } from "@/lib/seo";
 
 type WorkPageProps = {
   params: Promise<{ slug: string }>;
@@ -33,10 +34,34 @@ export async function generateMetadata({
   return {
     title,
     description: project.description,
+    keywords: [
+      `${project.shortTitle} Williams Praise`,
+      `${project.shortTitle} case study`,
+      project.role,
+      ...project.ownership,
+      ...(project.impact ?? []),
+    ],
+    alternates: {
+      canonical: `/work/${project.slug}`,
+    },
     openGraph: {
       title,
       description: project.description,
       type: "article",
+      url: `/work/${project.slug}`,
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: `${project.shortTitle} case study by Williams Praise`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: project.description,
     },
   };
 }
@@ -50,9 +75,31 @@ export default async function WorkPage({ params }: WorkPageProps) {
   }
 
   const study = project.caseStudy;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": `${siteUrl}/work/${project.slug}#case-study`,
+    name: `${project.shortTitle} Case Study`,
+    url: absoluteUrl(`/work/${project.slug}`),
+    description: project.description,
+    creator: {
+      "@id": `${siteUrl}/#person`,
+    },
+    about: [
+      project.shortTitle,
+      project.role,
+      ...project.ownership,
+      ...(project.impact ?? []),
+    ],
+    image: absoluteUrl(project.image),
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="case-page">
         <section className="case-hero">
