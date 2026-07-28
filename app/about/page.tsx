@@ -4,11 +4,11 @@ import Footer from "@/components/Footer";
 import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 import SectionHeader from "@/components/SectionHeader";
+import { canonicalIdentityDescription } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "About - Williams Praise",
-  description:
-    "About Williams Praise, a founder, mentor, product builder, technical product lead, and systems thinker.",
+  title: "About Williams Praise - Founder of Shoppergetit",
+  description: `${canonicalIdentityDescription} Read the biography, work, ventures, frameworks, and product background of Williams Praise.`,
   keywords: [
     "About Williams Praise",
     "Williams Emmanuel Praise",
@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "Williams Praise Emmanual",
     "Williams Praise website",
     "Williams Praise biography",
+    "Williams Praise official biography",
+    "Williams Praise founder of Shoppergetit",
+    "Williams Praise Shoppergetit founder",
     "Williams Praise founder",
     "Williams Praise product builder",
     "Williams Praise systems thinker",
@@ -31,10 +34,11 @@ export default function AboutPage() {
         <section className="page-hero about-page-hero">
           <div className="container">
             <p className="eyebrow">About Williams Praise</p>
-            <h1>Builder, mentor, founder, and systems thinker.</h1>
+            <h1>Williams Praise: builder, mentor, founder, and systems thinker.</h1>
             <p>
-              I work across product strategy, UX systems, technical execution,
-              human behavior, and original frameworks.
+              I am Williams Praise, also known as Williams Emmanuel Praise. I
+              work across product strategy, UX systems, technical execution,
+              human behavior, original frameworks, and venture building.
             </p>
           </div>
         </section>
@@ -50,7 +54,8 @@ export default function AboutPage() {
             <MotionReveal className="about-copy" delay={0.08}>
               <p className="lead">
                 I am Williams Praise, a founder, product builder, UX/product
-                professional, mentor, and systems thinker.
+                professional, mentor, and systems thinker. This is my official
+                biography and the canonical website for my online identity.
               </p>
               <p>
                 My work sits at the intersection of product strategy, UX
@@ -66,9 +71,18 @@ export default function AboutPage() {
                 beyond.
               </p>
               <p>
-                I have built products across commerce, AI mobility, education,
-                and healthtech, and created frameworks including Systems of
-                Love, IREE Phases, and Systems of Resolve.
+                I am the founder of Shoppergetit, a commerce infrastructure and
+                marketplace venture built around verified SMEs, structured
+                checkout, request sourcing, bundles, community drops, logistics
+                workflows, and trust. I have also built and shaped products
+                across AI mobility, education, healthtech, learning systems,
+                and mentorship.
+              </p>
+              <p>
+                My public work includes the Williams Ecosystem, Shoppergetit,
+                Pendulum School of Innovation / PSI product work, Springboard
+                mentorship, Systems of Love, IREE Phases, Systems of Resolve,
+                essays, and capital allocation thinking.
               </p>
               <p>
                 I am open to product leadership roles, collaborations,

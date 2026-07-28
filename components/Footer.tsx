@@ -37,6 +37,16 @@ const footerGroups = [
         href: "https://github.com/williamspraise",
         external: true,
       },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/kku_by",
+        external: true,
+      },
+      {
+        label: "TikTok",
+        href: "https://www.tiktok.com/@williams.praise",
+        external: true,
+      },
       { label: "Request Investment Memorandum", href: "/why-williams#partners" },
     ],
   },

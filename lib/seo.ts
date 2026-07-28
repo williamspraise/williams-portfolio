@@ -12,6 +12,8 @@ export const identityKeywords = [
   "Williams Emmanuel Praise",
   "Williams Praise Emmanuel",
   "Williams Praise Emmanual",
+  "Williams Praise tech founder",
+  "Williams Praise Shoppergetit founder",
   "Praise Williams",
   "William Praise",
   "WilliamsPraise",
@@ -21,6 +23,10 @@ export const identityKeywords = [
 
 export const coreSeoKeywords = [
   ...identityKeywords,
+  "Williams Praise official website",
+  "Williams Praise official portfolio",
+  "Williams Praise biography",
+  "Williams Praise founder of Shoppergetit",
   "Williams Praise portfolio",
   "Williams Praise website",
   "Williams Praise biography",
@@ -78,6 +84,9 @@ export const coreSeoKeywords = [
   "national wealth",
 ];
 
+export const canonicalIdentityDescription =
+  "Williams Praise, also known as Williams Emmanuel Praise, is a Nigeria-based founder-operator, product builder, technical product lead, systems thinker, framework creator, and founder of Shoppergetit.";
+
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
 }
@@ -132,10 +141,26 @@ export const personJsonLd = {
   "@type": "Person",
   "@id": `${siteUrl}/#person`,
   name: authorName,
+  givenName: "Williams",
+  familyName: "Praise",
   alternateName: identityKeywords.filter((keyword) => keyword !== authorName),
+  description: canonicalIdentityDescription,
+  disambiguatingDescription:
+    "Williams Praise is the product builder, systems thinker, technical product lead, and Shoppergetit founder represented by williamspraise.com and the LinkedIn profile iam-williams.",
   url: siteUrl,
+  mainEntityOfPage: {
+    "@id": `${siteUrl}/about#profile`,
+  },
   image: absoluteUrl("/images/C208(1).jpg"),
   email: "mailto:williamspraise01@gmail.com",
+  homeLocation: {
+    "@type": "Place",
+    name: "Abuja, Nigeria",
+  },
+  nationality: {
+    "@type": "Country",
+    name: "Nigeria",
+  },
   jobTitle: [
     "Systems Thinker",
     "Founder-Operator",
@@ -146,14 +171,44 @@ export const personJsonLd = {
   ],
   worksFor: {
     "@type": "Organization",
+    "@id": `${siteUrl}/#williams-ecosystem`,
     name: "Williams Ecosystem",
     url: siteUrl,
   },
   founder: [
     {
       "@type": "Organization",
+      "@id": "https://shoppergetit.com/#organization",
       name: "Shoppergetit",
       url: "https://shoppergetit.com",
+    },
+  ],
+  affiliation: [
+    {
+      "@type": "Organization",
+      "@id": "https://shoppergetit.com/#organization",
+      name: "Shoppergetit",
+      url: "https://shoppergetit.com",
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/ventures#psi`,
+      name: "Pendulum School of Innovation",
+      alternateName: "PSI",
+      url: "https://pendulumsi.com",
+    },
+    {
+      "@type": "Organization",
+      name: "Springboard",
+      url: "https://www.springboard.com/",
+    },
+  ],
+  owns: [
+    {
+      "@type": "Brand",
+      "@id": `${siteUrl}/#williams-ecosystem`,
+      name: "Williams Ecosystem",
+      url: siteUrl,
     },
   ],
   knowsAbout: [
@@ -175,11 +230,39 @@ export const personJsonLd = {
     "Technology Exports",
     "African Innovation",
   ],
+  subjectOf: [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/portfolio#webpage`,
+      name: "Williams Praise Product Portfolio",
+      url: absoluteUrl("/portfolio"),
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/ventures#webpage`,
+      name: "Ventures associated with Williams Praise",
+      url: absoluteUrl("/ventures"),
+    },
+  ],
   sameAs: [
     "https://www.linkedin.com/in/iam-williams/",
     "https://github.com/williamspraise",
+    "https://www.instagram.com/kku_by",
+    "https://www.tiktok.com/@williams.praise",
     "https://shoppergetit.com",
   ],
+};
+
+export const profilePageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${siteUrl}/about#profile`,
+  url: absoluteUrl("/about"),
+  name: "About Williams Praise",
+  description: canonicalIdentityDescription,
+  mainEntity: {
+    "@id": `${siteUrl}/#person`,
+  },
 };
 
 export const websiteJsonLd = {
@@ -195,11 +278,65 @@ export const websiteJsonLd = {
   ],
   url: siteUrl,
   description:
-    "The public website of Williams Praise: systems thinking, product work, ventures, investment philosophy, essays, and original frameworks.",
+    "The official website and canonical identity hub of Williams Praise: systems thinking, product work, ventures, investment philosophy, essays, and original frameworks.",
   publisher: {
     "@id": `${siteUrl}/#person`,
   },
+  about: {
+    "@id": `${siteUrl}/#person`,
+  },
   inLanguage: "en",
+};
+
+export const ventureGraphJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#williams-ecosystem`,
+      name: "Williams Ecosystem",
+      url: siteUrl,
+      founder: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description:
+        "The Williams Ecosystem connects Williams Praise's product work, ventures, frameworks, essays, capital thinking, and public identity.",
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://shoppergetit.com/#organization",
+      name: "Shoppergetit",
+      url: "https://shoppergetit.com",
+      founder: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description:
+        "Shoppergetit is a commerce marketplace and infrastructure venture associated with Williams Praise, built around verified SMEs, structured checkout, request sourcing, bundles, community drops, logistics workflows, and buyer-seller trust.",
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/ventures#psi`,
+      name: "Pendulum School of Innovation",
+      alternateName: "PSI",
+      url: "https://pendulumsi.com",
+      contributor: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description:
+        "Pendulum School of Innovation is a learning and capability-building venture associated with Williams Praise, focused on structured learning, mentorship, cohort education, and professional transformation.",
+    },
+    {
+      "@type": "Brand",
+      "@id": `${siteUrl}/ventures#williams-content`,
+      name: "Williams Content",
+      url: absoluteUrl("/essays"),
+      founder: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description:
+        "Williams Content is the public thinking, essays, frameworks, and audience-development layer of Williams Praise.",
+    },
+  ],
 };
 
 export const creativeWorkGraphJsonLd = {

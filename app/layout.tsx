@@ -3,15 +3,17 @@ import {
   coreSeoKeywords,
   creativeWorkGraphJsonLd,
   personJsonLd,
+  profilePageJsonLd,
   siteName,
   siteUrl,
+  ventureGraphJsonLd,
   websiteJsonLd,
 } from "@/lib/seo";
 import "./globals.css";
 
 const title = "Williams Praise - Systems Thinker for Human Problems";
 const description =
-  "Williams Praise, also searched as Williams Emmanuel Praise, is a systems thinker, founder-operator, product builder, technical product lead, framework creator, and capital allocation thinker building products, ventures, essays, and original frameworks.";
+  "Official website of Williams Praise, also known as Williams Emmanuel Praise: founder of Shoppergetit, systems thinker, founder-operator, product builder, technical product lead, framework creator, and capital allocation thinker.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -22,6 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: siteName, url: siteUrl }],
   creator: siteName,
   publisher: siteName,
+  referrer: "origin-when-cross-origin",
   category: "personal portfolio",
   alternates: {
     canonical: "/",
@@ -57,6 +60,11 @@ export const metadata: Metadata = {
     title,
     description,
   },
+  other: {
+    "profile:first_name": "Williams",
+    "profile:last_name": "Praise",
+    "profile:username": "iam-williams",
+  },
 };
 
 const themeScript = `
@@ -67,6 +75,10 @@ const themeScript = `
     }
   } catch (error) {}
 `;
+
+function jsonLd(data: unknown) {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
 
 export default function RootLayout({
   children,
@@ -79,16 +91,24 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLd(personJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLd(profilePageJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(ventureGraphJsonLd) }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(creativeWorkGraphJsonLd),
+            __html: jsonLd(creativeWorkGraphJsonLd),
           }}
         />
       </head>

@@ -12,15 +12,17 @@ import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeader from "@/components/SectionHeader";
+import { canonicalIdentityDescription } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Williams Praise - Product Builder & Technical Product Lead Portfolio",
-  description:
-    "Portfolio of Williams Praise, a Product Builder and Technical Product Lead with work across commerce, AI, education, healthtech, UX systems, and startup execution.",
+  title: "Williams Praise Portfolio - Founder of Shoppergetit & Product Builder",
+  description: `${canonicalIdentityDescription} Product portfolio covering Shoppergetit, commerce infrastructure, AI mobility, education, healthtech, UX systems, mentorship, and startup execution.`,
   keywords: [
     "Williams Praise portfolio",
     "Williams Emmanuel Praise portfolio",
     "Williams Praise Product Builder",
+    "Williams Praise founder of Shoppergetit",
+    "Williams Praise Shoppergetit founder",
     "Williams Praise Technical Product Lead",
     "Product Builder",
     "Technical Product Lead",
@@ -215,6 +217,22 @@ export default function PortfolioPage() {
                 >
                   <Globe2 size={18} />
                   GitHub / williamspraise
+                </a>
+                <a
+                  href="https://www.instagram.com/kku_by"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Globe2 size={18} />
+                  Instagram / kku_by
+                </a>
+                <a
+                  href="https://www.tiktok.com/@williams.praise"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Globe2 size={18} />
+                  TikTok / williams.praise
                 </a>
                 <p>
                   <MapPin size={18} />

@@ -84,6 +84,22 @@ export default function ContactPage() {
                   <Globe2 size={18} />
                   GitHub / williamspraise
                 </a>
+                <a
+                  href="https://www.instagram.com/kku_by"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Globe2 size={18} />
+                  Instagram / kku_by
+                </a>
+                <a
+                  href="https://www.tiktok.com/@williams.praise"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Globe2 size={18} />
+                  TikTok / williams.praise
+                </a>
               </div>
             </MotionReveal>
 

@@ -23,18 +23,21 @@ import VentureCard from "@/components/VentureCard";
 import { essays } from "@/data/essays";
 import { frameworks } from "@/data/frameworks";
 import { ventures } from "@/data/ventures";
+import { canonicalIdentityDescription } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Williams Praise - Systems Thinker for Human Problems",
-  description:
-    "Williams Praise is a systems thinker, founder-operator, product builder, framework creator, and capital allocation thinker building products, ventures, essays, and original frameworks.",
+  title: "Williams Praise - Official Website, Founder of Shoppergetit",
+  description: `${canonicalIdentityDescription} This official website connects Williams Praise to Shoppergetit, product work, ventures, essays, frameworks, and the Williams Ecosystem.`,
   keywords: [
     "Williams Praise",
     "Williams Emmanuel Praise",
     "Williams Praise Emmanuel",
     "Williams Praise Emmanual",
     "Williams Praise website",
+    "Williams Praise official website",
     "Williams Praise portfolio",
+    "Williams Praise founder of Shoppergetit",
+    "Williams Praise Shoppergetit",
     "Systems Thinker",
     "Founder-Operator",
     "Product Builder",
@@ -48,6 +51,24 @@ export const metadata: Metadata = {
     "The American system to wealth",
   ],
 };
+
+const identityFacts = [
+  {
+    title: "Williams Praise",
+    description:
+      "The official identity hub for Williams Praise, also known as Williams Emmanuel Praise.",
+  },
+  {
+    title: "Founder of Shoppergetit",
+    description:
+      "Associated with Shoppergetit, a structured commerce marketplace for verified SMEs, checkout workflows, request sourcing, bundles, community drops, and buyer-seller trust.",
+  },
+  {
+    title: "Product builder and systems thinker",
+    description:
+      "Work spans product strategy, UX systems, technical product leadership, startup execution, mentorship, essays, and original frameworks.",
+  },
+];
 
 const identityChips = [
   "Founder-Operator",
@@ -182,6 +203,30 @@ export default function Home() {
               <span key={item}>{item}</span>
             ))}
           </MotionReveal>
+        </section>
+
+        <section className="section section-contrast" id="identity">
+          <div className="container">
+            <MotionReveal>
+              <SectionHeader
+                eyebrow="Official Identity"
+                title="Williams Praise, founder-operator and product builder"
+                description="This website is the canonical home for Williams Praise online: the place that connects the person, product work, ventures, frameworks, essays, and public professional identity."
+              />
+            </MotionReveal>
+            <div className="role-grid">
+              {identityFacts.map((fact, index) => (
+                <MotionReveal key={fact.title} delay={index * 0.04}>
+                  <article className="role-card">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <h3>{fact.title}</h3>
+                    <p>{fact.description}</p>
+                    <ArrowUpRight size={18} />
+                  </article>
+                </MotionReveal>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section className="section" id="build">

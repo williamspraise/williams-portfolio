@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const baseUrl = "https://williamspraise.com";
-const lastModified = new Date("2026-07-22");
+const lastModified = new Date("2026-07-28");
 
 const routes = [
   { path: "/", priority: 1, changeFrequency: "monthly" },
