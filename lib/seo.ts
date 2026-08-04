@@ -37,6 +37,8 @@ export const coreSeoKeywords = [
   "Williams Praise technical product lead",
   "Williams Praise founder",
   "Williams Ecosystem",
+  "Williams Praise",
+  "Williams Praise Emmanuel",
   "Systems Thinker",
   "Systems Thinking",
   "Founder-Operator",
