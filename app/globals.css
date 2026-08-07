@@ -238,13 +238,13 @@ button {
   gap: 15px;
 }
 
-.desktop-links > a {
+.desktop-links>a {
   color: var(--muted);
   font-size: 0.8rem;
   transition: color 160ms ease;
 }
 
-.desktop-links > a:hover,
+.desktop-links>a:hover,
 .mobile-menu-links a:hover {
   color: var(--accent);
 }
@@ -552,12 +552,10 @@ button {
 }
 
 .hq-portrait-card::after {
-  background: linear-gradient(
-    180deg,
-    transparent 48%,
-    rgb(6 17 24 / 26%) 70%,
-    rgb(6 17 24 / 72%) 100%
-  );
+  background: linear-gradient(180deg,
+      transparent 48%,
+      rgb(6 17 24 / 26%) 70%,
+      rgb(6 17 24 / 72%) 100%);
   content: "";
   inset: 0;
   pointer-events: none;
@@ -745,10 +743,10 @@ button {
   margin: 0 0 12px;
 }
 
-.hq-card > p:not(.card-meta),
-.framework-card > p:not(.card-meta),
+.hq-card>p:not(.card-meta),
+.framework-card>p:not(.card-meta),
 .venture-card p,
-.essay-card > p,
+.essay-card>p,
 .pillar-card p {
   color: var(--muted);
   font-size: 0.9rem;
@@ -1152,7 +1150,7 @@ button {
   padding: 27px 20px;
 }
 
-.metrics-grid > div:last-child .metric-card {
+.metrics-grid>div:last-child .metric-card {
   border-right: 0;
 }
 
@@ -1352,9 +1350,9 @@ button {
   margin: 0;
 }
 
-.diligence-question-grid > div > p:not(.eyebrow),
-.diligence-diagram-grid > div > p:not(.eyebrow),
-.diligence-section-head > p:not(.eyebrow) {
+.diligence-question-grid>div>p:not(.eyebrow),
+.diligence-diagram-grid>div>p:not(.eyebrow),
+.diligence-section-head>p:not(.eyebrow) {
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.75;
@@ -1865,7 +1863,7 @@ button {
   margin: 0;
 }
 
-.diligence-recovery-note p + p {
+.diligence-recovery-note p+p {
   color: var(--muted);
   font-size: 1rem;
   font-weight: 400;
@@ -2008,8 +2006,8 @@ button {
   margin: 0;
 }
 
-.capital-question-grid > div > p:not(.eyebrow),
-.capital-diagram-grid > div > p:not(.eyebrow) {
+.capital-question-grid>div>p:not(.eyebrow),
+.capital-diagram-grid>div>p:not(.eyebrow) {
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.75;
@@ -2151,7 +2149,7 @@ button {
   z-index: 1;
 }
 
-.wealth-era-timeline > div:last-child article::after {
+.wealth-era-timeline>div:last-child article::after {
   display: none;
 }
 
@@ -2629,6 +2627,7 @@ button {
 }
 
 @keyframes diligence-arrow {
+
   0%,
   100% {
     transform: translateY(0);
@@ -2992,13 +2991,13 @@ button {
   width: 100%;
 }
 
-.interest-option input:checked + span {
+.interest-option input:checked+span {
   background: var(--accent-soft);
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.interest-option input:focus-visible + span {
+.interest-option input:focus-visible+span {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -3175,7 +3174,7 @@ button {
   grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
 }
 
-.footer-grid > * {
+.footer-grid>* {
   min-width: 0;
 }
 
@@ -3356,7 +3355,7 @@ button {
   padding: 0 0 49px;
 }
 
-.case-block + .case-block {
+.case-block+.case-block {
   padding-top: 49px;
 }
 
@@ -3368,7 +3367,7 @@ button {
   margin: 0 0 21px;
 }
 
-.case-block > p {
+.case-block>p {
   color: var(--muted);
   font-size: 0.97rem;
   line-height: 1.82;
@@ -3556,7 +3555,7 @@ button {
   margin: 0 0 18px;
 }
 
-.not-found > p:not(.eyebrow) {
+.not-found>p:not(.eyebrow) {
   color: var(--muted);
   margin: 0 0 37px;
 }
@@ -3688,11 +3687,11 @@ button {
     border-bottom: 1px solid var(--line);
   }
 
-  .metrics-grid > div:nth-child(3n) .metric-card {
+  .metrics-grid>div:nth-child(3n) .metric-card {
     border-right: 0;
   }
 
-  .metrics-grid > div:nth-last-child(-n + 3) .metric-card {
+  .metrics-grid>div:nth-last-child(-n + 3) .metric-card {
     border-bottom: 0;
   }
 
@@ -4114,14 +4113,14 @@ button {
     width: 100%;
   }
 
-  .metrics-grid > div .metric-card,
-  .metrics-grid > div:nth-last-child(-n + 3) .metric-card {
+  .metrics-grid>div .metric-card,
+  .metrics-grid>div:nth-last-child(-n + 3) .metric-card {
     border-bottom: 1px solid var(--line);
     border-right: 0;
     min-height: auto;
   }
 
-  .metrics-grid > div:last-child .metric-card {
+  .metrics-grid>div:last-child .metric-card {
     border-bottom: 0;
   }
 
@@ -4267,6 +4266,7 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -4428,7 +4428,7 @@ button {
   scroll-margin-top: 105px;
 }
 
-.article-section + .article-section {
+.article-section+.article-section {
   padding-top: 72px;
 }
 
@@ -4468,11 +4468,9 @@ button {
 }
 
 .insight-briefing-section {
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--accent-soft) 58%, transparent),
-    color-mix(in srgb, var(--background-raised) 78%, transparent)
-  );
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--accent-soft) 58%, transparent),
+      color-mix(in srgb, var(--background-raised) 78%, transparent));
   border: 1px solid var(--line);
   border-radius: 18px;
   margin-bottom: 72px;
@@ -4732,7 +4730,7 @@ button {
   transform: rotate(180deg);
 }
 
-.article-expandable > div {
+.article-expandable>div {
   border-top: 1px solid var(--line);
   padding: 20px;
 }
@@ -5150,21 +5148,41 @@ button {
 }
 
 @media (max-width: 1050px) {
+
   .article-hero-grid,
-  .article-layout,
   .wealth-diagram {
     grid-template-columns: 1fr;
   }
 
-  .article-nav {
-    position: static;
+  .article-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    grid-template-columns: none;
   }
 
   .article-nav {
     display: flex;
     flex-wrap: nowrap;
     gap: 8px;
+    max-width: 100%;
+    min-width: 0;
     overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    padding: 10px 12px;
+    position: relative;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    top: auto;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .article-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .article-nav p {
@@ -5173,6 +5191,13 @@ button {
 
   .article-nav a {
     flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
+
+  .article-content {
+    min-width: 0;
+    width: 100%;
   }
 
   .insight-briefing-grid,
@@ -5204,8 +5229,18 @@ button {
     padding-block: 28px 68px;
   }
 
+  .article-content {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .article-layout>.article-nav {
+    align-self: start;
+    flex-shrink: 0;
+  }
+
   .article-section,
-  .article-section + .article-section {
+  .article-section+.article-section {
     padding-block: 54px;
   }
 
