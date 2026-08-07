@@ -13,6 +13,11 @@ const routes = [
     priority: 0.9,
     changeFrequency: "monthly",
   },
+  {
+    path: "/essays/the-systems-of-schooling",
+    priority: 0.9,
+    changeFrequency: "monthly",
+  },
   { path: "/frameworks", priority: 0.8, changeFrequency: "monthly" },
   { path: "/frameworks/iree", priority: 0.7, changeFrequency: "monthly" },
   {

@@ -8,6 +8,14 @@ export const essays = [
     status: "Read Essay",
   },
   {
+    title: "The Systems of Schooling: Into, Across and Beyond",
+    description:
+      "A systems-based essay on education as orientation, development, and transition toward a meaningful destination.",
+    category: "Education",
+    href: "/essays/the-systems-of-schooling",
+    status: "Read Essay",
+  },
+  {
     title: "Why Love Needs Systems",
     description:
       "A note on treating love as balance, conduct, value exchange, and interpretation.",

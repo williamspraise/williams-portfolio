@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server";
 
-const articleSlug = "why-america-became-rich";
-const metricsKey = `article:${articleSlug}:metrics`;
-const uniquesKey = `article:${articleSlug}:uniques`;
+const defaultArticleSlug = "why-america-became-rich";
+
+function getRedisKeys(articleSlug: string) {
+  return {
+    metricsKey: `article:${articleSlug}:metrics`,
+    uniquesKey: `article:${articleSlug}:uniques`,
+  };
+}
 
 const allowedEvents = new Set([
   "view",
@@ -119,7 +124,11 @@ async function redisPipeline(commands: unknown[][]) {
   return response.json() as Promise<Array<{ result: unknown }>>;
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const articleSlug = readString(searchParams.get("articleSlug")) || defaultArticleSlug;
+  const { metricsKey } = getRedisKeys(articleSlug);
+
   if (!redisConfig()) {
     return NextResponse.json(emptyStats(false));
   }
@@ -147,6 +156,8 @@ export async function POST(request: Request) {
   const event = readString(body.event);
   const visitorId = readString(body.visitorId).slice(0, 80);
   const reaction = readString(body.reaction);
+  const articleSlug = readString(body.articleSlug) || defaultArticleSlug;
+  const { metricsKey, uniquesKey } = getRedisKeys(articleSlug);
 
   if (!allowedEvents.has(event)) {
     return NextResponse.json({ error: "Invalid event." }, { status: 400 });

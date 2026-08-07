@@ -39,6 +39,8 @@ const sections = [
   { id: "reflection", label: "Reflection" },
 ];
 
+const articleSlug = "why-america-became-rich";
+
 const timeline = [
   {
     era: "Native America",
@@ -210,7 +212,7 @@ const emptyEngagementStats: EngagementStats = {
 };
 
 function getVisitorId() {
-  const key = "wp-article-visitor-id";
+  const key = `wp-article-visitor-id:${articleSlug}`;
 
   try {
     const existing = window.localStorage.getItem(key);
@@ -231,6 +233,7 @@ function trackArticleEvent(event: ArticleEvent, reaction?: Reaction) {
   const payload = JSON.stringify({
     event,
     reaction,
+    articleSlug,
     visitorId: getVisitorId(),
   });
 
@@ -257,6 +260,7 @@ async function postArticleEvent(event: ArticleEvent, reaction?: Reaction) {
     body: JSON.stringify({
       event,
       reaction,
+      articleSlug,
       visitorId: getVisitorId(),
     }),
   });
@@ -350,7 +354,7 @@ function ArticleEngagement() {
 
     async function loadStats() {
       try {
-        const response = await fetch("/api/article-engagement", {
+        const response = await fetch(`/api/article-engagement?articleSlug=${encodeURIComponent(articleSlug)}`, {
           cache: "no-store",
         });
         const nextStats = (await response.json()) as EngagementStats;
@@ -368,13 +372,13 @@ function ArticleEngagement() {
     window.setTimeout(() => {
       try {
         const saved = window.localStorage.getItem(
-          "wp-article-reaction:why-america-became-rich",
+          `wp-article-reaction:${articleSlug}`,
         );
 
         if (saved === "sharp_insight" || saved === "made_me_think") {
           setSelectedReaction(saved);
         }
-      } catch {}
+      } catch { }
     }, 0);
 
     void loadStats();
@@ -405,12 +409,12 @@ function ArticleEngagement() {
 
     try {
       window.localStorage.setItem(
-        "wp-article-reaction:why-america-became-rich",
+        `wp-article-reaction:${articleSlug}`,
         reaction,
       );
       const nextStats = await postArticleEvent("reaction", reaction);
       setStats(nextStats);
-    } catch {}
+    } catch { }
   }
 
   const showCounts =
