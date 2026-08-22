@@ -24,8 +24,8 @@ export const metadata = pageMetadata({
     "Williams Capital Allocation Engine",
     "Capital Allocation Engine",
     "Capital preservation",
-    "Operator investor",
-    "Venture operator",
+    "Capital Allocator",
+    "Founder Operator",
   ],
 });
 

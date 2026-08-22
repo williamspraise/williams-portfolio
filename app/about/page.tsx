@@ -6,9 +6,9 @@ import Navbar from "@/components/Navbar";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "The Story of Williams Praise | Capital Allocator, Operator & Sophisticated Advisor",
+  title: "The Story of Williams Praise | Capital Allocator + Operator",
   description:
-    "Discover how Williams Praise integrates capital allocation with premium retail operations (Shoppergetit) and professional leadership structures modeled on Ryan Leak and Pastor Mike Todd.",
+    "Discover how Williams Praise integrates capital allocation with product strategy, technical execution, systems thinking, and direct operating involvement.",
   path: "/about",
   keywords: [
     "About Williams Praise",
@@ -17,7 +17,7 @@ export const metadata = pageMetadata({
     "Shoppergetit Founder",
     "Product Builder",
     "Capital Allocator Biography",
-    "Executive Leadership",
+    "Systems Thinker",
   ],
 });
 
@@ -41,8 +41,8 @@ export default function AboutPage() {
               <span className="italic text-[var(--accent)]">Williams Praise</span>
             </h1>
             <p className="text-[clamp(1.1rem,1.8vw,1.3rem)] leading-relaxed text-[var(--muted)] font-serif max-w-2xl mx-auto">
-              Bridging the gap between strict capital stewardship, high-end consumer operations,
-              and executive presence.
+              Capital Allocator + Operator. Systems Thinker for Human Problems.
+              Product builder with direct operating involvement.
             </p>
           </div>
         </section>
@@ -56,7 +56,7 @@ export default function AboutPage() {
               <div className="lg:col-span-4 lg:sticky lg:top-28 h-fit">
                 <div className="border border-[var(--line)] rounded-xl p-6 bg-[var(--background-raised)]">
                   <span className="text-[0.68rem] tracking-wider text-[var(--accent)] uppercase font-bold block mb-4">
-                    THE ADVISORY VITALS
+                    OPERATING CAPABILITY
                   </span>
 
                   <div className="flex flex-col gap-6">
@@ -64,23 +64,23 @@ export default function AboutPage() {
                       <Users size={20} className="text-[var(--accent)] shrink-0" />
                       <div>
                         <strong className="text-[0.9rem] block text-[var(--foreground)]">900+ Professionals</strong>
-                        <span className="text-[0.8rem] text-[var(--muted)] block">Mentored globally in Product Design & UX.</span>
+                        <span className="text-[0.8rem] text-[var(--muted)] block">Mentored globally in product, design, UX, and execution.</span>
                       </div>
                     </div>
 
                     <div className="flex gap-3">
                       <Trophy size={20} className="text-[var(--accent)] shrink-0" />
                       <div>
-                        <strong className="text-[0.9rem] block text-[var(--foreground)]">Route 1 Execution</strong>
-                        <span className="text-[0.8rem] text-[var(--muted)] block">Fulfillment channels, custom packaging, Sony FX3 cinema media.</span>
+                        <strong className="text-[0.9rem] block text-[var(--foreground)]">Shoppergetit Evidence</strong>
+                        <span className="text-[0.8rem] text-[var(--muted)] block">Urban retail infrastructure for predictable distribution.</span>
                       </div>
                     </div>
 
                     <div className="flex gap-3">
                       <Sparkles size={20} className="text-[var(--accent)] shrink-0" />
                       <div>
-                        <strong className="text-[0.9rem] block text-[var(--foreground)]">Route 2 Sophistication</strong>
-                        <span className="text-[0.8rem] text-[var(--muted)] block">Modeling high-fashion, high-trust leadership advisory.</span>
+                        <strong className="text-[0.9rem] block text-[var(--foreground)]">Systems Thinking</strong>
+                        <span className="text-[0.8rem] text-[var(--muted)] block">Product, technology, capital, and human behaviour studied together.</span>
                       </div>
                     </div>
 
@@ -95,7 +95,7 @@ export default function AboutPage() {
 
                   <div className="mt-8 border-t border-[var(--line)] pt-6 text-center">
                     <p className="text-[0.78rem] text-[var(--muted)] italic leading-normal m-0">
-                      &ldquo;Presentation and operations share one integrated identity.&rdquo;
+                      &ldquo;The allocator and operator share one strategic brain.&rdquo;
                     </p>
                   </div>
                 </div>
@@ -105,27 +105,38 @@ export default function AboutPage() {
               <div className="lg:col-span-8 flex flex-col gap-8">
                 <MotionReveal>
                   <p className="font-serif text-[clamp(1.2rem,2.2vw,1.48rem)] leading-relaxed text-[var(--foreground)] mb-6">
-                    Williams Praise is an allocator-operator who rejected the passive board-room model to work directly at the friction points of technology, logistics, design, and human psychology.
+                    Williams Praise is a Capital Allocator + Operator who raises
+                    and allocates capital into productive businesses he can help
+                    build and operate.
                   </p>
                   <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
-                    The traditional boundary of a capital allocator is passive observation. You raise capital, deploy it into a company, wait for reports, and pray the managers execute. Williams realized that passive intermediation fails in high-growth, highly-constrained environments. Real growth demands active, operational proximity.
+                    His advantage is proximity. Capital judgment sits close to
+                    product strategy, technical execution, UX and human behaviour,
+                    founder operations, systems thinking, and the discipline to
+                    decide what the evidence actually says.
                   </p>
                 </MotionReveal>
 
-                {/* THE MANIFESTO INSERTION */}
+                {/* POSITIONING INSERTION */}
                 <MotionReveal className="bg-[var(--background-contrast)] rounded-xl border border-[var(--line)] p-8 my-4 relative overflow-hidden">
                   <div className="absolute top-0 right-0 h-24 w-24 bg-[var(--accent)]/5 rounded-full -mr-8 -mt-8 pointer-events-none" />
                   <Quote size={32} className="text-[var(--accent)]/10 mb-2" />
-                  <h3 className="font-serif text-[1.2rem] text-[var(--foreground)] mb-4">The Dual-Engine Vision</h3>
+                  <h3 className="font-serif text-[1.2rem] text-[var(--foreground)] mb-4">Approved Identity Layers</h3>
                   <p className="text-[0.94rem] text-[var(--muted)] leading-relaxed m-0 mb-4">
-                    Our platform executes across two highly synchronized tracks to maximize returns and expand brand power:
+                    The Williams architecture stays intentionally focused:
                   </p>
                   <ul className="text-[0.92rem] text-[var(--muted)] flex flex-col gap-3 pl-4 list-disc">
                     <li>
-                      <strong>Route 1 (The Asset Engine - Shoppergetit):</strong> Reimagining local consumer retail. We build full-stack commerce platforms, custom branded packaging layers, quarterly luxury print magazines, and cinematic video workflows shot on commercial Sony FX3 cinema lenses to bypass traditional passive retailing.
+                      <strong>Primary:</strong> Capital Allocator + Operator.
                     </li>
                     <li>
-                      <strong>Route 2 (The Personal Engine - Williams Praise Brand):</strong> Cultivating absolute personal sophistication, professional advisory, high-trust coaching, and refined wardrobe settings. This is modeled heavily on Ryan Leak&apos;s clean professionalism and Pastor Mike Todd&apos;s charismatic, elegant, high-impact public presence.
+                      <strong>Intellectual foundation:</strong> Systems Thinker for Human Problems.
+                    </li>
+                    <li>
+                      <strong>Evidence:</strong> Ventures and product work, especially Shoppergetit.
+                    </li>
+                    <li>
+                      <strong>Engagement:</strong> Capital Partnership or Work With Williams.
                     </li>
                   </ul>
                 </MotionReveal>
@@ -136,7 +147,10 @@ export default function AboutPage() {
                     Beyond shipping commerce platforms, Williams has actively shaped the product landscape. He has mentored over 900+ professionals, startup founders, and students in Product Engineering, User Experience Architecture, and visual execution across South Korea, India, Switzerland, the United States, and Nigeria.
                   </p>
                   <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
-                    This deep investment in human relationships is not a passive side-project; it is a core diagnostic funnel. Mentorship provides direct, ground-level feedback on what frameworks work, where engineers encounter friction, and how digital interfaces must be designed to speak to authentic human behaviors.
+                    This work supports the operating layer. Mentorship provides
+                    direct, ground-level feedback on where builders encounter
+                    friction and how digital interfaces must be designed around
+                    real human behaviour.
                   </p>
                 </MotionReveal>
 
@@ -175,10 +189,10 @@ export default function AboutPage() {
             <MotionReveal>
               <h2 className="font-serif text-[clamp(1.8rem,3.2vw,2.5rem)] leading-tight text-[var(--foreground)] mb-8">
                 &ldquo;We don&apos;t just allocate the capital. <br />
-                We enter the system it is building and guide it to sovereign maturity.&rdquo;
+                We enter the system it is building and let direct evidence guide the next decision.&rdquo;
               </h2>
               <p className="text-[var(--accent)] font-mono text-[0.76rem] tracking-[0.15em] uppercase m-0">
-                — WILLIAMS PRAISE, CHIEF ALLOCATOR & OPERATOR
+                WILLIAMS PRAISE, CAPITAL ALLOCATOR + OPERATOR
               </p>
             </MotionReveal>
           </div>

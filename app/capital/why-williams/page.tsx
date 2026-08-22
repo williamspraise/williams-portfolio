@@ -27,7 +27,6 @@ export const metadata = pageMetadata({
   keywords: [
     "Why Williams Praise",
     "Capital Allocator",
-    "Operator Investor",
     "Founder Operator",
     "Technical Product Leader",
     "African founder operator",

@@ -38,15 +38,13 @@ export const coreSeoKeywords = [
   "Williams Praise capital allocator",
   "Williams Praise Nigeria",
   "Capital Allocator Nigeria",
-  "Operator Investor",
   "Founder Operator",
   "Capital Allocation",
   "Capital Allocation Engine",
   "African capital allocator",
   "African founder operator",
-  "Venture Operator",
   "Nigerian entrepreneur",
-  "Williams Praise technical product lead",
+  "Williams Praise technical product leader",
   "Williams Praise founder",
   "Williams Ecosystem",
   "Williams Praise",
@@ -56,7 +54,7 @@ export const coreSeoKeywords = [
   "Founder-Operator",
   "Founder Operator",
   "Product Builder",
-  "Technical Product Lead",
+  "Technical Product Leader",
   "Founding Product Lead",
   "Product Strategist",
   "Technical Product Manager",
@@ -64,7 +62,6 @@ export const coreSeoKeywords = [
   "UX Design Mentor",
   "Framework Creator",
   "Capital Allocator",
-  "Capital Allocation Thinker",
   "Investment Philosophy",
   "Product Strategy",
   "Product Leadership",
@@ -104,7 +101,7 @@ export const coreSeoKeywords = [
 ];
 
 export const canonicalIdentityDescription =
-  "Williams Praise, also known as Williams Emmanuel Praise, is a Nigeria-based capital allocator, founder-operator, product builder, technical product lead, systems thinker, framework creator, and founder of Shoppergetit.";
+  "Williams Praise, also known as Williams Emmanuel Praise, is a Nigeria-based Capital Allocator + Operator, Systems Thinker for Human Problems, founder-operator, product builder, technical product leader, and founder of Shoppergetit.";
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
@@ -165,7 +162,7 @@ export const personJsonLd = {
   alternateName: identityKeywords.filter((keyword) => keyword !== authorName),
   description: canonicalIdentityDescription,
   disambiguatingDescription:
-    "Williams Praise is the capital allocator, operator, product builder, systems thinker, technical product lead, and Shoppergetit founder represented by williamspraise.com and the LinkedIn profile iam-williams.",
+    "Williams Praise is the Capital Allocator + Operator, Systems Thinker for Human Problems, product builder, technical product leader, and Shoppergetit founder represented by williamspraise.com and the LinkedIn profile iam-williams.",
   url: siteUrl,
   mainEntityOfPage: {
     "@id": `${siteUrl}/about#profile`,
@@ -181,13 +178,11 @@ export const personJsonLd = {
     name: "Nigeria",
   },
   jobTitle: [
-    "Capital Allocator and Operator",
-    "Systems Thinker",
+    "Capital Allocator + Operator",
+    "Systems Thinker for Human Problems",
     "Founder-Operator",
     "Product Builder",
-    "Technical Product Lead",
-    "Framework Creator",
-    "Capital Allocation Thinker",
+    "Technical Product Leader",
   ],
   worksFor: {
     "@type": "Organization",
@@ -241,7 +236,6 @@ export const personJsonLd = {
     "Capital Allocation Engine",
     "Capital Stewardship",
     "Investment Philosophy",
-    "Operator Investing",
     "Marketplace Systems",
     "Urban Retail Infrastructure",
     "Predictable Distribution",

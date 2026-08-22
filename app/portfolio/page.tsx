@@ -23,9 +23,9 @@ export const metadata = pageMetadata({
     "Williams Praise portfolio",
     "Williams Praise Product Builder",
     "Williams Praise founder of Shoppergetit",
-    "Williams Praise Technical Product Lead",
+    "Williams Praise Technical Product Leader",
     "Product Builder",
-    "Technical Product Lead",
+    "Technical Product Leader",
     "Founding Product Lead",
     "Technical Product Manager",
     "Product Strategist",
@@ -118,7 +118,7 @@ export default function PortfolioPage() {
             <MotionReveal className="about-copy" delay={0.08}>
               <p className="lead">
                 I am Williams Praise, a founder-operator and technical product
-                lead with experience building and shipping products across
+                leader with experience building and shipping products across
                 commerce, AI mobility, education, and healthtech.
               </p>
               <p>
@@ -164,7 +164,7 @@ export default function PortfolioPage() {
               <p className="eyebrow">Resume</p>
               <h2>Ready to build with an early-stage team.</h2>
               <p>
-                Target roles: Founding Product Lead, Technical Product Lead,
+                Target roles: Founding Product Lead, Technical Product Leader,
                 Product Strategist, Technical Product Manager, and
                 Founder-Operator.
               </p>

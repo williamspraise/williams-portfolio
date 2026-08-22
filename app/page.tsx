@@ -35,37 +35,36 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Williams Praise - Capital Allocator, Operator & Systems Thinker",
   description:
-    "Williams Praise raising and deploying capital into premium commerce, high-trust advisory, and robust operating assets. Operator of Shoppergetit, mentoring 900+ professionals globally.",
+    "Williams Praise raises and allocates capital into productive businesses he can help build and operate, including Shoppergetit urban retail infrastructure.",
   path: "/",
   keywords: [
     "Williams Praise",
     "Capital Allocator Nigeria",
-    "Operator Investor",
     "Founder Operator",
     "Shoppergetit Founder",
     "African capital allocator",
     "Mentorship and Leadership",
-    "Premium Commerce Operations",
+    "Urban Retail Infrastructure",
   ],
 });
 
 const capabilityCards = [
   {
-    title: "Dual-Engine Operations",
+    title: "Product Strategy",
     text:
-      "We build premium retail operations with Route 1 (Shoppergetit) while raising sophistication, style, and leadership via Route 2 advisory pipelines.",
-    icon: Sparkles,
-  },
-  {
-    title: "Proximity & Diagnostics",
-    text:
-      "We don't watch from a passive distance. We walk the retail floor, inspect logistics, adjust code, and refine user psychology directly.",
+      "Clarify the customer problem, the operating constraint, and the product path that turns capital into useful work.",
     icon: BriefcaseBusiness,
   },
   {
-    title: "Intellectual Signature",
+    title: "Technical Execution",
     text:
-      "Identify the true systemic forces, name the root cause, design precise human interventions, and track performance signals.",
+      "Move from thesis to working systems through hands-on product, technology, workflow, and implementation discipline.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Systems Thinking",
+    text:
+      "Study how product, technology, capital, human behavior, and operations influence one another inside a live system.",
     icon: Brain,
   },
 ];
@@ -83,23 +82,24 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-4">
                 <span className="h-[1px] w-8 bg-[var(--accent)]"></span>
                 <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
-                  AN UNCONVENTIONAL OPERATOR
+                  CAPITAL ALLOCATOR + OPERATOR
                 </p>
               </div>
               <h1 className="font-serif text-[clamp(2.5rem,5.5vw,4.8rem)] leading-[1.05] tracking-tight text-[var(--foreground)] mb-6">
-                Raising Capital. <br />
-                Building Operating Systems. <br />
-                <span className="text-[var(--accent)] italic">Creating Direct Proof.</span>
+                Williams Praise. <br />
+                Capital Allocator + Operator. <br />
+                <span className="text-[var(--accent)] italic">Systems Thinker for Human Problems.</span>
               </h1>
 
               <p className="hero-subtitle text-[clamp(1.1rem,1.8vw,1.35rem)] leading-relaxed text-[var(--muted)] mb-8 font-serif">
-                I am Williams Praise. I raise capital and deploy it directly into high-growth,
-                premium ventures that I build, manage, and steward from the ground up.
+                I raise and allocate capital into productive businesses I can help build
+                and operate.
               </p>
 
               <div className="border-l-2 border-[var(--accent)] pl-6 py-2 mb-8 bg-[var(--background-contrast)]/30 rounded-r-lg">
                 <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed m-0 italic">
-                  &ldquo;Passivity is the enemy of capital. We do not pass capital to passive intermediaries. We enter the arena, redesign the distribution flow, and capture true evidence.&rdquo;
+                  &ldquo;The model combines capital allocation with product, technology,
+                  human behaviour, systems thinking, and direct operating involvement.&rdquo;
                 </p>
               </div>
 
@@ -164,24 +164,26 @@ export default function Home() {
                   THE OPERATIONAL ADVANTAGE
                 </p>
                 <h3 className="font-serif text-[1.4rem] text-white leading-snug mb-3">
-                  Systems Thinking, Refined Style, and High-Trust Proximity.
+                  Capital judgment with direct operating capability.
                 </h3>
                 <p className="text-[#a9b8bd] text-[0.91rem] leading-relaxed">
-                  Combining meticulous systems engineering with premium aesthetic standards. Modeled on professional advisory structures to elevate both digital operations and physical logistics.
+                  Williams can inspect and influence product, technology, customer
+                  behaviour, and operations directly instead of depending only on
+                  distant reporting layers.
                 </p>
               </div>
             </MotionReveal>
           </div>
         </section>
 
-        {/* DUAL ENGINE PATHWAY MANIFESTO */}
+        {/* CAPITAL JOURNEY */}
         <section className="section bg-[var(--background-contrast)] border-b border-[var(--line)]">
           <div className="container home-model-grid">
             <MotionReveal className="flex flex-col justify-center">
               <SectionHeader
-                eyebrow="The Two-Track Model"
-                title="Building Assets via Route 1. Elevating Leadership via Route 2."
-                description="We operate across two distinct but reinforcing tracks. Route 1 executes on retail infrastructure, premium commerce packaging, and logistics. Route 2 commands personal sophistication, professional speaking, and trusted advisor network systems."
+                eyebrow="The Capital Journey"
+                title="Raise capital, allocate it, build with it, and let evidence govern the next decision."
+                description="The Williams model is simple first: raise capital, allocate into productive ventures, build and operate, create revenue and evidence, then grow, recover, stop, or reallocate from a stronger position."
               />
               <div className="flex flex-wrap gap-4 mt-4">
                 <ButtonLink href="/capital">Access the Capital Hub</ButtonLink>
@@ -206,9 +208,9 @@ export default function Home() {
           <div className="container">
             <MotionReveal>
               <SectionHeader
-                eyebrow="Active Operations - Route 1"
-                title="Shoppergetit: Premium Retail Infrastructure & Predictable Distribution"
-                description="A physical and digital asset engineered to connect retail inventories with premium consumers. From branded luxury tote bags and printed quarterly magazines to Sony FX3 cinema-grade narrative content, we have built a luxury retail layer from Nigeria outward."
+                eyebrow="Active Operations"
+                title="Shoppergetit: Urban retail infrastructure for predictable distribution."
+                description="Shoppergetit connects local retailers, customer demand, and fulfilment through one intelligent commerce system."
               />
             </MotionReveal>
 
@@ -221,7 +223,9 @@ export default function Home() {
                   </div>
                   <FlowDiagram items={shoppergetitAllocation.model} />
                   <p className="mt-6 text-[#a9b8bd] text-[0.93rem] leading-relaxed">
-                    Shoppergetit bypasses passive retail models. By utilizing premium packaging identity, scheduled try-it-on quarterly events, and streamlined fulfillment channels, we enforce absolute quality control and predictable distribution.
+                    Cities already have retailers, inventory, and demand. What is
+                    broken is how fragmented those pieces are. More customers
+                    shouldn&apos;t require more warehouses and more people.
                   </p>
                 </div>
                 <div className="mt-8 border-t border-[var(--panel-line)] pt-4">
@@ -250,47 +254,51 @@ export default function Home() {
           </div>
         </section>
 
-        {/* COMPARISON - passive vs active operator */}
+        {/* MODEL COMPARISON */}
         <section className="section bg-[var(--background-contrast)] border-y border-[var(--line)]">
           <div className="container">
             <MotionReveal>
               <SectionHeader
-                eyebrow="Proximity MOAT"
-                title="The Operator Moat: passive investing is broken under constraints."
-                description="Passive investors wait for monthly dashboards, completely insulated from the market realities. Williams operates inside the machinery, detecting operational friction, and adjusting execution in real-time."
+                eyebrow="Why This Model Is Different"
+                title="Williams doesn't only allocate the capital. He can enter the system it is building."
+                description="The difference is proximity. The Williams model gives him the ability to inspect and influence product, technology, customer behaviour, and operations directly."
               />
             </MotionReveal>
             <div className="diligence-moat-comparison mt-12">
               <MotionReveal>
                 <article className="h-full bg-[var(--background-raised)] border border-[var(--line)] p-8 rounded-xl">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase block mb-3">PASSIVE PATHWAY</span>
-                  <h3 className="font-serif text-[1.2rem] text-[var(--foreground)] mb-6">Passive/Conventional Allocation</h3>
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase block mb-3">CONVENTIONAL DISTANCE</span>
+                  <h3 className="font-serif text-[1.2rem] text-[var(--foreground)] mb-6">Traditional Allocation</h3>
                   <FlowDiagram items={conventionalAllocationFlow} />
                   <p className="mt-6 text-[0.88rem] text-[var(--muted)] leading-relaxed">
-                    Dependent entirely on highly-abstracted reports, lagging metrics, and intermediary layers. Incapable of diagnosing structural execution failure until the capital is depleted.
+                    Traditional allocators may depend more heavily on external
+                    operating teams, reporting layers, and delayed evidence before
+                    making the next capital decision.
                   </p>
                 </article>
               </MotionReveal>
               <MotionReveal delay={0.06}>
                 <article className="engine-view h-full bg-[var(--panel)] border border-[var(--panel-line)] p-8 rounded-xl text-white">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--accent)] uppercase block mb-3">ACTIVE PATHWAY</span>
+                  <span className="text-[0.68rem] tracking-wider text-[var(--accent)] uppercase block mb-3">WILLIAMS MODEL</span>
                   <h3 className="font-serif text-[1.2rem] text-white mb-6">Williams Praise System</h3>
                   <FlowDiagram items={williamsAllocationFlow} />
                   <p className="mt-6 text-[0.88rem] text-[#a9b8bd] leading-relaxed">
-                    Direct operational loop feedback. We observe buyer psychology, execute try-it-on product events, inspect visual aesthetics, and optimize code personally. Precision pivot.
+                    Capital flows through an allocator-operator who can build,
+                    diagnose, intervene, observe direct evidence, and use that
+                    evidence for the next capital decision.
                   </p>
                 </article>
               </MotionReveal>
             </div>
             <div className="mt-12 text-center">
               <ButtonLink href="/capital/why-williams" variant="secondary">
-                Learn why active proximity protects capital
+                Learn why proximity matters
               </ButtonLink>
             </div>
           </div>
         </section>
 
-        {/* REFINED ADVISORY LEADERSHIP: ROUTE 2 */}
+        {/* PROFESSIONAL PATHWAY */}
         <section className="section bg-[var(--background)]">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -298,28 +306,32 @@ export default function Home() {
                 <div className="flex items-center gap-2 mb-4">
                   <span className="h-[1px] w-8 bg-[var(--accent)]"></span>
                   <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
-                    ROUTE 2 - PRESENCE & ADVISORY
+                    WORK WITH WILLIAMS
                   </p>
                 </div>
                 <h2 className="font-serif text-[clamp(2rem,3.5vw,2.8rem)] leading-tight text-[var(--foreground)] mb-6">
-                  Advisory, Speaking & Executive Sophistication
+                  Product, technical, UX, and founder operating work.
                 </h2>
                 <p className="text-[var(--muted)] text-[1.02rem] leading-relaxed mb-6">
-                  Modeled on professional leadership blue-prints. We advise founders, lead deep conversational structures, and mentor the next generation.
+                  Professional work remains a secondary pathway beneath the
+                  Capital Allocator + Operator positioning. It is one way to
+                  engage Williams&apos; product, technical, UX, and operating capability.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-4">
                   <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
                     <TrendingUp size={24} className="text-[var(--accent)] mb-3" />
                     <h4 className="font-serif text-[1.08rem] font-bold mb-2">900+ Mentored</h4>
                     <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
-                      Guided product engineers, UX specialists, and builders globally under high-trust mentorship structures.
+                      Guided product engineers, UX specialists, founders, and
+                      builders through product, UX, and execution questions.
                     </p>
                   </div>
                   <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
                     <UserCheck size={24} className="text-[var(--accent)] mb-3" />
-                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">Refined Staging</h4>
+                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">Operating Capability</h4>
                     <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
-                      Deploying top-tier video documentation, curated studio staging, and public advisory speaking.
+                      Product strategy, technical execution, UX and human behaviour,
+                      founder operations, systems thinking, and capital discipline.
                     </p>
                   </div>
                 </div>
@@ -333,7 +345,8 @@ export default function Home() {
                   <div className="absolute top-0 right-0 h-24 w-24 bg-[var(--accent-soft)] rounded-full -mr-8 -mt-8 opacity-50 pointer-events-none" />
                   <Quote size={40} className="text-[var(--accent)]/20 mb-4" />
                   <blockquote className="font-serif text-[1.15rem] leading-relaxed text-[var(--foreground)] mb-6 italic">
-                    &ldquo;People don&apos;t just invest in systems; they align with growth, presentation, and evidence. You must model professionalism and carry deep personal elegance to secure absolute trust.&rdquo;
+                    &ldquo;The allocator and operator share one strategic brain. Each
+                    serious build should make the next one less blind.&rdquo;
                   </blockquote>
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-mono text-[0.82rem] font-bold">
@@ -341,7 +354,7 @@ export default function Home() {
                     </div>
                     <div>
                       <strong className="text-[0.92rem] text-[var(--foreground)] block">Williams Praise</strong>
-                      <span className="text-[0.74rem] text-[var(--muted)] block">Advisor, Operator, & Stylist Thinker</span>
+                      <span className="text-[0.74rem] text-[var(--muted)] block">Capital Allocator + Operator</span>
                     </div>
                   </div>
                 </div>
@@ -356,8 +369,8 @@ export default function Home() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="The Capabilities"
-                title="Bespoke Operational Architecture"
-                description="Integrating three core disciplines to execute product, engineering, and capital stewardship flawlessly."
+                title="Operating capability behind the capital thesis."
+                description="The work is grounded in product strategy, technical execution, UX and human behaviour, founder operations, systems thinking, and capital allocation discipline."
               />
             </MotionReveal>
             <div className="capability-grid mt-12">
@@ -386,8 +399,8 @@ export default function Home() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="The Capital Engine"
-                title="Sovereign, systematic deployment."
-                description="We follow a non-negotiable operational cycle to protect our liquidity, test deep product-market fit, and deploy further capital only on verified customer evidence."
+                title="Preserve, deploy, measure, decide, return, repeat."
+                description="The operating cycle protects liquidity, watches evidence, and makes the next capital decision from what the build actually reveals."
               />
             </MotionReveal>
             <MotionReveal className="engine-step-grid mt-12" delay={0.08}>
@@ -408,8 +421,8 @@ export default function Home() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="The Operating Portfolio"
-                title="Productive Assets Under Active Stewardship"
-                description="A list of operating systems, commercial infrastructure, and custom framework networks being nurtured."
+                title="Ventures and product work under active stewardship."
+                description="Operating systems, commercial infrastructure, and product work that show how the capital thesis becomes practical evidence."
               />
             </MotionReveal>
             <div className="venture-grid compact mt-12">
@@ -428,8 +441,8 @@ export default function Home() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="Stewardship & Diligence"
-                title="Knowing when to stop is a sovereign capability."
-                description="We protect principal, retain complete visibility, and enforce pre-set abort signals to stop allocation the moment evidence fails to back the operating hypothesis."
+                title="Knowing when to stop is part of allocation discipline."
+                description="Capital stewardship protects principal, keeps visibility, and uses evidence gates to decide whether to increase, hold, redirect, or stop."
               />
               <div className="mt-4">
                 <ButtonLink href="/capital/stewardship" variant="secondary">
@@ -452,8 +465,8 @@ export default function Home() {
         {/* CALL TO ACTIONS */}
         <CTASection
           eyebrow="The Capital Hub"
-          title="Explore the sovereign capital framework."
-          description="Access philosophy records, engine loops, direct records, stewardship details, and investor pipeline dialogues."
+          title="Explore the capital framework."
+          description="Access the allocation philosophy, capital engine, allocation record, Why Williams, stewardship details, and partnership pathway."
           primaryHref="/capital"
           primaryLabel="Start the Capital Journey"
           secondaryHref="/capital/partnership"
@@ -467,7 +480,7 @@ export default function Home() {
               <SectionHeader
                 eyebrow="Intellectual Signature"
                 title="The ideas that drive the operator"
-                description="Bespoke essays examining social systems, economic models, architectural engineering, and capital loops."
+                description="Essays examining social systems, economic models, human behaviour, and execution."
               />
             </MotionReveal>
             <div className="essay-grid mt-12">
@@ -481,9 +494,9 @@ export default function Home() {
         </section>
 
         <CTASection
-          eyebrow="Bespoke Engineering"
-          title="Direct Product Portfolios"
-          description="Review product mockups, codebase repositories, ux systems, and 0-to-1 operational deployments engineered by Williams."
+          eyebrow="Operating Capability"
+          title="Product portfolio"
+          description="Review product work, UX systems, and 0-to-1 operating deployments built or led by Williams."
           primaryHref="/portfolio"
           primaryLabel="View Product Portfolios"
           secondaryHref="/contact"
@@ -499,16 +512,17 @@ export default function Home() {
 
 const conventionalAllocationFlow = [
   "Capital Base",
-  "Venture Intermediary",
-  "Externalpassive Operators",
-  "Highly Abstracted Reports",
-  "Capital Pivot / Exit",
+  "External Operating Team",
+  "Reporting Layer",
+  "Delayed Evidence",
+  "Next Capital Decision",
 ];
 
 const williamsAllocationFlow = [
-  "Capital Base",
-  "Williams Active Operator",
-  "Direct Diagnostics & Interventions",
-  "Frictionless Operating Venture",
-  "Customer & Operating Evidence",
+  "Capital",
+  "Williams - Allocator + Operator",
+  "Build / Diagnose / Intervene",
+  "Operating Venture",
+  "Direct Evidence",
+  "Next Capital Decision",
 ];

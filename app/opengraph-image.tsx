@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Williams Praise - Product Builder and Technical Product Lead";
+export const alt = "Williams Praise - Capital Allocator + Operator";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -33,13 +33,13 @@ export default function OpenGraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ display: "flex", fontSize: 64, fontWeight: 700 }}>
-            Product Builder &amp;
+            Capital Allocator
           </div>
           <div style={{ display: "flex", fontSize: 64, fontWeight: 700 }}>
-            Technical Product Lead
+            + Operator
           </div>
           <div style={{ color: "#9babb1", display: "flex", fontSize: 26 }}>
-            Turning ambiguous problems into shipped systems.
+            Systems Thinker for Human Problems.
           </div>
         </div>
       </div>

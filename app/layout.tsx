@@ -13,7 +13,7 @@ import "./globals.css";
 
 const title = "Williams Praise - Capital Allocator, Operator & Systems Thinker";
 const description =
-  "Official website of Williams Praise, also known as Williams Emmanuel Praise: capital allocator and operator, founder of Shoppergetit, systems thinker, product builder, technical product lead, and framework creator.";
+  "Official website of Williams Praise, also known as Williams Emmanuel Praise: Capital Allocator + Operator, Systems Thinker for Human Problems, founder of Shoppergetit, product builder, and technical product leader.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Williams Praise - Capital Allocator, Operator, Systems Thinker, and Product Builder",
+        alt: "Williams Praise - Capital Allocator + Operator and Systems Thinker for Human Problems",
       },
     ],
   },

@@ -17,7 +17,9 @@ Primary identity:
 - Name: Williams Praise
 - Also known as: Williams Emmanuel Praise, iam-williams
 - Location: Abuja, Nigeria / remote global
-- Roles: founder-operator, product builder, technical product lead, systems thinker, framework creator, capital allocation thinker
+- Primary role: Capital Allocator + Operator
+- Intellectual identity: Systems Thinker for Human Problems
+- Supporting roles: founder-operator, product builder, technical product leader
 - Founder of: Shoppergetit
 
 Associated ventures and work:
