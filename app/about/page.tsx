@@ -117,32 +117,56 @@ export default function AboutPage() {
                   </p>
                 </MotionReveal>
 
-                {/* POSITIONING INSERTION */}
+                {/* PUBLIC-FACING CONNECTION SECTION */}
                 <MotionReveal className="bg-[var(--background-contrast)] rounded-xl border border-[var(--line)] p-8 my-4 relative overflow-hidden">
                   <div className="absolute top-0 right-0 h-24 w-24 bg-[var(--accent)]/5 rounded-full -mr-8 -mt-8 pointer-events-none" />
                   <Quote size={32} className="text-[var(--accent)]/10 mb-2" />
-                  <h3 className="font-serif text-[1.2rem] text-[var(--foreground)] mb-4">Approved Identity Layers</h3>
-                  <p className="text-[0.94rem] text-[var(--muted)] leading-relaxed m-0 mb-4">
-                    The Williams architecture stays intentionally focused:
+                  <p className="eyebrow mb-3">What connects the work</p>
+                  <h2 className="font-serif text-[1.55rem] text-[var(--foreground)] mb-4">
+                    One way of thinking, applied across different systems.
+                  </h2>
+                  <p className="text-[0.98rem] text-[var(--muted)] leading-relaxed m-0 mb-6">
+                    Williams works across capital, products, technology,
+                    businesses, and human behaviour through the same underlying
+                    discipline: understand the system, identify what is producing
+                    the outcome, intervene where leverage exists, and learn from
+                    the evidence.
                   </p>
-                  <ul className="text-[0.92rem] text-[var(--muted)] flex flex-col gap-3 pl-4 list-disc">
-                    <li>
-                      <strong>Primary:</strong> Capital Allocator + Operator.
-                    </li>
-                    <li>
-                      <strong>Intellectual foundation:</strong> Systems Thinker for Human Problems.
-                    </li>
-                    <li>
-                      <strong>Evidence:</strong> Ventures and product work, especially Shoppergetit.
-                    </li>
-                    <li>
-                      <strong>Engagement:</strong> Capital Partnership or Work With Williams.
-                    </li>
-                  </ul>
+                  <div className="grid grid-cols-1 gap-5">
+                    <div>
+                      <h3 className="font-serif text-[1.1rem] text-[var(--foreground)] mb-2">
+                        Capital Allocator + Operator
+                      </h3>
+                      <p className="text-[0.92rem] text-[var(--muted)] leading-relaxed m-0">
+                        Williams raises and allocates capital into productive
+                        businesses he can help build and operate.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-[1.1rem] text-[var(--foreground)] mb-2">
+                        Systems Thinker for Human Problems
+                      </h3>
+                      <p className="text-[0.92rem] text-[var(--muted)] leading-relaxed m-0">
+                        Systems thinking is the intellectual method behind how
+                        Williams studies behaviour, products, organizations, and
+                        capital.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-[1.1rem] text-[var(--foreground)] mb-2">
+                        Product + Technical Operator
+                      </h3>
+                      <p className="text-[0.92rem] text-[var(--muted)] leading-relaxed m-0">
+                        Product strategy, UX, technology, and direct implementation
+                        give Williams the ability to move from diagnosis into
+                        execution.
+                      </p>
+                    </div>
+                  </div>
                 </MotionReveal>
 
                 <MotionReveal>
-                  <h3 className="font-serif text-[1.4rem] text-[var(--foreground)] mb-4">A Legacy of Global Guidance</h3>
+                  <h3 className="font-serif text-[1.4rem] text-[var(--foreground)] mb-4">Professional Mentorship</h3>
                   <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
                     Beyond shipping commerce platforms, Williams has actively shaped the product landscape. He has mentored over 900+ professionals, startup founders, and students in Product Engineering, User Experience Architecture, and visual execution across South Korea, India, Switzerland, the United States, and Nigeria.
                   </p>
@@ -157,7 +181,7 @@ export default function AboutPage() {
                 <MotionReveal>
                   <h3 className="font-serif text-[1.4rem] text-[var(--foreground)] mb-4">Original Intellectual Frameworks</h3>
                   <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
-                    Williams Praise is the author of several systems thinking architectures that merge human behavior with execution dynamics:
+                    Williams Praise is the author of several systems thinking frameworks that merge human behavior with execution dynamics:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                     <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
@@ -172,9 +196,19 @@ export default function AboutPage() {
                 </MotionReveal>
 
                 <MotionReveal className="border-t border-[var(--line)] pt-8 mt-4">
+                  <p className="eyebrow mb-3">Allocator + Operator</p>
+                  <h2 className="font-serif text-[clamp(1.8rem,3vw,2.4rem)] text-[var(--foreground)] mb-4">
+                    Why Williams?
+                  </h2>
+                  <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
+                    Williams&apos; advantage is not one isolated skill. It is the
+                    combination of capital judgment, systems thinking, product and
+                    technical capability, human behaviour, and direct founder
+                    operating experience inside one decision-maker.
+                  </p>
                   <div className="flex flex-wrap gap-4">
-                    <ButtonLink href="/capital">Explore the Capital Hub <ArrowRight size={15} /></ButtonLink>
-                    <ButtonLink href="/portfolio" variant="secondary">View Product Portfolios</ButtonLink>
+                    <ButtonLink href="/capital/why-williams">Explore Why Williams <ArrowRight size={15} /></ButtonLink>
+                    <ButtonLink href="/portfolio" variant="secondary">View Product Portfolio</ButtonLink>
                   </div>
                 </MotionReveal>
 

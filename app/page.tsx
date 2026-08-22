@@ -13,7 +13,6 @@ import Link from "next/link";
 import AudienceModalPrompt from "@/components/AudienceModalPrompt";
 import ButtonLink from "@/components/ButtonLink";
 import { FlowDiagram, StatusBadge } from "@/components/CapitalJourney";
-import CTASection from "@/components/CTASection";
 import EssayCard from "@/components/EssayCard";
 import Footer from "@/components/Footer";
 import MotionReveal from "@/components/MotionReveal";
@@ -80,7 +79,6 @@ export default function Home() {
           <div className="container home-capital-hero-grid py-12 md:py-20 lg:py-24">
             <MotionReveal className="home-capital-copy flex flex-col justify-center">
               <div className="flex items-center gap-2 mb-4">
-                <span className="h-[1px] w-8 bg-[var(--accent)]"></span>
                 <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
                   CAPITAL ALLOCATOR + OPERATOR
                 </p>
@@ -110,15 +108,15 @@ export default function Home() {
                   <strong className="text-[1rem] text-[var(--foreground)]">Shoppergetit</strong>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">ACTIVE DEMAND</span>
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">Customer Signups</span>
                   <strong className="text-[1rem] text-[var(--foreground)]">300+ Signups</strong>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">COMPLETED LOOPS</span>
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">Completed Orders</span>
                   <strong className="text-[1rem] text-[var(--foreground)]">100+ Orders</strong>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">GLOBAL GUIDANCE</span>
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">Professionals Mentored</span>
                   <strong className="text-[1rem] text-[var(--foreground)]">900+ Mentored</strong>
                 </div>
               </div>
@@ -131,7 +129,7 @@ export default function Home() {
                   Inspect Allocation Record
                 </ButtonLink>
                 <ButtonLink href="/portfolio" variant="quiet">
-                  View Product Portfolios
+                  View Product Portfolio
                 </ButtonLink>
               </div>
             </MotionReveal>
@@ -152,7 +150,7 @@ export default function Home() {
                 {/* FLOATING DESIGNER BADGE */}
                 <div className="absolute bottom-4 left-4 z-20 bg-[var(--background)]/90 backdrop-blur-md border border-[var(--line)] rounded-lg p-3 max-w-[280px] shadow-lg">
                   <span className="text-[0.68rem] text-[var(--accent)] font-bold tracking-wider uppercase block mb-1">
-                    OPERATOR PRINCIPLE
+                    HOW WILLIAMS OPERATES
                   </span>
                   <p className="text-[0.78rem] text-[var(--foreground)] m-0 leading-snug">
                     Designed, operating, and leading with human intuition and robust engineering.
@@ -171,33 +169,6 @@ export default function Home() {
                   behaviour, and operations directly instead of depending only on
                   distant reporting layers.
                 </p>
-              </div>
-            </MotionReveal>
-          </div>
-        </section>
-
-        {/* CAPITAL JOURNEY */}
-        <section className="section bg-[var(--background-contrast)] border-b border-[var(--line)]">
-          <div className="container home-model-grid">
-            <MotionReveal className="flex flex-col justify-center">
-              <SectionHeader
-                eyebrow="The Capital Journey"
-                title="Raise capital, allocate it, build with it, and let evidence govern the next decision."
-                description="The Williams model is simple first: raise capital, allocate into productive ventures, build and operate, create revenue and evidence, then grow, recover, stop, or reallocate from a stronger position."
-              />
-              <div className="flex flex-wrap gap-4 mt-4">
-                <ButtonLink href="/capital">Access the Capital Hub</ButtonLink>
-                <ButtonLink href="/capital/why-williams" variant="secondary">
-                  Why Allocator-Operator?
-                </ButtonLink>
-              </div>
-            </MotionReveal>
-            <MotionReveal delay={0.08}>
-              <div className="panel-flow bg-[var(--panel)] rounded-xl border border-[var(--panel-line)] p-8 shadow-xl">
-                <h3 className="font-serif text-white text-[1.28rem] mb-4 flex items-center gap-2">
-                  <Sparkles size={18} className="text-[var(--accent)]" /> Williams Allocation Engine
-                </h3>
-                <FlowDiagram items={homepageCapitalModel} className="panel-flow" />
               </div>
             </MotionReveal>
           </div>
@@ -267,7 +238,7 @@ export default function Home() {
             <div className="diligence-moat-comparison mt-12">
               <MotionReveal>
                 <article className="h-full bg-[var(--background-raised)] border border-[var(--line)] p-8 rounded-xl">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase block mb-3">CONVENTIONAL DISTANCE</span>
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase block mb-3">Traditional Allocator</span>
                   <h3 className="font-serif text-[1.2rem] text-[var(--foreground)] mb-6">Traditional Allocation</h3>
                   <FlowDiagram items={conventionalAllocationFlow} />
                   <p className="mt-6 text-[0.88rem] text-[var(--muted)] leading-relaxed">
@@ -280,7 +251,7 @@ export default function Home() {
               <MotionReveal delay={0.06}>
                 <article className="engine-view h-full bg-[var(--panel)] border border-[var(--panel-line)] p-8 rounded-xl text-white">
                   <span className="text-[0.68rem] tracking-wider text-[var(--accent)] uppercase block mb-3">WILLIAMS MODEL</span>
-                  <h3 className="font-serif text-[1.2rem] text-white mb-6">Williams Praise System</h3>
+                  <h3 className="font-serif text-[1.2rem] text-white mb-6">Williams Model</h3>
                   <FlowDiagram items={williamsAllocationFlow} />
                   <p className="mt-6 text-[0.88rem] text-[#a9b8bd] leading-relaxed">
                     Capital flows through an allocator-operator who can build,
@@ -298,119 +269,37 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PROFESSIONAL PATHWAY */}
+        {/* CAPITAL MODEL / ENGINE PREVIEW */}
         <section className="section bg-[var(--background)]">
-          <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <MotionReveal className="flex flex-col justify-center">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="h-[1px] w-8 bg-[var(--accent)]"></span>
-                  <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
-                    WORK WITH WILLIAMS
+          <div className="container home-model-grid">
+            <MotionReveal className="flex flex-col justify-center">
+              <SectionHeader
+                eyebrow="Capital Model"
+                title="Raise capital, allocate it, build with it, and let evidence govern the next decision."
+                description="The homepage version is intentionally simple: capital moves through productive work, evidence, recovery or growth, and reallocation from a stronger position."
+              />
+              <div className="flex flex-wrap gap-4 mt-4">
+                <ButtonLink href="/capital/engine">
+                  Explore Capital Engine <ArrowRight size={16} />
+                </ButtonLink>
+                <ButtonLink href="/capital" variant="secondary">
+                  View Capital Hub
+                </ButtonLink>
+              </div>
+            </MotionReveal>
+            <MotionReveal delay={0.08}>
+              <div className="panel-flow bg-[var(--panel)] rounded-xl border border-[var(--panel-line)] p-8 shadow-xl">
+                <h3 className="font-serif text-white text-[1.28rem] mb-4 flex items-center gap-2">
+                  <Sparkles size={18} className="text-[var(--accent)]" /> Capital Journey
+                </h3>
+                <FlowDiagram items={homepageCapitalModel} className="panel-flow" />
+                <div className="border-t border-[var(--panel-line)] mt-6 pt-6">
+                  <p className="panel-kicker text-[var(--accent)] font-bold tracking-[0.15em] text-[0.7rem] uppercase mb-3">
+                    Engine rhythm
                   </p>
+                  <FlowDiagram items={capitalEngineSteps.map((step) => step.step)} className="panel-flow" />
                 </div>
-                <h2 className="font-serif text-[clamp(2rem,3.5vw,2.8rem)] leading-tight text-[var(--foreground)] mb-6">
-                  Product, technical, UX, and founder operating work.
-                </h2>
-                <p className="text-[var(--muted)] text-[1.02rem] leading-relaxed mb-6">
-                  Professional work remains a secondary pathway beneath the
-                  Capital Allocator + Operator positioning. It is one way to
-                  engage Williams&apos; product, technical, UX, and operating capability.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-4">
-                  <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
-                    <TrendingUp size={24} className="text-[var(--accent)] mb-3" />
-                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">900+ Mentored</h4>
-                    <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
-                      Guided product engineers, UX specialists, founders, and
-                      builders through product, UX, and execution questions.
-                    </p>
-                  </div>
-                  <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
-                    <UserCheck size={24} className="text-[var(--accent)] mb-3" />
-                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">Operating Capability</h4>
-                    <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
-                      Product strategy, technical execution, UX and human behaviour,
-                      founder operations, systems thinking, and capital discipline.
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <ButtonLink href="/contact" variant="primary">Work with Williams</ButtonLink>
-                </div>
-              </MotionReveal>
-              <MotionReveal delay={0.08} className="relative flex justify-center items-center">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)]/5 to-transparent rounded-2xl pointer-events-none" />
-                <div className="bg-[var(--background-raised)] border border-[var(--line)] rounded-2xl p-8 max-w-lg shadow-xl relative overflow-hidden">
-                  <div className="absolute top-0 right-0 h-24 w-24 bg-[var(--accent-soft)] rounded-full -mr-8 -mt-8 opacity-50 pointer-events-none" />
-                  <Quote size={40} className="text-[var(--accent)]/20 mb-4" />
-                  <blockquote className="font-serif text-[1.15rem] leading-relaxed text-[var(--foreground)] mb-6 italic">
-                    &ldquo;The allocator and operator share one strategic brain. Each
-                    serious build should make the next one less blind.&rdquo;
-                  </blockquote>
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-mono text-[0.82rem] font-bold">
-                      WP
-                    </div>
-                    <div>
-                      <strong className="text-[0.92rem] text-[var(--foreground)] block">Williams Praise</strong>
-                      <span className="text-[0.74rem] text-[var(--muted)] block">Capital Allocator + Operator</span>
-                    </div>
-                  </div>
-                </div>
-              </MotionReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* SYSTEM CAPABILITIES SECTION */}
-        <section className="section bg-[var(--background-contrast)] border-y border-[var(--line)]">
-          <div className="container">
-            <MotionReveal>
-              <SectionHeader
-                eyebrow="The Capabilities"
-                title="Operating capability behind the capital thesis."
-                description="The work is grounded in product strategy, technical execution, UX and human behaviour, founder operations, systems thinking, and capital allocation discipline."
-              />
-            </MotionReveal>
-            <div className="capability-grid mt-12">
-              {capabilityCards.map((card, index) => {
-                const Icon = card.icon;
-
-                return (
-                  <MotionReveal key={card.title} delay={index * 0.04}>
-                    <article className="capability-card group hover:border-[var(--accent)] hover:shadow-md transition-all duration-300">
-                      <span className="capability-icon bg-[var(--accent-soft)] group-hover:bg-[var(--accent)] group-hover:text-white transition-all duration-300">
-                        <Icon size={21} />
-                      </span>
-                      <h3 className="font-serif text-[1.18rem] text-[var(--foreground)] mb-3">{card.title}</h3>
-                      <p className="text-[var(--muted)] text-[0.9rem] leading-relaxed">{card.text}</p>
-                    </article>
-                  </MotionReveal>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* SYSTEM ENGINES PREVIEW */}
-        <section className="section bg-[var(--background)]">
-          <div className="container engine-preview-grid">
-            <MotionReveal>
-              <SectionHeader
-                eyebrow="The Capital Engine"
-                title="Preserve, deploy, measure, decide, return, repeat."
-                description="The operating cycle protects liquidity, watches evidence, and makes the next capital decision from what the build actually reveals."
-              />
-            </MotionReveal>
-            <MotionReveal className="engine-step-grid mt-12" delay={0.08}>
-              {capitalEngineSteps.map((step, index) => (
-                <article key={step.step} className="hover:shadow-sm border border-[var(--line)] rounded-xl p-6 bg-[var(--background-raised)]">
-                  <span className="font-mono text-[var(--accent)] text-[0.8rem] block mb-2">{String(index + 1).padStart(2, "0")}</span>
-                  <h3 className="font-serif text-[1.12rem] mb-2">{step.step}</h3>
-                  <p className="text-[var(--muted)] text-[0.88rem] leading-relaxed m-0">{step.text}</p>
-                </article>
-              ))}
+              </div>
             </MotionReveal>
           </div>
         </section>
@@ -431,6 +320,44 @@ export default function Home() {
                   <VentureCard venture={venture} />
                 </MotionReveal>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* THINKING / OPERATING CAPABILITY */}
+        <section className="section bg-[var(--background)]">
+          <div className="container">
+            <MotionReveal>
+              <SectionHeader
+                eyebrow="Thinking + Operating Capability"
+                title="The operating capability behind the capital thesis."
+                description="Williams' work is grounded in systems thinking, product strategy, technical execution, UX and human behaviour, founder operations, and capital allocation discipline."
+              />
+            </MotionReveal>
+            <div className="capability-grid mt-12">
+              {capabilityCards.map((card, index) => {
+                const Icon = card.icon;
+
+                return (
+                  <MotionReveal key={card.title} delay={index * 0.04}>
+                    <article className="capability-card group hover:border-[var(--accent)] hover:shadow-md transition-all duration-300">
+                      <span className="capability-icon bg-[var(--accent-soft)] group-hover:bg-[var(--accent)] group-hover:text-white transition-all duration-300">
+                        <Icon size={21} />
+                      </span>
+                      <h3 className="font-serif text-[1.18rem] text-[var(--foreground)] mb-3">{card.title}</h3>
+                      <p className="text-[var(--muted)] text-[0.9rem] leading-relaxed">{card.text}</p>
+                    </article>
+                  </MotionReveal>
+                );
+              })}
+            </div>
+            <div className="flex flex-wrap gap-4 mt-10">
+              <ButtonLink href="/capital/why-williams" variant="secondary">
+                Explore Why Williams
+              </ButtonLink>
+              <ButtonLink href="/portfolio" variant="quiet">
+                View Product Portfolio
+              </ButtonLink>
             </div>
           </div>
         </section>
@@ -462,17 +389,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CALL TO ACTIONS */}
-        <CTASection
-          eyebrow="The Capital Hub"
-          title="Explore the capital framework."
-          description="Access the allocation philosophy, capital engine, allocation record, Why Williams, stewardship details, and partnership pathway."
-          primaryHref="/capital"
-          primaryLabel="Start the Capital Journey"
-          secondaryHref="/capital/partnership"
-          secondaryLabel="Initiate Capital Conversations"
-        />
-
         {/* ESSAYS & INTELLECTUAL OUTPUT */}
         <section className="section bg-[var(--background)] border-b border-[var(--line)]">
           <div className="container">
@@ -493,15 +409,70 @@ export default function Home() {
           </div>
         </section>
 
-        <CTASection
-          eyebrow="Operating Capability"
-          title="Product portfolio"
-          description="Review product work, UX systems, and 0-to-1 operating deployments built or led by Williams."
-          primaryHref="/portfolio"
-          primaryLabel="View Product Portfolios"
-          secondaryHref="/contact"
-          secondaryLabel="Get in Touch Direct"
-        />
+        {/* PROFESSIONAL WORK */}
+        <section className="section bg-[var(--background-contrast)] border-b border-[var(--line)]">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <MotionReveal className="flex flex-col justify-center">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="h-[1px] w-8 bg-[var(--accent)]"></span>
+                  <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
+                    PROFESSIONAL WORK
+                  </p>
+                </div>
+                <h2 className="font-serif text-[clamp(2rem,3.5vw,2.8rem)] leading-tight text-[var(--foreground)] mb-6">
+                  Product, technical, UX, and founder operating work.
+                </h2>
+                <p className="text-[var(--muted)] text-[1.02rem] leading-relaxed mb-6">
+                  A secondary pathway for engaging Williams&apos; product,
+                  technical, UX, and operating capability.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-4">
+                  <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
+                    <TrendingUp size={24} className="text-[var(--accent)] mb-3" />
+                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">900+ Mentored</h4>
+                    <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
+                      Guided product engineers, UX specialists, founders, and
+                      builders through product, UX, and execution questions.
+                    </p>
+                  </div>
+                  <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
+                    <UserCheck size={24} className="text-[var(--accent)] mb-3" />
+                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">Product Portfolio</h4>
+                    <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
+                      Product strategy, technical execution, UX and human
+                      behaviour, founder operations, and systems thinking.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-4 mt-4">
+                  <ButtonLink href="/portfolio" variant="secondary">View Product Portfolio</ButtonLink>
+                  <ButtonLink href="/contact" variant="quiet">Work with Williams</ButtonLink>
+                </div>
+              </MotionReveal>
+              <MotionReveal delay={0.08} className="relative flex justify-center items-center">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)]/5 to-transparent rounded-2xl pointer-events-none" />
+                <div className="bg-[var(--background-raised)] border border-[var(--line)] rounded-2xl p-8 max-w-lg shadow-xl relative overflow-hidden">
+                  <div className="absolute top-0 right-0 h-24 w-24 bg-[var(--accent-soft)] rounded-full -mr-8 -mt-8 opacity-50 pointer-events-none" />
+                  <Quote size={40} className="text-[var(--accent)]/20 mb-4" />
+                  <blockquote className="font-serif text-[1.15rem] leading-relaxed text-[var(--foreground)] mb-6 italic">
+                    &ldquo;The allocator and operator share one strategic brain. Each
+                    serious build should make the next one less blind.&rdquo;
+                  </blockquote>
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-mono text-[0.82rem] font-bold">
+                      WP
+                    </div>
+                    <div>
+                      <strong className="text-[0.92rem] text-[var(--foreground)] block">Williams Praise</strong>
+                      <span className="text-[0.74rem] text-[var(--muted)] block">Capital Allocator + Operator</span>
+                    </div>
+                  </div>
+                </div>
+              </MotionReveal>
+            </div>
+          </div>
+        </section>
 
         <SystemsLetter />
       </main>

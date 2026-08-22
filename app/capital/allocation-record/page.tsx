@@ -37,8 +37,8 @@ const allocationStory = [
   "Execution exposed weak dependencies and operating friction.",
   "Williams reassessed the method and changed how the work moved forward.",
   "Williams increased direct technical ownership of the product, incorporating AI-assisted engineering into the development stack to reduce external dependency and maintain execution momentum.",
-  "The objective remained clear: produce urban retail infrastructure that coordinates retailer-held inventory, demand, transactions, and fulfilment.",
-  "Shoppergetit became a platform capable of running a live Abuja market beta.",
+  "The original objective remained practical: build a product system capable of real customer transactions.",
+  "As product, operations, retailer participation, and market evidence developed, Shoppergetit became a clearer infrastructure model.",
   "Customers, orders, repeat purchase, and revenue activity produced new evidence.",
 ];
 
@@ -55,10 +55,10 @@ export default function AllocationRecordPage() {
               <h1>Williams has already converted resources into operating capability.</h1>
               <p>
                 Allocation 001 shows the allocator/operator pattern in public:
-                capital and technical resources were directed toward a defined
-                objective, execution had to adapt, and Shoppergetit became a
-                functioning urban retail infrastructure platform with live
-                Abuja market evidence.
+                capital and technical resources were directed toward building
+                and launching Shoppergetit&apos;s commerce platform, execution had
+                to adapt, and the business evolved into a functioning urban
+                retail infrastructure platform with live Abuja market evidence.
               </p>
             </MotionReveal>
           </div>
@@ -97,7 +97,7 @@ export default function AllocationRecordPage() {
               <SectionHeader
                 eyebrow="Adaptive Allocation"
                 title="Capital stayed attached to the objective while the execution method changed."
-                description="The Shoppergetit record matters because Williams did not only fund a plan. He kept reallocating attention, resources, and operating method toward the outcome."
+                description="The Shoppergetit record matters because Williams did not only fund a plan. He kept reallocating attention, resources, and operating method toward the outcome as the evidence became clearer."
               />
             </MotionReveal>
             <div className="engine-step-grid">
@@ -118,8 +118,8 @@ export default function AllocationRecordPage() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="Execution Story"
-                title="The objective survived the first execution method."
-                description="Capital was allocated to the outcome: operating retail infrastructure for predictable distribution. When the operating path weakened, Williams changed the method instead of protecting the original plan."
+                title="What was intended, and what the build revealed."
+                description="The original development objective was to build and launch the commerce platform. The current infrastructure thesis became clearer through product, operations, retailer participation, and market evidence."
               />
             </MotionReveal>
             <div className="allocation-fact-grid">

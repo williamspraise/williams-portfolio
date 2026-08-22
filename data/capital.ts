@@ -107,13 +107,13 @@ export const proofStats = [
     status: "Current" as CapitalStatus,
   },
   {
-    value: "30%",
+    value: "~30%",
     label: "Repeat purchase rate",
     status: "Current" as CapitalStatus,
   },
   {
-    value: "90%",
-    label: "Platform V2 completion estimate",
+    value: "~90%",
+    label: "Platform V2 complete",
     status: "Current" as CapitalStatus,
   },
 ] as const;
@@ -126,13 +126,13 @@ export const shoppergetitAllocation = {
   title: "Shoppergetit Development",
   status: "Executed" as CapitalStatus,
   summary:
-    "Development capital and technical resources were converted into operating urban retail infrastructure designed to coordinate existing retailer inventory, customer demand, transactions, and fulfilment without requiring Shoppergetit to own that inventory itself.",
+    "Development capital and technical resources were first directed toward building and launching Shoppergetit's commerce platform. As product, operations, retailer participation, and market evidence developed, the work evolved into urban retail infrastructure for predictable distribution.",
   model: shoppergetitContent.businessModelFlow,
   facts: [
     {
-      label: "Objective",
+      label: "Original development objective",
       value:
-        "Build urban retail infrastructure for predictable distribution across local retailers, demand, transactions, and fulfilment.",
+        "Build and launch Shoppergetit's commerce platform and the technical infrastructure required for real customer transactions.",
       status: "Executed" as CapitalStatus,
     },
     {
@@ -145,6 +145,12 @@ export const shoppergetitAllocation = {
       value:
         "Managed product direction, execution decisions, technical resources, and increasing hands-on implementation.",
       status: "Executed" as CapitalStatus,
+    },
+    {
+      label: "What it became",
+      value:
+        "Urban retail infrastructure for predictable distribution, connecting local retailers, customer demand, and fulfilment through one intelligent commerce system.",
+      status: "Current" as CapitalStatus,
     },
     {
       label: "Asset produced",
