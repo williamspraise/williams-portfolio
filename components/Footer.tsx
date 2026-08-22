@@ -2,18 +2,22 @@ import Link from "next/link";
 
 const footerGroups = [
   {
+    title: "Capital",
+    links: [
+      { label: "Capital Hub", href: "/capital" },
+      { label: "Allocation Philosophy", href: "/capital/philosophy" },
+      { label: "Capital Engine", href: "/capital/engine" },
+      { label: "Allocation Record", href: "/capital/allocation-record" },
+      { label: "Why Williams", href: "/capital/why-williams" },
+      { label: "Stewardship", href: "/capital/stewardship" },
+      { label: "Partnership", href: "/capital/partnership" },
+    ],
+  },
+  {
     title: "Thinking",
     links: [
       { label: "Frameworks", href: "/frameworks" },
       { label: "Essays", href: "/essays" },
-      { label: "Investment Philosophy", href: "/investment-philosophy" },
-    ],
-  },
-  {
-    title: "Why Williams",
-    links: [
-      { label: "Why Williams", href: "/why-williams" },
-      { label: "About", href: "/about" },
     ],
   },
   {
@@ -27,6 +31,7 @@ const footerGroups = [
     title: "Connect",
     links: [
       { label: "Contact", href: "/contact" },
+      { label: "Capital Partnership", href: "/capital/partnership" },
       {
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/iam-williams/",
@@ -47,7 +52,7 @@ const footerGroups = [
         href: "https://www.tiktok.com/@williams.praise",
         external: true,
       },
-      { label: "Request Investment Memorandum", href: "/why-williams#partners" },
+      { label: "Request Investment Memorandum", href: "/capital/partnership#memo" },
     ],
   },
 ];
@@ -58,7 +63,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <strong>Williams Praise</strong>
-          <p>Systems Thinker / Founder / Product Builder</p>
+          <p>Capital Allocator + Operator / Systems Thinker</p>
           <a href="mailto:williamspraise01@gmail.com">williamspraise01@gmail.com</a>
         </div>
         <div className="footer-links">

@@ -59,11 +59,22 @@ export default function ContactForm() {
         />
       </label>
       <label>
+        Inquiry type
+        <select name="inquiryType" defaultValue="Capital partnership">
+          <option>Capital partnership</option>
+          <option>Advisory / consulting</option>
+          <option>Recruiting / product opportunity</option>
+          <option>Founder / venture partnership</option>
+          <option>Speaking / collaboration</option>
+          <option>General inquiry</option>
+        </select>
+      </label>
+      <label>
         Message
         <textarea
           name="message"
           rows={5}
-          placeholder="What are you building, and where do you need product leadership?"
+          placeholder="What should Williams understand before responding?"
           maxLength={3000}
           required
         />

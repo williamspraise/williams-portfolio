@@ -1,4 +1,5 @@
 import { absoluteUrl, canonicalIdentityDescription, siteUrl } from "@/lib/seo";
+import { shoppergetitContent } from "@/data/shoppergetit";
 
 const content = `# Williams Praise
 
@@ -20,7 +21,7 @@ Primary identity:
 - Founder of: Shoppergetit
 
 Associated ventures and work:
-- Shoppergetit: commerce marketplace and infrastructure venture for verified SMEs, structured checkout, request sourcing, bundles, community drops, logistics workflows, and buyer-seller trust. Website: https://shoppergetit.com
+- Shoppergetit: ${shoppergetitContent.shortPositioning} ${shoppergetitContent.definition} ${shoppergetitContent.businessModel} Website: https://shoppergetit.com
 - Williams Ecosystem: the umbrella for Williams Praise's public product work, ventures, essays, frameworks, capital thinking, and online identity.
 - Pendulum School of Innovation / PSI: learning and capability-building product work associated with Williams Praise.
 - Springboard mentorship: 900+ UX/product mentorship sessions supporting global learners.

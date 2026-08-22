@@ -1,129 +1,72 @@
-import type { Metadata } from "next";
 import {
-  ArrowUpRight,
-  BookOpen,
-  Boxes,
+  ArrowRight,
   Brain,
-  Building2,
-  Landmark,
+  BriefcaseBusiness,
+  ShieldCheck,
+  Sparkles,
+  Quote,
+  TrendingUp,
+  UserCheck,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import AudienceModalPrompt from "@/components/AudienceModalPrompt";
 import ButtonLink from "@/components/ButtonLink";
+import { FlowDiagram, StatusBadge } from "@/components/CapitalJourney";
 import CTASection from "@/components/CTASection";
 import EssayCard from "@/components/EssayCard";
-import FrameworkCard from "@/components/FrameworkCard";
 import Footer from "@/components/Footer";
-import HQCard from "@/components/HQCard";
 import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 import SectionHeader from "@/components/SectionHeader";
 import SystemsLetter from "@/components/SystemsLetter";
 import VentureCard from "@/components/VentureCard";
+import {
+  capitalEngineSteps,
+  homepageCapitalModel,
+  proofStats,
+  riskSystem,
+  shoppergetitAllocation,
+} from "@/data/capital";
 import { essays } from "@/data/essays";
-import { frameworks } from "@/data/frameworks";
 import { ventures } from "@/data/ventures";
-import { canonicalIdentityDescription } from "@/lib/seo";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Williams Praise - Official Website, Founder of Shoppergetit",
-  description: `${canonicalIdentityDescription} This official website connects Williams Praise to Shoppergetit, product work, ventures, essays, frameworks, and the Williams Ecosystem.`,
+export const metadata = pageMetadata({
+  title: "Williams Praise - Capital Allocator, Operator & Systems Thinker",
+  description:
+    "Williams Praise raising and deploying capital into premium commerce, high-trust advisory, and robust operating assets. Operator of Shoppergetit, mentoring 900+ professionals globally.",
+  path: "/",
   keywords: [
     "Williams Praise",
-    "Williams Emmanuel Praise",
-    "Williams Praise Emmanuel",
-    "Williams Praise Emmanual",
-    "Williams Praise website",
-    "Williams Praise official website",
-    "Williams Praise portfolio",
-    "Williams Praise founder of Shoppergetit",
-    "Williams Praise Shoppergetit",
-    "Systems Thinker",
-    "Founder-Operator",
-    "Product Builder",
-    "Framework Creator",
-    "Capital Allocator",
-    "Investment Philosophy",
-    "Williams Ecosystem",
-    "Shoppergetit",
-    "Systems of Love",
-    "Why America Became Rich",
-    "The American system to wealth",
+    "Capital Allocator Nigeria",
+    "Operator Investor",
+    "Founder Operator",
+    "Shoppergetit Founder",
+    "African capital allocator",
+    "Mentorship and Leadership",
+    "Premium Commerce Operations",
   ],
-};
+});
 
-const identityFacts = [
+const capabilityCards = [
   {
-    title: "Williams Praise",
-    description:
-      "The official identity hub for Williams Praise, also known as Williams Emmanuel Praise.",
+    title: "Dual-Engine Operations",
+    text:
+      "We build premium retail operations with Route 1 (Shoppergetit) while raising sophistication, style, and leadership via Route 2 advisory pipelines.",
+    icon: Sparkles,
   },
   {
-    title: "Founder of Shoppergetit",
-    description:
-      "Associated with Shoppergetit, a structured commerce marketplace for verified SMEs, checkout workflows, request sourcing, bundles, community drops, and buyer-seller trust.",
+    title: "Proximity & Diagnostics",
+    text:
+      "We don't watch from a passive distance. We walk the retail floor, inspect logistics, adjust code, and refine user psychology directly.",
+    icon: BriefcaseBusiness,
   },
   {
-    title: "Product builder and systems thinker",
-    description:
-      "Work spans product strategy, UX systems, technical product leadership, startup execution, mentorship, essays, and original frameworks.",
-  },
-];
-
-const identityChips = [
-  "Founder-Operator",
-  "Product Builder",
-  "Technical Product Lead",
-  "Framework Creator",
-  "Systems Thinking",
-  "Human Behavior",
-  "Product Strategy",
-  "0->1 Execution",
-];
-
-const credibility = [
-  "Builder of Shoppergetit",
-  "Creator of Systems of Love",
-  "Creator of IREE Phases",
-  "900+ mentorship sessions",
-  "Products across commerce, AI, education, and healthtech",
-];
-
-const buildAreas = [
-  {
-    title: "Frameworks",
-    description:
-      "Original systems for understanding human behavior, alignment, decision-making, love, resolve, and performance.",
-    href: "/frameworks",
+    title: "Intellectual Signature",
+    text:
+      "Identify the true systemic forces, name the root cause, design precise human interventions, and track performance signals.",
     icon: Brain,
-  },
-  {
-    title: "Investment Philosophy",
-    description:
-      "How Williams thinks about capital, productive cycles, cash flow, assets, signal, and long-term compounding.",
-    href: "/investment-philosophy",
-    icon: Landmark,
-  },
-  {
-    title: "Products",
-    description:
-      "0->1 product work across marketplace systems, AI mobility, education, and digital platforms.",
-    href: "/portfolio",
-    icon: Boxes,
-  },
-  {
-    title: "Ventures",
-    description:
-      "Products and companies built around trust, education, commerce, capability, and better systems.",
-    href: "/ventures",
-    icon: Building2,
-  },
-  {
-    title: "Essays",
-    description:
-      "Long-form thinking on psychology, systems, mediocrity, relationships, product thinking, and human progress.",
-    href: "/essays",
-    icon: BookOpen,
   },
 ];
 
@@ -132,127 +75,304 @@ export default function Home() {
     <>
       <Navbar />
       <AudienceModalPrompt />
-      <main>
-        <section className="hq-hero">
-          <div className="container hq-hero-grid">
-            <MotionReveal className="hq-hero-copy">
-              <p className="eyebrow">Williams Praise</p>
-              <h1>Systems Thinker for Human Problems</h1>
-              <p className="hero-subtitle">
-                Founder, product builder, and framework creator exploring how
-                people, businesses, relationships, products, and systems reach
-                clarity, resolve, and better outcomes.
-              </p>
-              <div className="hero-actions">
-                <ButtonLink href="/frameworks">Explore Frameworks</ButtonLink>
-                <ButtonLink href="/portfolio" variant="secondary">
-                  View Portfolio
-                </ButtonLink>
-                <ButtonLink href="/investment-philosophy" variant="quiet">
-                  Investment Philosophy
-                </ButtonLink>
+      <main className="overflow-hidden">
+        {/* EDITORIAL HERO SECTION */}
+        <section className="home-capital-hero relative border-b border-[var(--line)] bg-[var(--background)]">
+          <div className="container home-capital-hero-grid py-12 md:py-20 lg:py-24">
+            <MotionReveal className="home-capital-copy flex flex-col justify-center">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="h-[1px] w-8 bg-[var(--accent)]"></span>
+                <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
+                  AN UNCONVENTIONAL OPERATOR
+                </p>
               </div>
-              <div className="trust-row hq-chip-row">
-                {identityChips.map((chip) => (
-                  <span key={chip}>{chip}</span>
-                ))}
+              <h1 className="font-serif text-[clamp(2.5rem,5.5vw,4.8rem)] leading-[1.05] tracking-tight text-[var(--foreground)] mb-6">
+                Raising Capital. <br />
+                Building Operating Systems. <br />
+                <span className="text-[var(--accent)] italic">Creating Direct Proof.</span>
+              </h1>
+
+              <p className="hero-subtitle text-[clamp(1.1rem,1.8vw,1.35rem)] leading-relaxed text-[var(--muted)] mb-8 font-serif">
+                I am Williams Praise. I raise capital and deploy it directly into high-growth,
+                premium ventures that I build, manage, and steward from the ground up.
+              </p>
+
+              <div className="border-l-2 border-[var(--accent)] pl-6 py-2 mb-8 bg-[var(--background-contrast)]/30 rounded-r-lg">
+                <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed m-0 italic">
+                  &ldquo;Passivity is the enemy of capital. We do not pass capital to passive intermediaries. We enter the arena, redesign the distribution flow, and capture true evidence.&rdquo;
+                </p>
+              </div>
+
+              {/* HUMANIZED PROOF STRIP */}
+              <div className="hero-proof-strip flex flex-wrap gap-x-8 gap-y-3 py-4 border-y border-[var(--line)] mb-8 max-w-xl">
+                <div className="flex flex-col">
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">ALLOCATION 001</span>
+                  <strong className="text-[1rem] text-[var(--foreground)]">Shoppergetit</strong>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">ACTIVE DEMAND</span>
+                  <strong className="text-[1rem] text-[var(--foreground)]">300+ Signups</strong>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">COMPLETED LOOPS</span>
+                  <strong className="text-[1rem] text-[var(--foreground)]">100+ Orders</strong>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">GLOBAL GUIDANCE</span>
+                  <strong className="text-[1rem] text-[var(--foreground)]">900+ Mentored</strong>
+                </div>
+              </div>
+
+              <div className="hero-actions flex flex-wrap gap-4">
+                <ButtonLink href="/capital/engine">
+                  Explore the Capital Engine <ArrowRight size={16} />
+                </ButtonLink>
+                <ButtonLink href="/capital/allocation-record" variant="secondary">
+                  Inspect Allocation Record
+                </ButtonLink>
+                <ButtonLink href="/portfolio" variant="quiet">
+                  View Product Portfolios
+                </ButtonLink>
               </div>
             </MotionReveal>
 
-            <MotionReveal className="hq-identity-card" delay={0.08}>
-              <div className="hq-portrait-card">
+            {/* HIGH-END EDITORIAL PORTRAIT PANEL */}
+            <MotionReveal className="home-proof-panel relative" delay={0.08}>
+              <div className="proof-portrait relative overflow-hidden rounded-t-xl border border-[var(--panel-line)]">
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--panel)]/70 to-transparent z-10 pointer-events-none" />
                 <Image
                   src="/images/C208(1).jpg"
-                  alt="Portrait of Williams Praise"
+                  alt="Portrait of Williams Praise - Capital Allocator & Operator"
                   width={1080}
                   height={1920}
-                  sizes="(max-width: 1050px) min(100vw, 520px), 390px"
+                  className="w-full object-cover aspect-[4/5] scale-100 hover:scale-[1.02] transition-transform duration-700"
                   priority
                 />
-                <div className="hq-portrait-caption">
-                  <span>Williams Praise</span>
-                  <strong>Founder / Product Builder / Systems Thinker</strong>
+
+                {/* FLOATING DESIGNER BADGE */}
+                <div className="absolute bottom-4 left-4 z-20 bg-[var(--background)]/90 backdrop-blur-md border border-[var(--line)] rounded-lg p-3 max-w-[280px] shadow-lg">
+                  <span className="text-[0.68rem] text-[var(--accent)] font-bold tracking-wider uppercase block mb-1">
+                    OPERATOR PRINCIPLE
+                  </span>
+                  <p className="text-[0.78rem] text-[var(--foreground)] m-0 leading-snug">
+                    Designed, operating, and leading with human intuition and robust engineering.
+                  </p>
                 </div>
               </div>
-
-              <div className="hq-thesis-card">
-                <p className="panel-kicker">Operating thesis</p>
-                <h2>
-                  Better outcomes emerge when people can see the system clearly
-                  enough to repair it.
-                </h2>
-                <div className="thesis-list">
-                  {["Observe", "Structure", "Build", "Resolve"].map(
-                    (item, index) => (
-                      <div key={item}>
-                        <span>{String(index + 1).padStart(2, "0")}</span>
-                        <strong>{item}</strong>
-                      </div>
-                    )
-                  )}
-                </div>
-                <a className="text-link" href="mailto:williamspraise01@gmail.com">
-                  Start a conversation
-                  <ArrowUpRight size={15} />
-                </a>
+              <div className="proof-panel-copy bg-[var(--panel)] p-8 rounded-b-xl border-x border-b border-[var(--panel-line)]">
+                <p className="panel-kicker text-[var(--accent)] font-bold tracking-[0.15em] text-[0.7rem] uppercase mb-2">
+                  THE OPERATIONAL ADVANTAGE
+                </p>
+                <h3 className="font-serif text-[1.4rem] text-white leading-snug mb-3">
+                  Systems Thinking, Refined Style, and High-Trust Proximity.
+                </h3>
+                <p className="text-[#a9b8bd] text-[0.91rem] leading-relaxed">
+                  Combining meticulous systems engineering with premium aesthetic standards. Modeled on professional advisory structures to elevate both digital operations and physical logistics.
+                </p>
               </div>
             </MotionReveal>
           </div>
-          <MotionReveal className="container credibility-bar" delay={0.12}>
-            {credibility.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </MotionReveal>
         </section>
 
-        <section className="section section-contrast" id="identity">
+        {/* DUAL ENGINE PATHWAY MANIFESTO */}
+        <section className="section bg-[var(--background-contrast)] border-b border-[var(--line)]">
+          <div className="container home-model-grid">
+            <MotionReveal className="flex flex-col justify-center">
+              <SectionHeader
+                eyebrow="The Two-Track Model"
+                title="Building Assets via Route 1. Elevating Leadership via Route 2."
+                description="We operate across two distinct but reinforcing tracks. Route 1 executes on retail infrastructure, premium commerce packaging, and logistics. Route 2 commands personal sophistication, professional speaking, and trusted advisor network systems."
+              />
+              <div className="flex flex-wrap gap-4 mt-4">
+                <ButtonLink href="/capital">Access the Capital Hub</ButtonLink>
+                <ButtonLink href="/capital/why-williams" variant="secondary">
+                  Why Allocator-Operator?
+                </ButtonLink>
+              </div>
+            </MotionReveal>
+            <MotionReveal delay={0.08}>
+              <div className="panel-flow bg-[var(--panel)] rounded-xl border border-[var(--panel-line)] p-8 shadow-xl">
+                <h3 className="font-serif text-white text-[1.28rem] mb-4 flex items-center gap-2">
+                  <Sparkles size={18} className="text-[var(--accent)]" /> Williams Allocation Engine
+                </h3>
+                <FlowDiagram items={homepageCapitalModel} className="panel-flow" />
+              </div>
+            </MotionReveal>
+          </div>
+        </section>
+
+        {/* EXECUTED ASSET SHOWCASE: SHOPPERGETIT */}
+        <section className="section bg-[var(--background)]">
           <div className="container">
             <MotionReveal>
               <SectionHeader
-                eyebrow="Official Identity"
-                title="Williams Praise, founder-operator and product builder"
-                description="This website is the canonical home for Williams Praise online: the place that connects the person, product work, ventures, frameworks, essays, and public professional identity."
+                eyebrow="Active Operations - Route 1"
+                title="Shoppergetit: Premium Retail Infrastructure & Predictable Distribution"
+                description="A physical and digital asset engineered to connect retail inventories with premium consumers. From branded luxury tote bags and printed quarterly magazines to Sony FX3 cinema-grade narrative content, we have built a luxury retail layer from Nigeria outward."
               />
             </MotionReveal>
-            <div className="role-grid">
-              {identityFacts.map((fact, index) => (
-                <MotionReveal key={fact.title} delay={index * 0.04}>
-                  <article className="role-card">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <h3>{fact.title}</h3>
-                    <p>{fact.description}</p>
-                    <ArrowUpRight size={18} />
-                  </article>
-                </MotionReveal>
-              ))}
+
+            <div className="allocation-proof-grid gap-8 mt-12">
+              <MotionReveal className="allocation-proof-card flex flex-col justify-between">
+                <div>
+                  <div className="proof-card-top flex justify-between items-center mb-6">
+                    <StatusBadge status={shoppergetitAllocation.status} />
+                    <span className="font-mono text-[0.74rem] text-[#8fa0ab]">{shoppergetitAllocation.code}</span>
+                  </div>
+                  <FlowDiagram items={shoppergetitAllocation.model} />
+                  <p className="mt-6 text-[#a9b8bd] text-[0.93rem] leading-relaxed">
+                    Shoppergetit bypasses passive retail models. By utilizing premium packaging identity, scheduled try-it-on quarterly events, and streamlined fulfillment channels, we enforce absolute quality control and predictable distribution.
+                  </p>
+                </div>
+                <div className="mt-8 border-t border-[var(--panel-line)] pt-4">
+                  <Link className="text-link text-[var(--accent)] hover:text-[var(--accent-bright)] inline-flex items-center gap-2" href="/capital/allocation-record">
+                    Inspect Complete Allocation Records
+                    <ArrowRight size={15} />
+                  </Link>
+                </div>
+              </MotionReveal>
+
+              <div className="proof-metric-grid">
+                {proofStats.map((stat, index) => (
+                  <MotionReveal key={stat.label} delay={index * 0.04}>
+                    <article className="proof-metric hover:border-[var(--accent)] transition-all duration-300">
+                      <div className="flex justify-between items-start mb-2">
+                        <span className="font-mono text-[0.7rem] text-[var(--accent)]">METRIC {String(index + 1).padStart(2, "0")}</span>
+                        <StatusBadge status={stat.status} />
+                      </div>
+                      <strong className="font-serif text-[2.2rem] text-[var(--foreground)] tracking-tight">{stat.value}</strong>
+                      <span className="text-[var(--muted)] text-[0.88rem] leading-snug">{stat.label}</span>
+                    </article>
+                  </MotionReveal>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="section" id="build">
+        {/* COMPARISON - passive vs active operator */}
+        <section className="section bg-[var(--background-contrast)] border-y border-[var(--line)]">
           <div className="container">
             <MotionReveal>
               <SectionHeader
-                eyebrow="Williams Ecosystem"
-                title="The public headquarters for my thinking and building"
-                description="The site connects original frameworks, investment philosophy, shipped product work, ventures, and essays without forcing every audience into the same path."
+                eyebrow="Proximity MOAT"
+                title="The Operator Moat: passive investing is broken under constraints."
+                description="Passive investors wait for monthly dashboards, completely insulated from the market realities. Williams operates inside the machinery, detecting operational friction, and adjusting execution in real-time."
               />
             </MotionReveal>
-            <div className="hq-feature-grid">
-              {buildAreas.map((area, index) => {
-                const Icon = area.icon;
+            <div className="diligence-moat-comparison mt-12">
+              <MotionReveal>
+                <article className="h-full bg-[var(--background-raised)] border border-[var(--line)] p-8 rounded-xl">
+                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase block mb-3">PASSIVE PATHWAY</span>
+                  <h3 className="font-serif text-[1.2rem] text-[var(--foreground)] mb-6">Passive/Conventional Allocation</h3>
+                  <FlowDiagram items={conventionalAllocationFlow} />
+                  <p className="mt-6 text-[0.88rem] text-[var(--muted)] leading-relaxed">
+                    Dependent entirely on highly-abstracted reports, lagging metrics, and intermediary layers. Incapable of diagnosing structural execution failure until the capital is depleted.
+                  </p>
+                </article>
+              </MotionReveal>
+              <MotionReveal delay={0.06}>
+                <article className="engine-view h-full bg-[var(--panel)] border border-[var(--panel-line)] p-8 rounded-xl text-white">
+                  <span className="text-[0.68rem] tracking-wider text-[var(--accent)] uppercase block mb-3">ACTIVE PATHWAY</span>
+                  <h3 className="font-serif text-[1.2rem] text-white mb-6">Williams Praise System</h3>
+                  <FlowDiagram items={williamsAllocationFlow} />
+                  <p className="mt-6 text-[0.88rem] text-[#a9b8bd] leading-relaxed">
+                    Direct operational loop feedback. We observe buyer psychology, execute try-it-on product events, inspect visual aesthetics, and optimize code personally. Precision pivot.
+                  </p>
+                </article>
+              </MotionReveal>
+            </div>
+            <div className="mt-12 text-center">
+              <ButtonLink href="/capital/why-williams" variant="secondary">
+                Learn why active proximity protects capital
+              </ButtonLink>
+            </div>
+          </div>
+        </section>
+
+        {/* REFINED ADVISORY LEADERSHIP: ROUTE 2 */}
+        <section className="section bg-[var(--background)]">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <MotionReveal className="flex flex-col justify-center">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="h-[1px] w-8 bg-[var(--accent)]"></span>
+                  <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
+                    ROUTE 2 - PRESENCE & ADVISORY
+                  </p>
+                </div>
+                <h2 className="font-serif text-[clamp(2rem,3.5vw,2.8rem)] leading-tight text-[var(--foreground)] mb-6">
+                  Advisory, Speaking & Executive Sophistication
+                </h2>
+                <p className="text-[var(--muted)] text-[1.02rem] leading-relaxed mb-6">
+                  Modeled on professional leadership blue-prints. We advise founders, lead deep conversational structures, and mentor the next generation.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-4">
+                  <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
+                    <TrendingUp size={24} className="text-[var(--accent)] mb-3" />
+                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">900+ Mentored</h4>
+                    <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
+                      Guided product engineers, UX specialists, and builders globally under high-trust mentorship structures.
+                    </p>
+                  </div>
+                  <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
+                    <UserCheck size={24} className="text-[var(--accent)] mb-3" />
+                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">Refined Staging</h4>
+                    <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
+                      Deploying top-tier video documentation, curated studio staging, and public advisory speaking.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <ButtonLink href="/contact" variant="primary">Work with Williams</ButtonLink>
+                </div>
+              </MotionReveal>
+              <MotionReveal delay={0.08} className="relative flex justify-center items-center">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)]/5 to-transparent rounded-2xl pointer-events-none" />
+                <div className="bg-[var(--background-raised)] border border-[var(--line)] rounded-2xl p-8 max-w-lg shadow-xl relative overflow-hidden">
+                  <div className="absolute top-0 right-0 h-24 w-24 bg-[var(--accent-soft)] rounded-full -mr-8 -mt-8 opacity-50 pointer-events-none" />
+                  <Quote size={40} className="text-[var(--accent)]/20 mb-4" />
+                  <blockquote className="font-serif text-[1.15rem] leading-relaxed text-[var(--foreground)] mb-6 italic">
+                    &ldquo;People don&apos;t just invest in systems; they align with growth, presentation, and evidence. You must model professionalism and carry deep personal elegance to secure absolute trust.&rdquo;
+                  </blockquote>
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-mono text-[0.82rem] font-bold">
+                      WP
+                    </div>
+                    <div>
+                      <strong className="text-[0.92rem] text-[var(--foreground)] block">Williams Praise</strong>
+                      <span className="text-[0.74rem] text-[var(--muted)] block">Advisor, Operator, & Stylist Thinker</span>
+                    </div>
+                  </div>
+                </div>
+              </MotionReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* SYSTEM CAPABILITIES SECTION */}
+        <section className="section bg-[var(--background-contrast)] border-y border-[var(--line)]">
+          <div className="container">
+            <MotionReveal>
+              <SectionHeader
+                eyebrow="The Capabilities"
+                title="Bespoke Operational Architecture"
+                description="Integrating three core disciplines to execute product, engineering, and capital stewardship flawlessly."
+              />
+            </MotionReveal>
+            <div className="capability-grid mt-12">
+              {capabilityCards.map((card, index) => {
+                const Icon = card.icon;
 
                 return (
-                  <MotionReveal key={area.title} delay={index * 0.04}>
-                    <HQCard
-                      title={area.title}
-                      description={area.description}
-                      href={area.href}
-                    >
-                      <span className="capability-icon">
+                  <MotionReveal key={card.title} delay={index * 0.04}>
+                    <article className="capability-card group hover:border-[var(--accent)] hover:shadow-md transition-all duration-300">
+                      <span className="capability-icon bg-[var(--accent-soft)] group-hover:bg-[var(--accent)] group-hover:text-white transition-all duration-300">
                         <Icon size={21} />
                       </span>
-                    </HQCard>
+                      <h3 className="font-serif text-[1.18rem] text-[var(--foreground)] mb-3">{card.title}</h3>
+                      <p className="text-[var(--muted)] text-[0.9rem] leading-relaxed">{card.text}</p>
+                    </article>
                   </MotionReveal>
                 );
               })}
@@ -260,54 +380,40 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section section-contrast">
-          <div className="container">
+        {/* SYSTEM ENGINES PREVIEW */}
+        <section className="section bg-[var(--background)]">
+          <div className="container engine-preview-grid">
             <MotionReveal>
               <SectionHeader
-                eyebrow="Featured Frameworks"
-                title="Original systems for human clarity"
-                description="Frameworks for love, potential, resolve, alignment, and responsible decisions."
+                eyebrow="The Capital Engine"
+                title="Sovereign, systematic deployment."
+                description="We follow a non-negotiable operational cycle to protect our liquidity, test deep product-market fit, and deploy further capital only on verified customer evidence."
               />
             </MotionReveal>
-            <div className="framework-grid">
-              {frameworks.map((framework, index) => (
-                <MotionReveal key={framework.slug} delay={index * 0.05}>
-                  <FrameworkCard framework={framework} />
-                </MotionReveal>
+            <MotionReveal className="engine-step-grid mt-12" delay={0.08}>
+              {capitalEngineSteps.map((step, index) => (
+                <article key={step.step} className="hover:shadow-sm border border-[var(--line)] rounded-xl p-6 bg-[var(--background-raised)]">
+                  <span className="font-mono text-[var(--accent)] text-[0.8rem] block mb-2">{String(index + 1).padStart(2, "0")}</span>
+                  <h3 className="font-serif text-[1.12rem] mb-2">{step.step}</h3>
+                  <p className="text-[var(--muted)] text-[0.88rem] leading-relaxed m-0">{step.text}</p>
+                </article>
               ))}
-            </div>
+            </MotionReveal>
           </div>
         </section>
 
-        <CTASection
-          eyebrow="Investment Philosophy"
-          title="How I think about capital and productive cycles"
-          description="A public explanation of the philosophy behind cash flow, assets, signal, long-term thinking, and why capital should become progressively more capable."
-          primaryHref="/investment-philosophy"
-          primaryLabel="Read Investment Philosophy"
-          secondaryHref="/why-williams"
-          secondaryLabel="Why Williams"
-        />
-
-        <CTASection
-          eyebrow="For recruiters, founders, and teams"
-          title="Professional product portfolio"
-          description="This is evidence of how I think, build, execute, learn, and turn product work into reusable assets."
-          primaryHref="/portfolio"
-          primaryLabel="View Portfolio"
-        />
-
-        <section className="section">
+        {/* VENTURES COMPACT LIST */}
+        <section className="section bg-[var(--background-contrast)] border-y border-[var(--line)]">
           <div className="container">
             <MotionReveal>
               <SectionHeader
-                eyebrow="Ventures"
-                title="Products and companies as system responses"
-                description="Venture work shaped around commerce, education, capability, trust, and transformation."
+                eyebrow="The Operating Portfolio"
+                title="Productive Assets Under Active Stewardship"
+                description="A list of operating systems, commercial infrastructure, and custom framework networks being nurtured."
               />
             </MotionReveal>
-            <div className="venture-grid compact">
-              {ventures.map((venture, index) => (
+            <div className="venture-grid compact mt-12">
+              {ventures.slice(0, 4).map((venture, index) => (
                 <MotionReveal key={venture.title} delay={index * 0.05}>
                   <VentureCard venture={venture} />
                 </MotionReveal>
@@ -316,17 +422,56 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section section-contrast">
+        {/* RISK & STEWARDSHIP */}
+        <section className="section bg-[var(--background)]">
+          <div className="container risk-preview-grid">
+            <MotionReveal>
+              <SectionHeader
+                eyebrow="Stewardship & Diligence"
+                title="Knowing when to stop is a sovereign capability."
+                description="We protect principal, retain complete visibility, and enforce pre-set abort signals to stop allocation the moment evidence fails to back the operating hypothesis."
+              />
+              <div className="mt-4">
+                <ButtonLink href="/capital/stewardship" variant="secondary">
+                  Review Complete Diligence & Stewardship
+                </ButtonLink>
+              </div>
+            </MotionReveal>
+            <MotionReveal className="risk-card-grid mt-12" delay={0.08}>
+              {riskSystem.map((item) => (
+                <article key={item.risk} className="border border-[var(--line)] rounded-xl p-6 bg-[var(--background-raised)]">
+                  <ShieldCheck size={21} className="text-[var(--accent)] mb-3" />
+                  <h3 className="font-serif text-[1.12rem] mb-2">{item.risk}</h3>
+                  <p className="text-[var(--muted)] text-[0.88rem] leading-relaxed m-0">{item.response}</p>
+                </article>
+              ))}
+            </MotionReveal>
+          </div>
+        </section>
+
+        {/* CALL TO ACTIONS */}
+        <CTASection
+          eyebrow="The Capital Hub"
+          title="Explore the sovereign capital framework."
+          description="Access philosophy records, engine loops, direct records, stewardship details, and investor pipeline dialogues."
+          primaryHref="/capital"
+          primaryLabel="Start the Capital Journey"
+          secondaryHref="/capital/partnership"
+          secondaryLabel="Initiate Capital Conversations"
+        />
+
+        {/* ESSAYS & INTELLECTUAL OUTPUT */}
+        <section className="section bg-[var(--background)] border-b border-[var(--line)]">
           <div className="container">
             <MotionReveal>
               <SectionHeader
-                eyebrow="Latest Essays"
-                title="Notes coming from the headquarters"
-                description="Writing on psychology, systems, mediocrity, relationships, product thinking, and human progress."
+                eyebrow="Intellectual Signature"
+                title="The ideas that drive the operator"
+                description="Bespoke essays examining social systems, economic models, architectural engineering, and capital loops."
               />
             </MotionReveal>
-            <div className="essay-grid">
-              {essays.slice(0, 4).map((essay, index) => (
+            <div className="essay-grid mt-12">
+              {essays.slice(0, 3).map((essay, index) => (
                 <MotionReveal key={essay.title} delay={index * 0.04}>
                   <EssayCard essay={essay} />
                 </MotionReveal>
@@ -335,36 +480,35 @@ export default function Home() {
           </div>
         </section>
 
-        <SystemsLetter />
+        <CTASection
+          eyebrow="Bespoke Engineering"
+          title="Direct Product Portfolios"
+          description="Review product mockups, codebase repositories, ux systems, and 0-to-1 operational deployments engineered by Williams."
+          primaryHref="/portfolio"
+          primaryLabel="View Product Portfolios"
+          secondaryHref="/contact"
+          secondaryLabel="Get in Touch Direct"
+        />
 
-        <section className="section contact-options-section">
-          <div className="container contact-options">
-            <MotionReveal>
-              <SectionHeader
-                eyebrow="Contact"
-                title="Work with Williams"
-                description="Open to speaking, collaborations, consulting, jobs and recruiting, partnerships, and venture conversations."
-              />
-            </MotionReveal>
-            <MotionReveal className="contact-option-grid" delay={0.08}>
-              {[
-                "Speaking",
-                "Collaborations",
-                "Consulting",
-                "Jobs / Recruiting",
-                "Partnerships",
-                "Venture conversations",
-              ].map((option) => (
-                <span key={option}>{option}</span>
-              ))}
-            </MotionReveal>
-            <MotionReveal delay={0.12}>
-              <ButtonLink href="/contact">Start a Conversation</ButtonLink>
-            </MotionReveal>
-          </div>
-        </section>
+        <SystemsLetter />
       </main>
       <Footer />
     </>
   );
 }
+
+const conventionalAllocationFlow = [
+  "Capital Base",
+  "Venture Intermediary",
+  "Externalpassive Operators",
+  "Highly Abstracted Reports",
+  "Capital Pivot / Exit",
+];
+
+const williamsAllocationFlow = [
+  "Capital Base",
+  "Williams Active Operator",
+  "Direct Diagnostics & Interventions",
+  "Frictionless Operating Venture",
+  "Customer & Operating Evidence",
+];

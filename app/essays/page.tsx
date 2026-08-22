@@ -76,8 +76,8 @@ export default function EssaysPage() {
           description="Some essays begin as public thinking. Some become frameworks. Some clarify the product and venture systems I build."
           primaryHref="/frameworks"
           primaryLabel="Explore Frameworks"
-          secondaryHref="/investment-philosophy"
-          secondaryLabel="Investment Philosophy"
+          secondaryHref="/capital/philosophy"
+          secondaryLabel="Allocation Philosophy"
         />
 
         <SystemsLetter />

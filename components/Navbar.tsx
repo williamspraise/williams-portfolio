@@ -17,16 +17,29 @@ export default function Navbar() {
           <span className="brand-mark">WP</span>
           <span>
             <strong>Williams Praise</strong>
-            <small>Systems Thinker</small>
+            <small>Capital Allocator + Operator</small>
           </span>
         </Link>
 
         <div className="desktop-links">
-          {navigationLinks.map((link) => (
-            <Link key={link.label} href={link.href}>
-              {link.label}
-            </Link>
-          ))}
+          {navigationLinks.map((link) =>
+            link.children ? (
+              <div className="nav-group" key={link.label}>
+                <Link href={link.href}>{link.label}</Link>
+                <div className="nav-dropdown">
+                  {link.children.map((child) => (
+                    <Link key={child.href} href={child.href}>
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link key={link.label} href={link.href}>
+                {link.label}
+              </Link>
+            ),
+          )}
           <ThemeToggle />
         </div>
 
@@ -54,13 +67,24 @@ export default function Navbar() {
           >
             <div className="container mobile-menu-links">
               {navigationLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </Link>
+                <div className="mobile-link-group" key={link.label}>
+                  <Link href={link.href} onClick={() => setOpen(false)}>
+                    {link.label}
+                  </Link>
+                  {link.children && (
+                    <div>
+                      {link.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setOpen(false)}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </motion.div>

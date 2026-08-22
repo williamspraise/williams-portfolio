@@ -1,6 +1,14 @@
+import { shoppergetitContent } from "@/data/shoppergetit";
+
 export type ProjectDecision = {
   title: string;
   detail: string;
+};
+
+export type CaseStudySection = {
+  title: string;
+  content?: string;
+  items?: string[];
 };
 
 export type CaseStudy = {
@@ -15,6 +23,7 @@ export type CaseStudy = {
   lessons: string[];
   gallery: { src: string; alt: string }[];
   status?: string;
+  sections?: CaseStudySection[];
 };
 
 export type Project = {
@@ -40,11 +49,10 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "shoppergetit",
-    title: "Shoppergetit — Structured Commerce Marketplace",
+    title: "Shoppergetit - Urban Retail Infrastructure",
     shortTitle: "Shoppergetit",
     role: "Co-Founder & Technical Product Lead",
-    description:
-      "A live e-commerce marketplace designed to help shoppers buy from verified SMEs through structured checkout, vendor systems, logistics workflows, request sourcing, bundles, community drops, and dispute handling.",
+    description: shoppergetitContent.shortPositioning,
     ownership: [
       "Product strategy",
       "UX architecture",
@@ -52,18 +60,18 @@ export const projects: Project[] = [
       "Marketplace workflow design",
       "Monetization model",
       "Technical execution oversight",
-      "Vendor, admin, and shopper ecosystem",
+      "Retailer, admin, and shopper ecosystem",
       "Launch and go-to-market decisions",
     ],
     tech: "Next.js, React, Node.js, MongoDB, Redis, Vercel, Render, GA4 / GTM",
     impact: [
-      "Launched live marketplace",
-      "Onboarded SMEs",
+      "Launched live Abuja beta",
+      "Coordinated retailer-held inventory",
       "Raised ₦10M in early capital",
-      "Built shopper, vendor, and admin infrastructure",
+      "Built shopper, retailer, and admin infrastructure",
     ],
     image: "/images/projects/shoppergetit/cover.svg",
-    imageAlt: "Shoppergetit marketplace product interface",
+    imageAlt: "Shoppergetit urban retail infrastructure product interface",
     cta: "View Case Study",
     externalLink: {
       href: "https://shoppergetit.com",
@@ -71,33 +79,65 @@ export const projects: Project[] = [
     },
     caseStudy: {
       status: "Live product",
+      sections: [
+        {
+          title: "What Shoppergetit Is",
+          content: `${shoppergetitContent.shortPositioning} ${shoppergetitContent.definition}`,
+        },
+        {
+          title: "The Insight",
+          content: shoppergetitContent.coreInsight,
+          items: ["Retailers", "Inventory", "Customer demand"],
+        },
+        {
+          title: "The Traditional Constraint",
+          content:
+            "Commerce growth can create increasing dependency on warehousing, owned inventory, operational labour, and fulfilment complexity.",
+        },
+        {
+          title: "The Shoppergetit Model",
+          content: `${shoppergetitContent.businessModel} ${shoppergetitContent.operatingLayer}`,
+        },
+        {
+          title: "Design Principle",
+          content: `${shoppergetitContent.scalingPrinciple} ${shoppergetitContent.scalingClarification}`,
+        },
+        {
+          title: "Traditional Inventory-Heavy Commerce Expansion",
+          items: [...shoppergetitContent.moatComparison.traditional],
+        },
+        {
+          title: "Shoppergetit",
+          items: [...shoppergetitContent.moatComparison.shoppergetit],
+        },
+      ],
       context:
-        "Independent SMEs often sell through fragmented social channels, while buyers need confidence that discovery, payment, fulfilment, and issue resolution will hold together. Shoppergetit was built as commerce infrastructure: a marketplace where operational structure becomes the trust layer.",
+        "Shoppergetit is urban retail infrastructure for predictable distribution. It connects local retailers, customer demand, and fulfilment through one intelligent commerce system.",
       problem:
-        "The challenge was not simply presenting products online. A multi-sided product needed to coordinate verified vendors, shopper intent, checkout, delivery status, request sourcing, promotional bundles, community drops, and dispute resolution without creating operational confusion.",
+        "Cities already have retailers, inventory, and demand. The problem is fragmentation: product information, demand capture, transaction flow, quality control, fulfilment, and customer engagement often sit in disconnected places.",
       role:
         "As Co-Founder and Technical Product Lead, I shaped the opportunity, product model, workflows, priorities, and release decisions. I translated marketplace requirements into experience and system logic, supervised technical execution, and aligned product decisions with capital and launch realities.",
       constraints: [
-        "Building trust for new marketplace transactions and newly onboarded SMEs.",
-        "Balancing three operating surfaces: shopper, vendor, and admin workflows.",
+        "Coordinating inventory already held by local retailers without requiring Shoppergetit to own that inventory itself.",
+        "Balancing three operating surfaces: shopper, retailer, and admin workflows.",
         "Shipping under early-stage capital, team, and go-to-market constraints.",
-        "Supporting exceptions such as unavailable inventory, delivery friction, and disputes.",
+        "Supporting quality control, fulfilment, customer engagement, and operational exceptions without creating avoidable manual burden.",
       ],
       decisions: [
         {
-          title: "Design the transaction, not just the catalogue",
+          title: "Coordinate the city, not only the catalogue",
           detail:
-            "Checkout, logistics visibility, vendor accountability, and dispute handling were treated as first-class product flows because trust is created after discovery.",
+            "The product direction prioritizes the coordination layer between retailer inventory, customer demand, quality control, transactions, and fulfilment.",
         },
         {
           title: "Build role-specific operating surfaces",
           detail:
-            "Shopper simplicity required structured vendor and admin controls behind the scenes. Each audience received workflows aligned to the decisions they own.",
+            "Shopper simplicity required structured retailer and admin controls behind the scenes. Each audience received workflows aligned to the decisions they own.",
         },
         {
-          title: "Expand demand capture beyond search",
+          title: "Use automation to protect operating density",
           detail:
-            "Request sourcing, bundles, and community drops created paths for intent that a standard product listing model would miss.",
+            "AI assistance, product digitisation, operational tooling, and workflow design reduce the need for every growth step to become proportional warehouse or headcount growth.",
         },
         {
           title: "Treat monetization as system design",
@@ -106,33 +146,34 @@ export const projects: Project[] = [
         },
       ],
       execution: [
-        "Mapped critical shopper, vendor, admin, logistics, and exception journeys.",
+        "Mapped critical shopper, retailer, admin, logistics, and exception journeys.",
         "Defined release priorities around transaction confidence and operational control.",
         "Directed UX architecture and requirements across marketplace workflows.",
         "Worked with implementation decisions across a Next.js, Node.js, MongoDB, and Redis stack.",
         "Used analytics instrumentation and launch learning to inform subsequent product decisions.",
       ],
       systemThinking:
-        "A marketplace is a set of linked state transitions: inventory availability, vendor action, shopper payment, fulfilment status, support escalation, and admin intervention. I approached the product as a controlled operations system, defining the interfaces and decision points that make those transitions understandable and manageable.",
+        "Shoppergetit is a coordination system. Existing retailers hold inventory; customers create demand; the platform digitises products, controls quality, coordinates transactions, supports fulfilment, and gives operators the workflow visibility needed to keep the system predictable.",
       outcomes: [
-        "Launched a live commerce marketplace serving verified SME participation.",
-        "Established product infrastructure across shopper, vendor, and admin flows.",
+        "Launched a live Abuja beta for urban retail coordination.",
+        "Established product infrastructure across shopper, retailer, admin, checkout, fulfilment, and operations flows.",
         "Raised ₦10M in early capital to support the business direction.",
-        "Built a foundation for logistics workflows, sourcing requests, bundles, drops, and dispute handling.",
+        "Built a foundation for product digitisation, retailer onboarding, request sourcing, community drops, customer engagement, dashboards, and logistics workflows.",
       ],
       lessons: [
-        "Marketplace trust is operational: clear resolution paths matter as much as polished acquisition flows.",
-        "Early role clarity across admin and vendor experiences reduces manual firefighting later.",
+        shoppergetitContent.scalingPrinciple,
+        "Retail distribution becomes more scalable when existing inventory can be coordinated instead of duplicated.",
+        "Early role clarity across admin, retailer, and shopper experiences reduces manual firefighting later.",
         "Product leadership in a constrained startup requires prioritizing system integrity and commercial learning at the same time.",
       ],
       gallery: [
         {
           src: "/images/projects/shoppergetit/shopper-dashboard.svg",
-          alt: "Shoppergetit shopper marketplace interface",
+          alt: "Shoppergetit shopper retail interface",
         },
         {
           src: "/images/projects/shoppergetit/vendor-console.svg",
-          alt: "Shoppergetit vendor operations console",
+          alt: "Shoppergetit retailer operations console",
         },
         {
           src: "/images/projects/shoppergetit/admin-operations.svg",
@@ -368,8 +409,8 @@ export const projects: Project[] = [
 export const metrics = [
   { value: "900+", label: "Mentorship sessions" },
   { value: "₦10M", label: "Early capital raised" },
-  { value: "Live", label: "Marketplace launched" },
+  { value: "Live", label: "Abuja beta launched" },
   { value: "4 sectors", label: "E-commerce, AI, healthtech, education" },
-  { value: "3-sided", label: "Shopper, vendor and admin systems" },
+  { value: "3-sided", label: "Shopper, retailer and admin systems" },
   { value: "Global", label: "Remote collaboration experience" },
 ];

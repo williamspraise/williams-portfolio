@@ -26,6 +26,7 @@ export async function sendInquiry(
   const name = readField(formData, "name");
   const email = readField(formData, "email");
   const company = readField(formData, "company");
+  const inquiryType = readField(formData, "inquiryType");
   const message = readField(formData, "message");
   const website = readField(formData, "website");
 
@@ -69,6 +70,7 @@ export async function sendInquiry(
     `Name: ${name}`,
     `Email: ${email}`,
     `Company: ${company || "Not provided"}`,
+    `Inquiry type: ${inquiryType || "Not provided"}`,
     "",
     "Message:",
     message,
@@ -79,7 +81,7 @@ export async function sendInquiry(
       from: process.env.CONTACT_FROM_EMAIL || defaultSender,
       to: [recipientEmail],
       replyTo: email,
-      subject: `Portfolio inquiry from ${name}`,
+      subject: `${inquiryType || "Website"} inquiry from ${name}`,
       text,
     });
 

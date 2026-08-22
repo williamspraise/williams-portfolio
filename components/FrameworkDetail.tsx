@@ -47,7 +47,7 @@ export default function FrameworkDetail({ framework }: FrameworkDetailProps) {
           </p>
           <p>
             The frameworks connect to the wider Williams Ecosystem: essays show
-            the thinking in public, investment philosophy shows how the same
+            the thinking in public, allocation philosophy shows how the same
             thinking applies to capital, and Why Williams explains the trust
             architecture behind the operator.
           </p>
@@ -55,10 +55,10 @@ export default function FrameworkDetail({ framework }: FrameworkDetailProps) {
             <ButtonLink href="/essays" variant="secondary">
               Read Essays
             </ButtonLink>
-            <ButtonLink href="/investment-philosophy">
-              Investment Philosophy
+            <ButtonLink href="/capital/philosophy">
+              Allocation Philosophy
             </ButtonLink>
-            <ButtonLink href="/why-williams" variant="quiet">
+            <ButtonLink href="/capital/why-williams" variant="quiet">
               Why Williams
             </ButtonLink>
           </div>

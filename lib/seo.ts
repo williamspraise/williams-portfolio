@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { essays } from "@/data/essays";
 import { frameworks } from "@/data/frameworks";
 import { projects } from "@/data/projects";
+import { shoppergetitContent } from "@/data/shoppergetit";
 
 export const siteUrl = "https://williamspraise.com";
 export const siteName = "Williams Praise";
@@ -34,6 +35,17 @@ export const coreSeoKeywords = [
   "Williams Praise frameworks",
   "Williams Praise product builder",
   "Williams Praise systems thinker",
+  "Williams Praise capital allocator",
+  "Williams Praise Nigeria",
+  "Capital Allocator Nigeria",
+  "Operator Investor",
+  "Founder Operator",
+  "Capital Allocation",
+  "Capital Allocation Engine",
+  "African capital allocator",
+  "African founder operator",
+  "Venture Operator",
+  "Nigerian entrepreneur",
   "Williams Praise technical product lead",
   "Williams Praise founder",
   "Williams Ecosystem",
@@ -67,6 +79,11 @@ export const coreSeoKeywords = [
   "Relationship Systems",
   "Decision Frameworks",
   "Shoppergetit",
+  "Shoppergetit urban retail infrastructure",
+  "Urban retail infrastructure",
+  "Predictable distribution",
+  "Local retailers",
+  "Retail fulfilment",
   "PAM AI",
   "Pendulum School of Innovation",
   "Springboard mentorship",
@@ -82,12 +99,12 @@ export const coreSeoKeywords = [
   "Nigeria wealth systems",
   "African builders essays",
   "technology exports",
-  "commerce infrastructure",
+  "retail infrastructure",
   "national wealth",
 ];
 
 export const canonicalIdentityDescription =
-  "Williams Praise, also known as Williams Emmanuel Praise, is a Nigeria-based founder-operator, product builder, technical product lead, systems thinker, framework creator, and founder of Shoppergetit.";
+  "Williams Praise, also known as Williams Emmanuel Praise, is a Nigeria-based capital allocator, founder-operator, product builder, technical product lead, systems thinker, framework creator, and founder of Shoppergetit.";
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
@@ -124,7 +141,7 @@ export function pageMetadata({
           url: "/opengraph-image",
           width: 1200,
           height: 630,
-          alt: "Williams Praise - Systems thinker, founder-operator, and product builder",
+          alt: "Williams Praise - Capital allocator, operator, systems thinker, and product builder",
         },
       ],
     },
@@ -148,7 +165,7 @@ export const personJsonLd = {
   alternateName: identityKeywords.filter((keyword) => keyword !== authorName),
   description: canonicalIdentityDescription,
   disambiguatingDescription:
-    "Williams Praise is the product builder, systems thinker, technical product lead, and Shoppergetit founder represented by williamspraise.com and the LinkedIn profile iam-williams.",
+    "Williams Praise is the capital allocator, operator, product builder, systems thinker, technical product lead, and Shoppergetit founder represented by williamspraise.com and the LinkedIn profile iam-williams.",
   url: siteUrl,
   mainEntityOfPage: {
     "@id": `${siteUrl}/about#profile`,
@@ -164,6 +181,7 @@ export const personJsonLd = {
     name: "Nigeria",
   },
   jobTitle: [
+    "Capital Allocator and Operator",
     "Systems Thinker",
     "Founder-Operator",
     "Product Builder",
@@ -220,8 +238,13 @@ export const personJsonLd = {
     "Technical Product Management",
     "Founder Operations",
     "Capital Allocation",
+    "Capital Allocation Engine",
+    "Capital Stewardship",
     "Investment Philosophy",
+    "Operator Investing",
     "Marketplace Systems",
+    "Urban Retail Infrastructure",
+    "Predictable Distribution",
     "Venture Building",
     "UX Systems",
     "Human Behavior",
@@ -280,7 +303,7 @@ export const websiteJsonLd = {
   ],
   url: siteUrl,
   description:
-    "The official website and canonical identity hub of Williams Praise: systems thinking, product work, ventures, investment philosophy, essays, and original frameworks.",
+    "The official website and canonical identity hub of Williams Praise: capital allocation, operating systems, product work, ventures, systems thinking, essays, and original frameworks.",
   publisher: {
     "@id": `${siteUrl}/#person`,
   },
@@ -302,7 +325,7 @@ export const ventureGraphJsonLd = {
         "@id": `${siteUrl}/#person`,
       },
       description:
-        "The Williams Ecosystem connects Williams Praise's product work, ventures, frameworks, essays, capital thinking, and public identity.",
+        "The Williams Ecosystem connects Williams Praise's capital allocation thesis, product work, ventures, frameworks, essays, and public identity.",
     },
     {
       "@type": "Organization",
@@ -313,7 +336,7 @@ export const ventureGraphJsonLd = {
         "@id": `${siteUrl}/#person`,
       },
       description:
-        "Shoppergetit is a commerce marketplace and infrastructure venture associated with Williams Praise, built around verified SMEs, structured checkout, request sourcing, bundles, community drops, logistics workflows, and buyer-seller trust.",
+        `${shoppergetitContent.shortPositioning} ${shoppergetitContent.definition} ${shoppergetitContent.businessModel}`,
     },
     {
       "@type": "Organization",

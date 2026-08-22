@@ -25,7 +25,8 @@ export const metadata: Metadata = pageMetadata({
     "Nigeria should care",
     "African builders",
     "African innovation",
-    "commerce infrastructure",
+    "urban retail infrastructure",
+    "predictable distribution",
     "national wealth",
     "wealth systems",
     "productive systems",
@@ -59,7 +60,7 @@ export default function WhyAmericaBecameRichPage() {
       "@id": `${siteUrl}/#website`,
     },
     keywords:
-      "Why America Became Rich, The American system to wealth, national wealth, Nigeria technology strategy, African builders, technology exports, commerce infrastructure",
+      "Why America Became Rich, The American system to wealth, national wealth, Nigeria technology strategy, African builders, technology exports, urban retail infrastructure",
   };
 
   return (

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ArrowUpRight, Globe2, Mail, MapPin } from "lucide-react";
 import { capabilities, roleFits } from "@/data/capabilities";
 import { metrics, projects } from "@/data/projects";
@@ -12,17 +11,18 @@ import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeader from "@/components/SectionHeader";
-import { canonicalIdentityDescription } from "@/lib/seo";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Williams Praise Portfolio - Founder of Shoppergetit & Product Builder",
-  description: `${canonicalIdentityDescription} Product portfolio covering Shoppergetit, commerce infrastructure, AI mobility, education, healthtech, UX systems, mentorship, and startup execution.`,
+export const metadata = pageMetadata({
+  title: "Product Portfolio | Williams Praise",
+  description:
+    "The operating craft behind Williams Praise as a capital allocator and operator: Shoppergetit urban retail infrastructure, AI mobility, education, healthtech, UX systems, mentorship, and startup execution.",
+  path: "/portfolio",
+  type: "profile",
   keywords: [
     "Williams Praise portfolio",
-    "Williams Emmanuel Praise portfolio",
     "Williams Praise Product Builder",
     "Williams Praise founder of Shoppergetit",
-    "Williams Praise Shoppergetit founder",
     "Williams Praise Technical Product Lead",
     "Product Builder",
     "Technical Product Lead",
@@ -34,17 +34,7 @@ export const metadata: Metadata = {
     "UX systems",
     "0 to 1 product execution",
   ],
-  alternates: {
-    canonical: "/portfolio",
-  },
-  openGraph: {
-    title: "Williams Praise - Product Builder & Technical Product Lead Portfolio",
-    description:
-      "Portfolio of Williams Praise, a Product Builder and Technical Product Lead with work across commerce, AI, education, healthtech, UX systems, and startup execution.",
-    type: "profile",
-    url: "/portfolio",
-  },
-};
+});
 
 export default function PortfolioPage() {
   return (
@@ -56,10 +46,9 @@ export default function PortfolioPage() {
         <section className="portfolio-note-section">
           <div className="container">
             <MotionReveal className="portfolio-note">
-              This page is the professional portfolio for recruiters, founders,
-              and product teams. It is not simply a collection of projects; it
-              is evidence of how I think, build, execute, learn, and turn work
-              into reusable assets.
+              For recruiters, founders, and product teams: this portfolio shows
+              the operating craft behind the allocator. It is evidence of how I
+              think, build, execute, learn, and turn work into reusable assets.
             </MotionReveal>
           </div>
         </section>

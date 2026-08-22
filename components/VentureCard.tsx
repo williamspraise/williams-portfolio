@@ -5,6 +5,9 @@ type VentureCardProps = {
   venture: {
     title: string;
     description: string;
+    stage?: string;
+    role?: string;
+    validation?: string;
     problem: string;
     systemResponse: string;
     cta: string;
@@ -20,6 +23,28 @@ export default function VentureCard({ venture }: VentureCardProps) {
       <p className="card-meta">Venture</p>
       <h3>{venture.title}</h3>
       <p className="venture-description">{venture.description}</p>
+      {(venture.stage || venture.role || venture.validation) && (
+        <div className="venture-meta-grid">
+          {venture.stage && (
+            <div>
+              <strong>Stage</strong>
+              <span>{venture.stage}</span>
+            </div>
+          )}
+          {venture.role && (
+            <div>
+              <strong>Williams role</strong>
+              <span>{venture.role}</span>
+            </div>
+          )}
+          {venture.validation && (
+            <div>
+              <strong>Validation</strong>
+              <span>{venture.validation}</span>
+            </div>
+          )}
+        </div>
+      )}
       <div className="venture-notes">
         <div>
           <strong>Problem</strong>

@@ -168,7 +168,7 @@ const finalDeductions = [
   "Faith becomes dangerous when it replaces responsibility. Prosperity still obeys material laws: bad policy, weak infrastructure, poor execution, and low trust produce poverty regardless of religious intensity.",
   "Local tech is useful, but export tech is how a country pulls new money into the economy. The real question is what Nigeria can build for the world from Nigeria.",
   "Startups need more than founders. They need capital depth, patient risk, talent recycling, infrastructure, and operators who can turn chaos into repeatable systems.",
-  "Shoppergetit fits the thesis because commerce infrastructure helps markets become more coordinated, measurable, and productive.",
+  "Shoppergetit fits the thesis because urban retail infrastructure helps local retailers, inventory, demand, and fulfilment become more coordinated, measurable, and productive.",
 ];
 
 type ArticleEvent =
@@ -935,26 +935,27 @@ export default function WealthArticle() {
               </Expandable>
               <Link
                 className="article-inline-link"
-                href="/investment-philosophy"
+                href="/capital/philosophy"
                 onClick={() => trackArticleEvent("post_clicked")}
               >
-                Read the investment philosophy behind productive cycles{" "}
+                Read the allocation philosophy behind productive cycles{" "}
                 <ArrowRight size={16} />
               </Link>
             </section>
 
             <section id="shoppergetit" className="article-section shoppergetit-panel">
               <p className="eyebrow">How Shoppergetit fits</p>
-              <h2>Commerce infrastructure is nation-building at market level.</h2>
+              <h2>Urban retail infrastructure is nation-building at market level.</h2>
               <p>
-                Shoppergetit matters because commerce is not only buying and
-                selling. It is inventory, trust, discovery, fulfillment,
-                payments, customer memory, vendor operations, and data. When
-                those layers become easier, small businesses become more
-                productive and local markets become more legible.
+                Shoppergetit matters because cities already contain retailers,
+                inventory, and customer demand. The problem is fragmentation:
+                discovery, fulfilment, payments, customer memory, retailer
+                operations, and data often sit in disconnected places. When
+                those layers become coordinated, local markets become more
+                productive and legible.
               </p>
               <div className="infrastructure-stack">
-                {["Vendors", "Catalogs", "Orders", "Payments", "Fulfillment", "Data"].map(
+                {["Retailers", "Inventory", "Demand", "Payments", "Fulfilment", "Data"].map(
                   (item, index) => (
                     <motion.div
                       key={item}
@@ -970,9 +971,9 @@ export default function WealthArticle() {
                 )}
               </div>
               <p className="highlight-insight">
-                The long-term value is not another store. It is a commerce
-                operating layer that can help informal markets behave more like
-                coordinated infrastructure.
+                The long-term value is not another store. It is a retail
+                coordination layer that can help fragmented markets behave more
+                like predictable distribution infrastructure.
               </p>
               <Link
                 className="article-inline-link"

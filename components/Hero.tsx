@@ -60,7 +60,7 @@ export default function Hero() {
           <div className="panel-feature">
             <p>Current proof point</p>
             <strong>Shoppergetit</strong>
-            <span>Live structured commerce marketplace</span>
+            <span>Live urban retail infrastructure</span>
             <ArrowUpRight size={18} />
           </div>
         </MotionReveal>

@@ -160,6 +160,9 @@ export default async function WorkPage({ params }: WorkPageProps) {
             </aside>
 
             <div className="case-content">
+              {study.sections?.map((section) => (
+                <CaseSection key={section.title} section={section} />
+              ))}
               <CaseText title="Context" content={study.context} />
               <CaseText title="Problem" content={study.problem} />
               <CaseText title="My Role" content={study.role} />
@@ -241,6 +244,26 @@ export default async function WorkPage({ params }: WorkPageProps) {
       </main>
       <Footer />
     </>
+  );
+}
+
+function CaseSection({
+  section,
+}: {
+  section: { title: string; content?: string; items?: string[] };
+}) {
+  return (
+    <section className="case-block">
+      <h2>{section.title}</h2>
+      {section.content && <p>{section.content}</p>}
+      {section.items && (
+        <ul>
+          {section.items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      )}
+    </section>
   );
 }
 

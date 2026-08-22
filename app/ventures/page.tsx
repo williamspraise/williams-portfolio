@@ -1,31 +1,32 @@
-import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
 import VentureCard from "@/components/VentureCard";
 import { ventures } from "@/data/ventures";
-import { canonicalIdentityDescription } from "@/lib/seo";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Ventures by Williams Praise - Shoppergetit and Williams Ecosystem",
-  description: `${canonicalIdentityDescription} Explore ventures associated with Williams Praise including Shoppergetit, Williams Content, Pendulum School of Innovation, and the Williams Ecosystem.`,
+export const metadata = pageMetadata({
+  title: "Ventures & Operating Assets | Williams Praise",
+  description:
+    "Ventures and operating assets associated with Williams Praise, including Shoppergetit urban retail infrastructure, Williams Content, Pendulum School of Innovation, and planned Williams Ecosystem concepts.",
+  path: "/ventures",
   keywords: [
     "Williams Praise ventures",
-    "Williams Emmanuel Praise ventures",
     "Williams Ecosystem",
     "Williams Praise founder of Shoppergetit",
     "Shoppergetit",
     "Shoppergetit founder Williams Praise",
     "Williams Content",
     "Pendulum School of Innovation",
-    "commerce infrastructure",
+    "urban retail infrastructure",
+    "predictable distribution",
+    "local retailers",
+    "customer demand",
+    "fulfilment",
     "talent infrastructure",
     "venture builder",
   ],
-  alternates: {
-    canonical: "/ventures",
-  },
-};
+});
 
 export default function VenturesPage() {
   return (
@@ -35,12 +36,14 @@ export default function VenturesPage() {
         <section className="page-hero">
           <div className="container">
             <p className="eyebrow">Venture Hub</p>
-            <h1>Ventures</h1>
+            <h1>Ventures and operating assets</h1>
             <p>
               Active operating parts associated with Williams Praise and the
-              Williams Ecosystem: Shoppergetit commerce infrastructure, public
-              trust and distribution, talent infrastructure, product work, and
-              future ventures shaped by systems thinking.
+              Williams Ecosystem: Shoppergetit urban retail infrastructure,
+              public trust and distribution, talent infrastructure, product
+              work, and future ventures shaped by systems thinking. These
+              businesses show where Williams is building operating capability,
+              reusable assets, and market intelligence.
             </p>
           </div>
         </section>
