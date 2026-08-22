@@ -46,7 +46,9 @@ export default function CapitalEnginePage() {
                 The Williams Capital Allocation Engine turns philosophy into an
                 operating rhythm: protect the capital base, deploy against a
                 clear hypothesis, measure the evidence, and redeploy from a
-                stronger position when the cycle earns it.
+                stronger position when the cycle earns it. The 25% target is
+                one possible outcome in specific modeled rounds; the larger
+                opportunity is productive capital velocity.
               </p>
             </MotionReveal>
             <MotionReveal delay={0.08}>
@@ -60,8 +62,8 @@ export default function CapitalEnginePage() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="Operating Cycle"
-                title="A capital cycle should create more than activity."
-                description="Each stage exists to convert capital into evidence, assets, cash flow, operating intelligence, or a disciplined decision to stop."
+                title="A capital cycle should create value, settlement capacity, or a disciplined stop."
+                description="Each stage exists to convert capital into economic value, evidence, assets, operating intelligence, or a recovery decision before more exposure becomes unjustified."
               />
             </MotionReveal>
             <div className="engine-step-grid">
@@ -127,15 +129,16 @@ export default function CapitalEnginePage() {
           <div className="container capital-question-grid">
             <MotionReveal>
               <p className="eyebrow">Capital Velocity</p>
-              <h2>The next allocation should begin from a stronger position.</h2>
+              <h2>Successful capital should regain optionality as soon as the terms and evidence allow.</h2>
             </MotionReveal>
             <MotionReveal className="capital-disclosure-panel" delay={0.08}>
               <Repeat2 size={26} />
               <p>
-                A completed cycle may leave behind reusable assets, operating
-                intelligence, distribution, data, trust, relationships, and
-                infrastructure. Those can strengthen the next allocation, but
-                they are not presented as cash return.
+                The Engine should not keep capital unnecessarily trapped inside
+                a cycle merely because the maximum contractual period has not
+                elapsed. Where sufficient distributable settlement capacity
+                exists and the agreed terms allow, earlier settlement can
+                restore capital optionality for another evidence-led cycle.
               </p>
               <a className="text-link" href="/capital/allocation-record">
                 See executed evidence

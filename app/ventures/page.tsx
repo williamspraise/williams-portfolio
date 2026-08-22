@@ -38,12 +38,12 @@ export default function VenturesPage() {
             <p className="eyebrow">Venture Hub</p>
             <h1>Ventures and operating assets</h1>
             <p>
-              Active operating parts associated with Williams Praise and the
-              Williams Ecosystem: Shoppergetit urban retail infrastructure,
-              public trust and distribution, talent infrastructure, product
-              work, and future ventures shaped by systems thinking. These
-              businesses show where Williams is building operating capability,
-              reusable assets, and market intelligence.
+              Shoppergetit is the primary executed public allocation evidence.
+              Other ecosystem components are clearly separated as current
+              operating work, developing infrastructure, product work, planned
+              opportunities, or thesis assets. Together, they show where
+              Williams is building reusable capability, distribution, trust,
+              and market intelligence that may strengthen future capital cycles.
             </p>
           </div>
         </section>

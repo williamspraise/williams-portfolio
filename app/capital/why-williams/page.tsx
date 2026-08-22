@@ -153,10 +153,10 @@ export default function WhyWilliamsCapitalPage() {
               <p className="eyebrow">04 - Why Williams</p>
               <h1>The allocator and operator share one strategic brain.</h1>
               <p className="diligence-hero-reveal">
-                Williams does not build companies in isolation. He is building
-                a capital and operating system where resources, software,
-                market evidence, trust, and operating knowledge can strengthen
-                the next allocation cycle.
+                Williams is not the economic product. He is the reason the
+                Engine may possess an operating advantage: capital judgment,
+                product strategy, technical execution, and operating
+                intervention share one strategic brain.
               </p>
               <div className="trust-row hq-chip-row">
                 {capabilityStack.map((item) => (
@@ -193,7 +193,7 @@ export default function WhyWilliamsCapitalPage() {
               <SectionHeader
                 eyebrow="Model Contrast"
                 title="One capital system. Direct operating intelligence."
-                description="The Williams model combines allocation and operation so evidence from the work can shape the next capital decision."
+                description="The Williams model combines allocation and operation so evidence from the work can shape the next capital decision. This does not eliminate agency risk; it reduces certain kinds of distance and makes stewardship more important."
               />
             </MotionReveal>
             <div className="diligence-moat-comparison">

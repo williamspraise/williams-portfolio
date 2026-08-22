@@ -52,7 +52,8 @@ export default function CapitalStewardshipPage() {
                 Stewardship is the discipline of preserving capital, reducing
                 exposure, detecting weak signals, recovering what can be
                 recovered, and formalizing controls as capital responsibility
-                grows.
+                grows. Recovery is not only downside management; it protects
+                the possibility of the next productive cycle.
               </p>
             </MotionReveal>
             <MotionReveal delay={0.08}>
@@ -88,8 +89,8 @@ export default function CapitalStewardshipPage() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="Risk Responses"
-                title="Each risk requires a different response"
-                description="The point is not to avoid every risk. The point is to know which risk is present and choose the right intervention before exposure becomes careless."
+                title="Winning matters. So does knowing what happens when we do not."
+                description="The point is not to avoid every risk. The point is to know which risk is present, choose the right intervention early, and keep weak allocations from trapping useful capital."
               />
             </MotionReveal>
             <div className="risk-card-grid">
@@ -107,6 +108,31 @@ export default function CapitalStewardshipPage() {
         </section>
 
         <section className="section">
+          <div className="container capital-question-grid">
+            <MotionReveal>
+              <p className="eyebrow">Final Optionality</p>
+              <h2>Value can exist before cash arrives.</h2>
+              <p>
+                A business can possess real underlying value while lacking
+                sufficient liquidity at the exact settlement moment. Where
+                appropriate and properly documented, routes may include partial
+                repayment plus extension, principal-first structures,
+                refinancing, strategic investment, minority liquidity, or other
+                permitted transactions.
+              </p>
+            </MotionReveal>
+            <MotionReveal className="capital-disclosure-panel" delay={0.08}>
+              <ShieldCheck size={28} />
+              <p>
+                These are options, not guarantees. Optionality exists to prevent
+                a temporary liquidity mismatch from automatically destroying
+                otherwise productive value.
+              </p>
+            </MotionReveal>
+          </div>
+        </section>
+
+        <section className="section section-contrast">
           <div className="container capital-question-grid">
             <MotionReveal>
               <p className="eyebrow">Institutional Layer</p>

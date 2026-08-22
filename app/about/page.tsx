@@ -32,17 +32,17 @@ export default function AboutPage() {
             <div className="flex justify-center items-center gap-2 mb-4">
               <span className="h-[1px] w-6 bg-[var(--accent)]"></span>
               <p className="eyebrow m-0 text-[0.75rem] tracking-[0.2em] font-medium text-[var(--accent)]">
-                BIOGRAPHY & OPERATING PHILOSOPHY
+              BIOGRAPHY & OPERATING CONVERGENCE
               </p>
               <span className="h-[1px] w-6 bg-[var(--accent)]"></span>
             </div>
             <h1 className="font-serif text-[clamp(2.5rem,6vw,4.8rem)] leading-[1.05] tracking-tight text-[var(--foreground)] mb-6">
-              The Mind Behind the Systems: <br />
+              The Capabilities Converged: <br />
               <span className="italic text-[var(--accent)]">Williams Praise</span>
             </h1>
             <p className="text-[clamp(1.1rem,1.8vw,1.3rem)] leading-relaxed text-[var(--muted)] font-serif max-w-2xl mx-auto">
-              Capital Allocator + Operator. Systems Thinker for Human Problems.
-              Product builder with direct operating involvement.
+              Systems thinker, product builder, founder-operator, technical
+              intervener, and Capital Allocator + Operator.
             </p>
           </div>
         </section>
@@ -105,15 +105,24 @@ export default function AboutPage() {
               <div className="lg:col-span-8 flex flex-col gap-8">
                 <MotionReveal>
                   <p className="font-serif text-[clamp(1.2rem,2.2vw,1.48rem)] leading-relaxed text-[var(--foreground)] mb-6">
-                    Williams Praise is a Capital Allocator + Operator who raises
-                    and allocates capital into productive businesses he can help
-                    build and operate.
+                    Williams Praise did not arrive at capital allocation as a
+                    detached financial identity. The path began with systems:
+                    understanding how outcomes are produced, where human
+                    behavior bends a process, and which intervention changes
+                    the result.
                   </p>
                   <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
-                    His advantage is proximity. Capital judgment sits close to
-                    product strategy, technical execution, UX and human behaviour,
-                    founder operations, systems thinking, and the discipline to
-                    decide what the evidence actually says.
+                    He learned to study systems, then design them, then build
+                    them, then operate them. Shoppergetit forced the next
+                    evolution: when external execution weakened, Williams moved
+                    closer to the technical work, changed the operating method,
+                    and protected the objective.
+                  </p>
+                  <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
+                    Those identities now converge into the Williams Capital
+                    Allocation Engine: a disciplined attempt to allocate
+                    capital into productive businesses he can help build,
+                    operate, measure, recover, and reallocate from.
                   </p>
                 </MotionReveal>
 
@@ -129,8 +138,8 @@ export default function AboutPage() {
                     Williams works across capital, products, technology,
                     businesses, and human behaviour through the same underlying
                     discipline: understand the system, identify what is producing
-                    the outcome, intervene where leverage exists, and learn from
-                    the evidence.
+                    the outcome, intervene where leverage exists, and let the
+                    evidence change the method without abandoning the objective.
                   </p>
                   <div className="grid grid-cols-1 gap-5">
                     <div>
@@ -139,7 +148,8 @@ export default function AboutPage() {
                       </h3>
                       <p className="text-[0.92rem] text-[var(--muted)] leading-relaxed m-0">
                         Williams raises and allocates capital into productive
-                        businesses he can help build and operate.
+                        businesses he can help build and operate, with the
+                        long-term thesis of recurring productive capital cycles.
                       </p>
                     </div>
                     <div>

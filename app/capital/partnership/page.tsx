@@ -16,10 +16,13 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Capital Partnership | Williams Praise",
   description:
-    "Begin a capital partnership conversation with Williams Praise after reviewing the capital philosophy, engine, allocation record, Why Williams, and stewardship approach.",
+    "Begin capital diligence with Williams Praise: review the wealth acceleration thesis, capital velocity engine, Shoppergetit evidence, structure, risks, assumptions, and stewardship approach.",
   path: "/capital/partnership",
   keywords: [
     "Capital Partnership",
+    "Begin Capital Diligence",
+    "Wealth Acceleration",
+    "Capital Velocity",
     "Begin a capital conversation",
     "Williams Praise capital partner",
     "African capital allocator",
@@ -38,11 +41,12 @@ export default function CapitalPartnershipPage() {
           <div className="container capital-hub-hero-grid">
             <MotionReveal className="capital-hero-copy">
               <p className="eyebrow">06 - Capital Partnership</p>
-              <h1>Begin with diligence, not hype.</h1>
+              <h1>Begin capital diligence.</h1>
               <p>
-                Capital partnership begins with a serious review of the
-                philosophy, engine, Shoppergetit evidence, Williams&apos; operating
-                advantage, and stewardship discipline.
+                The right next step is not a generic contact note. It is a
+                serious review of the current allocation thesis, structure,
+                risks, assumptions, Shoppergetit evidence, recovery doctrine,
+                and partner visibility expectations.
               </p>
             </MotionReveal>
             <MotionReveal delay={0.08}>
@@ -56,15 +60,17 @@ export default function CapitalPartnershipPage() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="Capital Partners"
-                title="Explore fit before structure."
-                description="Useful conversations include capital allocation diligence, Shoppergetit evidence review, stewardship questions, venture operating capacity, and future structure development."
+                title="Understand the Engine before deciding whether it belongs in your capital strategy."
+                description="Useful conversations begin with the economic proposition: return, velocity, recovery, optionality, recurring productive cycles, and the evidence currently available."
               />
               <div className="contact-option-grid compact-options">
                 {[
                   "Capital allocation diligence",
+                  "Wealth acceleration thesis",
+                  "Capital velocity assumptions",
                   "Shoppergetit evidence review",
+                  "Recovery and optionality policy",
                   "Stewardship questions",
-                  "Venture operating capacity",
                   "Future structure development",
                 ].map((item) => (
                   <span key={item}>{item}</span>

@@ -49,12 +49,12 @@ export const capitalJourney = [
 
 export const capitalModel = [
   "Capital",
-  "Allocation",
+  "Productive Allocation",
   "Operation",
-  "Assets",
   "Evidence",
-  "Recovery / Growth",
+  "Return / Recovery",
   "Reallocation",
+  "Repeat",
 ];
 
 export const capitalEngineSteps = [
@@ -191,15 +191,18 @@ export const plannedAllocations = [
 export const riskSystem = [
   {
     risk: "Allocation Risk",
-    response: "Use staged deployment, evidence gates, and stop/hold decisions.",
+    response:
+      "Use staged deployment, evidence gates, and stop or hold decisions before optimism becomes careless exposure.",
   },
   {
     risk: "Execution Risk",
-    response: "Change the operating method when resources stop becoming progress.",
+    response:
+      "Change the operating method when resources stop becoming progress; preserve the objective while replacing the weak mechanism.",
   },
   {
     risk: "Liquidity Risk",
-    response: "Preserve reserves, avoid overexposure, and define recovery routes.",
+    response:
+      "Preserve reserves, avoid overexposure, and distinguish temporary liquidity mismatch from absence of underlying value.",
   },
 ] as const;
 

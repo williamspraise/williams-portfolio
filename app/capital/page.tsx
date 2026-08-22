@@ -18,10 +18,12 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Williams Capital Allocation Engine | Williams Praise",
   description:
-    "Explore the Williams capital journey: allocation philosophy, engine, executed record, Why Williams, stewardship, and capital partnership diligence.",
+    "Explore the Williams Capital Allocation Engine: wealth acceleration, productive capital velocity, return, recovery, optionality, Shoppergetit evidence, and capital partnership diligence.",
   path: "/capital",
   keywords: [
     "Williams Capital Allocation Engine",
+    "Wealth Acceleration",
+    "Capital Velocity",
     "Capital Allocator",
     "Capital Allocation",
     "Founder Operator",
@@ -39,16 +41,17 @@ export default function CapitalHubPage() {
           <div className="container capital-hub-hero-grid">
             <MotionReveal className="capital-hero-copy">
               <p className="eyebrow">Capital Hub</p>
-              <h1>Capital allocation as an operating system.</h1>
+              <h1>Wealth acceleration through productive capital velocity.</h1>
               <p>
-                Williams turns capital, product judgment, technical execution,
-                and market evidence into a repeatable path for building
-                productive assets.
+                Williams is building a capital allocation engine around one
+                larger question: how many successful productive cycles can a
+                capital base complete while return, recovery, optionality, and
+                stewardship remain disciplined?
               </p>
               <div className="hero-actions">
-                <ButtonLink href="/capital/engine">Explore the Engine</ButtonLink>
+                <ButtonLink href="/capital/partnership">Begin Capital Diligence</ButtonLink>
                 <ButtonLink href="/capital/allocation-record" variant="secondary">
-                  See Evidence
+                  See Allocation 001
                 </ButtonLink>
               </div>
             </MotionReveal>
@@ -63,8 +66,8 @@ export default function CapitalHubPage() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="The Williams Capital Model"
-                title="From capital philosophy to operating partnership."
-                description="The capital journey moves from what Williams believes capital should do, to how decisions are made, what has already been built, why Williams has an operator advantage, how risk is handled, and how partnership begins."
+                title="From wealth acceleration thesis to diligence."
+                description="The capital journey moves from capital velocity and evidence-led cycles, to the engine, Allocation 001, Williams' operator advantage, recovery discipline, and a serious partnership conversation."
               />
             </MotionReveal>
             <div className="capital-route-grid">
@@ -111,8 +114,8 @@ export default function CapitalHubPage() {
             <MotionReveal>
               <SectionHeader
                 eyebrow="Why Williams"
-                title="Allocation is only half the work."
-                description="Williams combines capital judgment with the ability to enter product, technology, customer behaviour, and operations when execution requires intervention."
+                title="Williams is the operating advantage, not the whole proposition."
+                description="The economic proposition is productive capital velocity. Williams matters because capital judgment sits close to product, technology, customer behaviour, and operating intervention."
               />
             </MotionReveal>
             <MotionReveal delay={0.08}>
@@ -126,10 +129,10 @@ export default function CapitalHubPage() {
         <section className="capital-next-step">
           <div>
             <p className="eyebrow">Start</p>
-            <h2>Begin with the Allocation Philosophy.</h2>
+            <h2>Begin with the wealth acceleration thesis.</h2>
             <p>
-              First understand what Williams believes capital is for, then see
-              how that becomes an operating engine.
+              First understand why time changes the value of a return, then see
+              how that belief becomes an operating engine.
             </p>
           </div>
           <Link className="button button-primary" href="/capital/philosophy">

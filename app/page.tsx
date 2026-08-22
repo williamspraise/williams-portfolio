@@ -1,12 +1,15 @@
 import {
+  Activity,
   ArrowRight,
   Brain,
   BriefcaseBusiness,
+  Clock,
+  Eye,
+  Gauge,
+  Layers,
   ShieldCheck,
-  Sparkles,
-  Quote,
   TrendingUp,
-  UserCheck,
+  Wrench,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,389 +20,489 @@ import EssayCard from "@/components/EssayCard";
 import Footer from "@/components/Footer";
 import MotionReveal from "@/components/MotionReveal";
 import Navbar from "@/components/Navbar";
-import SectionHeader from "@/components/SectionHeader";
 import SystemsLetter from "@/components/SystemsLetter";
-import VentureCard from "@/components/VentureCard";
 import {
   capitalEngineSteps,
-  homepageCapitalModel,
   proofStats,
   riskSystem,
   shoppergetitAllocation,
 } from "@/data/capital";
 import { essays } from "@/data/essays";
-import { ventures } from "@/data/ventures";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Williams Praise - Capital Allocator, Operator & Systems Thinker",
+  title: "Williams Praise - Wealth Acceleration Through Capital Velocity",
   description:
-    "Williams Praise raises and allocates capital into productive businesses he can help build and operate, including Shoppergetit urban retail infrastructure.",
+    "Williams Praise is a Capital Allocator + Operator building the Williams Capital Allocation Engine around wealth acceleration, capital velocity, productive cycles, recovery discipline, and Shoppergetit operating evidence.",
   path: "/",
   keywords: [
     "Williams Praise",
-    "Capital Allocator Nigeria",
-    "Founder Operator",
-    "Shoppergetit Founder",
-    "African capital allocator",
-    "Mentorship and Leadership",
+    "Williams Capital Allocation Engine",
+    "Wealth Acceleration",
+    "Capital Velocity",
+    "Capital Allocator Operator",
+    "Founder Operator Nigeria",
+    "Shoppergetit",
     "Urban Retail Infrastructure",
   ],
 });
 
-const capabilityCards = [
+const wealthCycle = [
+  "Capital",
+  "Productive Cycle",
+  "Return / Recovery",
+  "Reallocation",
+  "Repeat",
+] as const;
+
+const fourQuestions = [
   {
-    title: "Product Strategy",
+    title: "Return",
+    question: "What economic value did the allocation create?",
     text:
-      "Clarify the customer problem, the operating constraint, and the product path that turns capital into useful work.",
-    icon: BriefcaseBusiness,
+      "Cash flow, repayment capacity, distributions, asset value, and realized outcomes remain the scorecard. Learning is useful, but it is not a substitute for return.",
+    icon: TrendingUp,
   },
   {
-    title: "Technical Execution",
+    title: "Velocity",
+    question: "How efficiently can successful capital work again?",
     text:
-      "Move from thesis to working systems through hands-on product, technology, workflow, and implementation discipline.",
+      "If sufficient settlement capacity exists and the agreed terms allow it, the Engine should not keep capital trapped simply because the outer period has not ended.",
+    icon: Gauge,
+  },
+  {
+    title: "Recovery",
+    question: "What happens when the allocation underperforms?",
+    text:
+      "Recovery begins the moment an allocation stops justifying additional capital. Preserve cash, recover execution, recover assets, then consider documented recovery routes.",
     icon: ShieldCheck,
   },
   {
-    title: "Systems Thinking",
+    title: "Optionality",
+    question: "What if value exists but liquidity timing is wrong?",
     text:
-      "Study how product, technology, capital, human behavior, and operations influence one another inside a live system.",
+      "A temporary liquidity mismatch should not automatically destroy real underlying value. Extensions, refinancing, strategic investment, or minority liquidity may be considered where appropriate.",
+    icon: Layers,
+  },
+] as const;
+
+const shoppergetitOperatingStory = [
+  "Approximately NGN 10M was historically raised for early Shoppergetit development.",
+  "The objective was to build and launch the commerce platform and supporting technical infrastructure.",
+  "Execution problems exposed weak dependencies, forcing Williams to reassess the operating method.",
+  "Williams changed technical resources, increased direct technical involvement, and used AI-assisted development to reduce dependency.",
+  "The objective survived the method change: functioning commerce infrastructure launched into real Abuja market operation.",
+] as const;
+
+const shoppergetitFlow = [
+  "Existing Retailers",
+  "Retailer-Held Inventory",
+  "Customer Demand",
+  "Shoppergetit Coordination Layer",
+  "Transactions + Fulfilment",
+] as const;
+
+const recoveryLadder = [
+  "Preserve Cash",
+  "Recover Execution",
+  "Recover Assets",
+  "Unlock Portfolio Liquidity",
+  "Structured Recovery",
+] as const;
+
+const operatingAdvantages = [
+  {
+    title: "Operating Proximity",
+    text:
+      "Williams can inspect product, technology, customer behavior, and operations from inside the work instead of relying only on reporting layers.",
+    icon: Eye,
+  },
+  {
+    title: "Faster Evidence",
+    text:
+      "Customer, product, technical, and operating signals can reach capital decisions with less translation distance.",
+    icon: Activity,
+  },
+  {
+    title: "Intervention Capability",
+    text:
+      "When an execution mechanism weakens, Williams can change resources, workflows, systems, or enter implementation directly where appropriate.",
+    icon: Wrench,
+  },
+  {
+    title: "Allocation Intelligence",
+    text:
+      "Operating lessons from one venture can improve judgment in subsequent allocations without pretending they remove investment risk.",
     icon: Brain,
   },
-];
+] as const;
+
+const ecosystemAssets = [
+  "Software",
+  "Distribution",
+  "Customer relationships",
+  "Retailer relationships",
+  "Audience",
+  "Trust",
+  "Data",
+  "Operating knowledge",
+  "Market intelligence",
+  "Commercial relationships",
+] as const;
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <AudienceModalPrompt />
-      <main className="overflow-hidden">
-        {/* EDITORIAL HERO SECTION */}
-        <section className="home-capital-hero relative border-b border-[var(--line)] bg-[var(--background)]">
-          <div className="container home-capital-hero-grid py-12 md:py-20 lg:py-24">
-            <MotionReveal className="home-capital-copy flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-4">
-                <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
-                  CAPITAL ALLOCATOR + OPERATOR
+      <main className="overflow-hidden bg-[var(--background)]">
+        <section className="relative border-b border-[var(--line)] py-16 md:py-24">
+          <div className="container">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+              <MotionReveal className="lg:col-span-7">
+                <p className="eyebrow text-[var(--accent)]">
+                  Wealth Acceleration Through Productive Capital Velocity
                 </p>
-              </div>
-              <h1 className="font-serif text-[clamp(2.5rem,5.5vw,4.8rem)] leading-[1.05] tracking-tight text-[var(--foreground)] mb-6">
-                Williams Praise. <br />
-                Capital Allocator + Operator. <br />
-                <span className="text-[var(--accent)] italic">Systems Thinker for Human Problems.</span>
-              </h1>
-
-              <p className="hero-subtitle text-[clamp(1.1rem,1.8vw,1.35rem)] leading-relaxed text-[var(--muted)] mb-8 font-serif">
-                I raise and allocate capital into productive businesses I can help build
-                and operate.
-              </p>
-
-              <div className="border-l-2 border-[var(--accent)] pl-6 py-2 mb-8 bg-[var(--background-contrast)]/30 rounded-r-lg">
-                <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed m-0 italic">
-                  &ldquo;The model combines capital allocation with product, technology,
-                  human behaviour, systems thinking, and direct operating involvement.&rdquo;
+                <h1 className="editorial-title-serif mb-7 text-[clamp(2.65rem,6vw,5.2rem)] leading-[1.02]">
+                  Return matters. So does how long your capital waited for it.
+                </h1>
+                <p className="editorial-paragraph mb-7 max-w-3xl text-[var(--foreground)]">
+                  Capital owners have finite time. A return that restores
+                  capital optionality sooner can create the possibility of
+                  another productive cycle, then another. The real question is
+                  not only what your capital can earn. It is how many productive
+                  cycles it can complete across the time available to you.
                 </p>
-              </div>
-
-              {/* HUMANIZED PROOF STRIP */}
-              <div className="hero-proof-strip flex flex-wrap gap-x-8 gap-y-3 py-4 border-y border-[var(--line)] mb-8 max-w-xl">
-                <div className="flex flex-col">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">ALLOCATION 001</span>
-                  <strong className="text-[1rem] text-[var(--foreground)]">Shoppergetit</strong>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">Customer Signups</span>
-                  <strong className="text-[1rem] text-[var(--foreground)]">300+ Signups</strong>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">Completed Orders</span>
-                  <strong className="text-[1rem] text-[var(--foreground)]">100+ Orders</strong>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase">Professionals Mentored</span>
-                  <strong className="text-[1rem] text-[var(--foreground)]">900+ Mentored</strong>
-                </div>
-              </div>
-
-              <div className="hero-actions flex flex-wrap gap-4">
-                <ButtonLink href="/capital/engine">
-                  Explore the Capital Engine <ArrowRight size={16} />
-                </ButtonLink>
-                <ButtonLink href="/capital/allocation-record" variant="secondary">
-                  Inspect Allocation Record
-                </ButtonLink>
-                <ButtonLink href="/portfolio" variant="quiet">
-                  View Product Portfolio
-                </ButtonLink>
-              </div>
-            </MotionReveal>
-
-            {/* HIGH-END EDITORIAL PORTRAIT PANEL */}
-            <MotionReveal className="home-proof-panel relative" delay={0.08}>
-              <div className="proof-portrait relative overflow-hidden rounded-t-xl border border-[var(--panel-line)]">
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--panel)]/70 to-transparent z-10 pointer-events-none" />
-                <Image
-                  src="/images/C208(1).jpg"
-                  alt="Portrait of Williams Praise - Capital Allocator & Operator"
-                  width={1080}
-                  height={1920}
-                  className="w-full object-cover aspect-[4/5] scale-100 hover:scale-[1.02] transition-transform duration-700"
-                  priority
-                />
-
-                {/* FLOATING DESIGNER BADGE */}
-                <div className="absolute bottom-4 left-4 z-20 bg-[var(--background)]/90 backdrop-blur-md border border-[var(--line)] rounded-lg p-3 max-w-[280px] shadow-lg">
-                  <span className="text-[0.68rem] text-[var(--accent)] font-bold tracking-wider uppercase block mb-1">
-                    HOW WILLIAMS OPERATES
-                  </span>
-                  <p className="text-[0.78rem] text-[var(--foreground)] m-0 leading-snug">
-                    Designed, operating, and leading with human intuition and robust engineering.
+                <div className="mb-8 border-l-2 border-[var(--accent)] bg-[var(--background-contrast)] px-6 py-5">
+                  <p className="m-0 font-serif text-[1.05rem] leading-relaxed text-[var(--foreground)]">
+                    Williams Praise is a Capital Allocator + Operator building
+                    the Williams Capital Allocation Engine to grow capital
+                    through successful recurring allocation cycles, disciplined
+                    recovery, and evidence-led reallocation.
                   </p>
                 </div>
+                <div className="hero-actions flex flex-wrap gap-4">
+                  <ButtonLink href="/capital/partnership">
+                    Begin Capital Diligence
+                  </ButtonLink>
+                  <ButtonLink href="/capital/allocation-record" variant="secondary">
+                    Inspect Allocation 001
+                  </ButtonLink>
+                  <ButtonLink href="/capital/engine" variant="quiet">
+                    Study the Engine
+                  </ButtonLink>
+                </div>
+              </MotionReveal>
+
+              <MotionReveal className="lg:col-span-5" delay={0.08}>
+                <div className="editorial-fine-frame overflow-hidden rounded-lg p-3">
+                  <div className="relative overflow-hidden rounded border border-[var(--line)]">
+                    <Image
+                      src="/images/C208(1).jpg"
+                      alt="Williams Praise, Capital Allocator and Operator"
+                      width={1080}
+                      height={1920}
+                      className="aspect-[4/5] w-full object-cover"
+                      priority
+                    />
+                    <div className="absolute inset-x-4 bottom-4 border border-[var(--line-strong)] bg-[var(--background)]/95 p-4 backdrop-blur-md">
+                      <p className="mb-1 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">
+                        Allocator + Operator
+                      </p>
+                      <p className="m-0 font-serif text-[0.9rem] leading-snug text-[var(--foreground)]">
+                        Capital judgment close to product, technology, market
+                        signal, and direct operating intervention.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </MotionReveal>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20">
+          <div className="container">
+            <MotionReveal>
+              <div className="prospectus-section-header">
+                <p>The Proposition</p>
+                <h2>Capital that finishes one productive job should be free to begin the next.</h2>
               </div>
-              <div className="proof-panel-copy bg-[var(--panel)] p-8 rounded-b-xl border-x border-b border-[var(--panel-line)]">
-                <p className="panel-kicker text-[var(--accent)] font-bold tracking-[0.15em] text-[0.7rem] uppercase mb-2">
-                  THE OPERATIONAL ADVANTAGE
-                </p>
-                <h3 className="font-serif text-[1.4rem] text-white leading-snug mb-3">
-                  Capital judgment with direct operating capability.
-                </h3>
-                <p className="text-[#a9b8bd] text-[0.91rem] leading-relaxed">
-                  Williams can inspect and influence product, technology, customer
-                  behaviour, and operations directly instead of depending only on
-                  distant reporting layers.
-                </p>
+              <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+                <div className="lg:col-span-5">
+                  <p className="editorial-paragraph text-[var(--foreground)]">
+                    The Engine is not designed around one isolated investment.
+                    Its larger ambition is a capital base capable of completing
+                    successful productive cycles repeatedly: deploy, operate,
+                    create evidence, return or recover value, then reallocate
+                    from a stronger position.
+                  </p>
+                </div>
+                <div className="lg:col-span-7">
+                  <FlowDiagram items={wealthCycle} className="panel-flow" />
+                </div>
               </div>
             </MotionReveal>
           </div>
         </section>
 
-        {/* EXECUTED ASSET SHOWCASE: SHOPPERGETIT */}
-        <section className="section bg-[var(--background)]">
+        <section className="border-y border-[var(--line)] bg-[var(--background-contrast)] py-16 md:py-20">
           <div className="container">
             <MotionReveal>
-              <SectionHeader
-                eyebrow="Active Operations"
-                title="Shoppergetit: Urban retail infrastructure for predictable distribution."
-                description="Shoppergetit connects local retailers, customer demand, and fulfilment through one intelligent commerce system."
-              />
+              <div className="prospectus-section-header">
+                <p>The Four Economic Questions</p>
+                <h2>Return. Velocity. Recovery. Optionality. Then repeat.</h2>
+              </div>
             </MotionReveal>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {fourQuestions.map((item, index) => {
+                const Icon = item.icon;
 
-            <div className="allocation-proof-grid gap-8 mt-12">
-              <MotionReveal className="allocation-proof-card flex flex-col justify-between">
-                <div>
-                  <div className="proof-card-top flex justify-between items-center mb-6">
-                    <StatusBadge status={shoppergetitAllocation.status} />
-                    <span className="font-mono text-[0.74rem] text-[#8fa0ab]">{shoppergetitAllocation.code}</span>
-                  </div>
-                  <FlowDiagram items={shoppergetitAllocation.model} />
-                  <p className="mt-6 text-[#a9b8bd] text-[0.93rem] leading-relaxed">
-                    Cities already have retailers, inventory, and demand. What is
-                    broken is how fragmented those pieces are. More customers
-                    shouldn&apos;t require more warehouses and more people.
-                  </p>
+                return (
+                  <MotionReveal key={item.title} delay={index * 0.04}>
+                    <article className="incentive-card min-h-full">
+                      <div>
+                        <div className="mb-6 flex h-10 w-10 items-center justify-center rounded border border-[var(--line)] bg-[var(--accent-soft)] text-[var(--accent)]">
+                          <Icon size={20} />
+                        </div>
+                        <p className="mb-2 font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[var(--accent)]">
+                          {String(index + 1).padStart(2, "0")} / {item.title}
+                        </p>
+                        <h3 className="mb-4 font-serif text-[1.45rem] text-[var(--foreground)]">
+                          {item.question}
+                        </h3>
+                        <p className="m-0 text-[0.95rem] leading-relaxed text-[var(--muted)]">
+                          {item.text}
+                        </p>
+                      </div>
+                    </article>
+                  </MotionReveal>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20">
+          <div className="container">
+            <MotionReveal>
+              <div className="prospectus-section-header">
+                <p>Allocation 001 / Public Evidence</p>
+                <h2>Shoppergetit: urban retail infrastructure for predictable distribution.</h2>
+              </div>
+            </MotionReveal>
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+              <MotionReveal className="lg:col-span-5">
+                <p className="editorial-paragraph text-[var(--foreground)]">
+                  Cities already have retailers, inventory, and customer
+                  demand. What is broken is how fragmented those pieces are.
+                  Shoppergetit coordinates existing retail capacity through an
+                  intelligent commerce and fulfilment system.
+                </p>
+                <p className="mt-5 font-serif text-[1.35rem] leading-tight text-[var(--accent)]">
+                  More customers should not require more warehouses and more people.
+                </p>
+                <div className="mt-8 grid grid-cols-2 gap-4">
+                  {proofStats.slice(0, 3).map((stat) => (
+                    <article
+                      className="border border-[var(--line)] bg-[var(--background-raised)] p-5"
+                      key={stat.label}
+                    >
+                      <StatusBadge status={stat.status} />
+                      <strong className="mt-3 block font-mono text-[1.65rem] text-[var(--foreground)]">
+                        {stat.value}
+                      </strong>
+                      <span className="text-[0.82rem] leading-snug text-[var(--muted)]">
+                        {stat.label}
+                      </span>
+                    </article>
+                  ))}
                 </div>
-                <div className="mt-8 border-t border-[var(--panel-line)] pt-4">
-                  <Link className="text-link text-[var(--accent)] hover:text-[var(--accent-bright)] inline-flex items-center gap-2" href="/capital/allocation-record">
-                    Inspect Complete Allocation Records
+              </MotionReveal>
+
+              <MotionReveal className="lg:col-span-7" delay={0.08}>
+                <div className="home-proof-panel p-7">
+                  <div className="proof-card-top mb-6 border-b border-[var(--panel-line)] pb-4">
+                    <StatusBadge status={shoppergetitAllocation.status} />
+                    <span>{shoppergetitAllocation.code}</span>
+                  </div>
+                  <FlowDiagram items={shoppergetitFlow} className="panel-flow" />
+                  <div className="mt-8 grid grid-cols-1 gap-4">
+                    {shoppergetitOperatingStory.map((item, index) => (
+                      <div
+                        className="grid grid-cols-[42px_1fr] gap-4 border-t border-[var(--panel-line)] pt-4"
+                        key={item}
+                      >
+                        <span className="font-mono text-[0.78rem] text-[var(--accent)]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <p className="m-0 text-[0.9rem] leading-relaxed text-[#a9b8bd]">
+                          {item}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    className="text-link mt-7 inline-flex items-center gap-2 text-[var(--accent)]"
+                    href="/capital/allocation-record"
+                  >
+                    See the full allocation record
                     <ArrowRight size={15} />
                   </Link>
                 </div>
               </MotionReveal>
+            </div>
+          </div>
+        </section>
 
-              <div className="proof-metric-grid">
-                {proofStats.map((stat, index) => (
-                  <MotionReveal key={stat.label} delay={index * 0.04}>
-                    <article className="proof-metric hover:border-[var(--accent)] transition-all duration-300">
-                      <div className="flex justify-between items-start mb-2">
-                        <span className="font-mono text-[0.7rem] text-[var(--accent)]">METRIC {String(index + 1).padStart(2, "0")}</span>
-                        <StatusBadge status={stat.status} />
-                      </div>
-                      <strong className="font-serif text-[2.2rem] text-[var(--foreground)] tracking-tight">{stat.value}</strong>
-                      <span className="text-[var(--muted)] text-[0.88rem] leading-snug">{stat.label}</span>
+        <section className="border-y border-[var(--line)] bg-[var(--background-contrast)] py-16 md:py-20">
+          <div className="container">
+            <MotionReveal>
+              <div className="prospectus-section-header">
+                <p>Why Williams</p>
+                <h2>The allocator and operator share one strategic brain.</h2>
+              </div>
+              <p className="editorial-paragraph mb-10 max-w-4xl text-[var(--foreground)]">
+                Williams is not the product being sold. He is the reason the
+                Engine may possess an operating advantage. The model reduces
+                certain forms of distance between capital decisions and
+                operating reality while requiring stronger stewardship because
+                allocator and operator power are concentrated.
+              </p>
+            </MotionReveal>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {operatingAdvantages.map((item, index) => {
+                const Icon = item.icon;
+
+                return (
+                  <MotionReveal key={item.title} delay={index * 0.04}>
+                    <article className="border border-[var(--line)] bg-[var(--background-raised)] p-6">
+                      <Icon className="mb-4 text-[var(--accent)]" size={21} />
+                      <h3 className="mb-3 font-serif text-[1.18rem] text-[var(--foreground)]">
+                        {item.title}
+                      </h3>
+                      <p className="m-0 text-[0.88rem] leading-relaxed text-[var(--muted)]">
+                        {item.text}
+                      </p>
                     </article>
                   </MotionReveal>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        {/* MODEL COMPARISON */}
-        <section className="section bg-[var(--background-contrast)] border-y border-[var(--line)]">
+        <section className="py-16 md:py-20">
           <div className="container">
             <MotionReveal>
-              <SectionHeader
-                eyebrow="Why This Model Is Different"
-                title="Williams doesn't only allocate the capital. He can enter the system it is building."
-                description="The difference is proximity. The Williams model gives him the ability to inspect and influence product, technology, customer behaviour, and operations directly."
-              />
-            </MotionReveal>
-            <div className="diligence-moat-comparison mt-12">
-              <MotionReveal>
-                <article className="h-full bg-[var(--background-raised)] border border-[var(--line)] p-8 rounded-xl">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--soft)] uppercase block mb-3">Traditional Allocator</span>
-                  <h3 className="font-serif text-[1.2rem] text-[var(--foreground)] mb-6">Traditional Allocation</h3>
-                  <FlowDiagram items={conventionalAllocationFlow} />
-                  <p className="mt-6 text-[0.88rem] text-[var(--muted)] leading-relaxed">
-                    Traditional allocators may depend more heavily on external
-                    operating teams, reporting layers, and delayed evidence before
-                    making the next capital decision.
-                  </p>
-                </article>
-              </MotionReveal>
-              <MotionReveal delay={0.06}>
-                <article className="engine-view h-full bg-[var(--panel)] border border-[var(--panel-line)] p-8 rounded-xl text-white">
-                  <span className="text-[0.68rem] tracking-wider text-[var(--accent)] uppercase block mb-3">WILLIAMS MODEL</span>
-                  <h3 className="font-serif text-[1.2rem] text-white mb-6">Williams Model</h3>
-                  <FlowDiagram items={williamsAllocationFlow} />
-                  <p className="mt-6 text-[0.88rem] text-[#a9b8bd] leading-relaxed">
-                    Capital flows through an allocator-operator who can build,
-                    diagnose, intervene, observe direct evidence, and use that
-                    evidence for the next capital decision.
-                  </p>
-                </article>
-              </MotionReveal>
-            </div>
-            <div className="mt-12 text-center">
-              <ButtonLink href="/capital/why-williams" variant="secondary">
-                Learn why proximity matters
-              </ButtonLink>
-            </div>
-          </div>
-        </section>
-
-        {/* CAPITAL MODEL / ENGINE PREVIEW */}
-        <section className="section bg-[var(--background)]">
-          <div className="container home-model-grid">
-            <MotionReveal className="flex flex-col justify-center">
-              <SectionHeader
-                eyebrow="Capital Model"
-                title="Raise capital, allocate it, build with it, and let evidence govern the next decision."
-                description="The homepage version is intentionally simple: capital moves through productive work, evidence, recovery or growth, and reallocation from a stronger position."
-              />
-              <div className="flex flex-wrap gap-4 mt-4">
-                <ButtonLink href="/capital/engine">
-                  Explore Capital Engine <ArrowRight size={16} />
-                </ButtonLink>
-                <ButtonLink href="/capital" variant="secondary">
-                  View Capital Hub
-                </ButtonLink>
+              <div className="prospectus-section-header">
+                <p>The Engine</p>
+                <h2>Preserve, deploy, measure, decide, return, repeat.</h2>
               </div>
+              <p className="editorial-paragraph mb-10 max-w-4xl text-[var(--foreground)]">
+                The maximum duration of a round should not become a reason to
+                keep capital unnecessarily deployed when sufficient settlement
+                capacity exists and the agreed terms permit settlement.
+              </p>
             </MotionReveal>
-            <MotionReveal delay={0.08}>
-              <div className="panel-flow bg-[var(--panel)] rounded-xl border border-[var(--panel-line)] p-8 shadow-xl">
-                <h3 className="font-serif text-white text-[1.28rem] mb-4 flex items-center gap-2">
-                  <Sparkles size={18} className="text-[var(--accent)]" /> Capital Journey
-                </h3>
-                <FlowDiagram items={homepageCapitalModel} className="panel-flow" />
-                <div className="border-t border-[var(--panel-line)] mt-6 pt-6">
-                  <p className="panel-kicker text-[var(--accent)] font-bold tracking-[0.15em] text-[0.7rem] uppercase mb-3">
-                    Engine rhythm
-                  </p>
-                  <FlowDiagram items={capitalEngineSteps.map((step) => step.step)} className="panel-flow" />
-                </div>
-              </div>
-            </MotionReveal>
-          </div>
-        </section>
-
-        {/* VENTURES COMPACT LIST */}
-        <section className="section bg-[var(--background-contrast)] border-y border-[var(--line)]">
-          <div className="container">
-            <MotionReveal>
-              <SectionHeader
-                eyebrow="The Operating Portfolio"
-                title="Ventures and product work under active stewardship."
-                description="Operating systems, commercial infrastructure, and product work that show how the capital thesis becomes practical evidence."
-              />
-            </MotionReveal>
-            <div className="venture-grid compact mt-12">
-              {ventures.slice(0, 4).map((venture, index) => (
-                <MotionReveal key={venture.title} delay={index * 0.05}>
-                  <VentureCard venture={venture} />
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6">
+              {capitalEngineSteps.map((step, index) => (
+                <MotionReveal key={step.step} delay={index * 0.035}>
+                  <article className="min-h-full border border-[var(--line)] bg-[var(--background-raised)] p-5">
+                    <span className="mb-4 block font-mono text-[0.68rem] font-bold text-[var(--accent)]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="mb-2 font-serif text-[1.08rem] text-[var(--foreground)]">
+                      {step.step}
+                    </h3>
+                    <p className="m-0 text-[0.78rem] leading-relaxed text-[var(--muted)]">
+                      {step.text}
+                    </p>
+                  </article>
                 </MotionReveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* THINKING / OPERATING CAPABILITY */}
-        <section className="section bg-[var(--background)]">
+        <section className="border-y border-[var(--line)] bg-[var(--background-contrast)] py-16 md:py-20">
           <div className="container">
-            <MotionReveal>
-              <SectionHeader
-                eyebrow="Thinking + Operating Capability"
-                title="The operating capability behind the capital thesis."
-                description="Williams' work is grounded in systems thinking, product strategy, technical execution, UX and human behaviour, founder operations, and capital allocation discipline."
-              />
-            </MotionReveal>
-            <div className="capability-grid mt-12">
-              {capabilityCards.map((card, index) => {
-                const Icon = card.icon;
-
-                return (
-                  <MotionReveal key={card.title} delay={index * 0.04}>
-                    <article className="capability-card group hover:border-[var(--accent)] hover:shadow-md transition-all duration-300">
-                      <span className="capability-icon bg-[var(--accent-soft)] group-hover:bg-[var(--accent)] group-hover:text-white transition-all duration-300">
-                        <Icon size={21} />
-                      </span>
-                      <h3 className="font-serif text-[1.18rem] text-[var(--foreground)] mb-3">{card.title}</h3>
-                      <p className="text-[var(--muted)] text-[0.9rem] leading-relaxed">{card.text}</p>
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+              <MotionReveal className="lg:col-span-5">
+                <p className="eyebrow">Recovery</p>
+                <h2 className="mb-6 font-serif text-[clamp(2rem,4vw,3.2rem)] leading-tight text-[var(--foreground)]">
+                  Winning matters. So does knowing what happens when we do not.
+                </h2>
+                <p className="text-[1.03rem] leading-relaxed text-[var(--muted)]">
+                  Dead capital cannot compound. Recovery protects capital
+                  velocity by refusing to leave resources trapped inside an
+                  allocation that no longer justifies more exposure.
+                </p>
+                <p className="mt-5 font-serif text-[1.25rem] leading-tight text-[var(--accent)]">
+                  Recovery begins the moment an allocation stops justifying
+                  additional capital.
+                </p>
+              </MotionReveal>
+              <MotionReveal className="lg:col-span-7" delay={0.08}>
+                <FlowDiagram items={recoveryLadder} className="panel-flow" />
+                <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+                  {riskSystem.map((item) => (
+                    <article
+                      className="border border-[var(--line)] bg-[var(--background-raised)] p-5"
+                      key={item.risk}
+                    >
+                      <ShieldCheck className="mb-3 text-[var(--accent)]" size={20} />
+                      <h3 className="mb-2 font-serif text-[1.08rem] text-[var(--foreground)]">
+                        {item.risk}
+                      </h3>
+                      <p className="m-0 text-[0.82rem] leading-relaxed text-[var(--muted)]">
+                        {item.response}
+                      </p>
                     </article>
-                  </MotionReveal>
-                );
-              })}
-            </div>
-            <div className="flex flex-wrap gap-4 mt-10">
-              <ButtonLink href="/capital/why-williams" variant="secondary">
-                Explore Why Williams
-              </ButtonLink>
-              <ButtonLink href="/portfolio" variant="quiet">
-                View Product Portfolio
-              </ButtonLink>
+                  ))}
+                </div>
+              </MotionReveal>
             </div>
           </div>
         </section>
 
-        {/* RISK & STEWARDSHIP */}
-        <section className="section bg-[var(--background)]">
-          <div className="container risk-preview-grid">
+        <section className="py-16 md:py-20">
+          <div className="container">
             <MotionReveal>
-              <SectionHeader
-                eyebrow="Stewardship & Diligence"
-                title="Knowing when to stop is part of allocation discipline."
-                description="Capital stewardship protects principal, keeps visibility, and uses evidence gates to decide whether to increase, hold, redirect, or stop."
-              />
-              <div className="mt-4">
-                <ButtonLink href="/capital/stewardship" variant="secondary">
-                  Review Complete Diligence & Stewardship
-                </ButtonLink>
+              <div className="prospectus-section-header">
+                <p>The Ecosystem</p>
+                <h2>The next allocation should not always begin from zero.</h2>
               </div>
+              <p className="editorial-paragraph mb-10 max-w-4xl text-[var(--foreground)]">
+                A serious build may leave behind technology, distribution,
+                customer relationships, retailer relationships, audience, trust,
+                data, operating knowledge, and market intelligence. Those assets
+                can make subsequent cycles less blind and potentially more
+                efficient without becoming a guarantee of return.
+              </p>
             </MotionReveal>
-            <MotionReveal className="risk-card-grid mt-12" delay={0.08}>
-              {riskSystem.map((item) => (
-                <article key={item.risk} className="border border-[var(--line)] rounded-xl p-6 bg-[var(--background-raised)]">
-                  <ShieldCheck size={21} className="text-[var(--accent)] mb-3" />
-                  <h3 className="font-serif text-[1.12rem] mb-2">{item.risk}</h3>
-                  <p className="text-[var(--muted)] text-[0.88rem] leading-relaxed m-0">{item.response}</p>
-                </article>
+            <MotionReveal className="diligence-layer-tags" delay={0.08}>
+              {ecosystemAssets.map((asset) => (
+                <span key={asset}>{asset}</span>
               ))}
             </MotionReveal>
           </div>
         </section>
 
-        {/* ESSAYS & INTELLECTUAL OUTPUT */}
-        <section className="section bg-[var(--background)] border-b border-[var(--line)]">
+        <section className="border-y border-[var(--line)] bg-[var(--background-contrast)] py-16 md:py-20">
           <div className="container">
             <MotionReveal>
-              <SectionHeader
-                eyebrow="Intellectual Signature"
-                title="The ideas that drive the operator"
-                description="Essays examining social systems, economic models, human behaviour, and execution."
-              />
+              <div className="prospectus-section-header">
+                <p>Ideas Behind the Allocator</p>
+                <h2>The thinking is supporting evidence, not the main pitch.</h2>
+              </div>
+              <p className="editorial-paragraph mb-10 max-w-3xl text-[var(--foreground)]">
+                Williams writes to expose how he reasons about systems, human
+                behavior, institutions, product, and execution. The essays help
+                a capital partner inspect the mind behind the operating model.
+              </p>
             </MotionReveal>
-            <div className="essay-grid mt-12">
+            <div className="essay-grid">
               {essays.slice(0, 3).map((essay, index) => (
                 <MotionReveal key={essay.title} delay={index * 0.04}>
                   <EssayCard essay={essay} />
@@ -409,68 +512,60 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PROFESSIONAL WORK */}
-        <section className="section bg-[var(--background-contrast)] border-b border-[var(--line)]">
+        <section className="py-16 md:py-20">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <MotionReveal className="flex flex-col justify-center">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="h-[1px] w-8 bg-[var(--accent)]"></span>
-                  <p className="eyebrow m-0 text-[0.78rem] tracking-[0.2em] font-medium text-[var(--accent)]">
-                    PROFESSIONAL WORK
-                  </p>
-                </div>
-                <h2 className="font-serif text-[clamp(2rem,3.5vw,2.8rem)] leading-tight text-[var(--foreground)] mb-6">
-                  Product, technical, UX, and founder operating work.
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+              <MotionReveal className="lg:col-span-5">
+                <p className="eyebrow">Capital Stewardship</p>
+                <h2 className="mb-6 font-serif text-[clamp(2rem,4vw,3.1rem)] leading-tight text-[var(--foreground)]">
+                  Stronger operating proximity demands stronger partner visibility.
                 </h2>
-                <p className="text-[var(--muted)] text-[1.02rem] leading-relaxed mb-6">
-                  A secondary pathway for engaging Williams&apos; product,
-                  technical, UX, and operating capability.
+                <p className="text-[1.03rem] leading-relaxed text-[var(--muted)]">
+                  Institutional controls are being formalized as the Engine
+                  prepares for larger pools of partner capital: custody,
+                  reporting cadence, conflicts, decision rights, accounting, and
+                  partner visibility.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-4">
-                  <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
-                    <TrendingUp size={24} className="text-[var(--accent)] mb-3" />
-                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">900+ Mentored</h4>
-                    <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
-                      Guided product engineers, UX specialists, founders, and
-                      builders through product, UX, and execution questions.
-                    </p>
-                  </div>
-                  <div className="border border-[var(--line)] rounded-lg p-5 bg-[var(--background-raised)]">
-                    <UserCheck size={24} className="text-[var(--accent)] mb-3" />
-                    <h4 className="font-serif text-[1.08rem] font-bold mb-2">Product Portfolio</h4>
-                    <p className="text-[0.84rem] text-[var(--muted)] leading-relaxed m-0">
-                      Product strategy, technical execution, UX and human
-                      behaviour, founder operations, and systems thinking.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-4 mt-4">
-                  <ButtonLink href="/portfolio" variant="secondary">View Product Portfolio</ButtonLink>
-                  <ButtonLink href="/contact" variant="quiet">Work with Williams</ButtonLink>
-                </div>
               </MotionReveal>
-              <MotionReveal delay={0.08} className="relative flex justify-center items-center">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)]/5 to-transparent rounded-2xl pointer-events-none" />
-                <div className="bg-[var(--background-raised)] border border-[var(--line)] rounded-2xl p-8 max-w-lg shadow-xl relative overflow-hidden">
-                  <div className="absolute top-0 right-0 h-24 w-24 bg-[var(--accent-soft)] rounded-full -mr-8 -mt-8 opacity-50 pointer-events-none" />
-                  <Quote size={40} className="text-[var(--accent)]/20 mb-4" />
-                  <blockquote className="font-serif text-[1.15rem] leading-relaxed text-[var(--foreground)] mb-6 italic">
-                    &ldquo;The allocator and operator share one strategic brain. Each
-                    serious build should make the next one less blind.&rdquo;
-                  </blockquote>
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-mono text-[0.82rem] font-bold">
-                      WP
-                    </div>
-                    <div>
-                      <strong className="text-[0.92rem] text-[var(--foreground)] block">Williams Praise</strong>
-                      <span className="text-[0.74rem] text-[var(--muted)] block">Capital Allocator + Operator</span>
-                    </div>
-                  </div>
+              <MotionReveal className="editorial-fine-frame p-8 lg:col-span-7" delay={0.08}>
+                <Clock className="mb-5 text-[var(--accent)]" size={28} />
+                <h3 className="mb-4 font-serif text-[1.6rem] text-[var(--foreground)]">
+                  Understand the current thesis before deciding whether the
+                  Engine belongs in your capital strategy.
+                </h3>
+                <p className="mb-7 text-[0.96rem] leading-relaxed text-[var(--muted)]">
+                  A serious diligence conversation should review the allocation
+                  thesis, structure, risks, assumptions, Shoppergetit evidence,
+                  recovery doctrine, and partner reporting expectations.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <ButtonLink href="/capital/partnership">
+                    Begin Capital Diligence
+                  </ButtonLink>
+                  <ButtonLink href="/capital/stewardship" variant="secondary">
+                    Review Stewardship
+                  </ButtonLink>
                 </div>
               </MotionReveal>
             </div>
+          </div>
+        </section>
+
+        <section className="border-t border-[var(--line)] bg-[var(--background-contrast)] py-16 md:py-20">
+          <div className="container text-center">
+            <MotionReveal>
+              <BriefcaseBusiness className="mx-auto mb-5 text-[var(--accent)]" size={28} />
+              <h2 className="mx-auto mb-6 max-w-4xl font-serif text-[clamp(2rem,4vw,3.4rem)] leading-tight text-[var(--foreground)]">
+                How many productive cycles can your capital complete?
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl text-[1rem] leading-relaxed text-[var(--muted)]">
+                Begin the conversation with evidence, assumptions, structure,
+                and risk on the table.
+              </p>
+              <ButtonLink href="/capital/partnership">
+                Begin Capital Diligence
+              </ButtonLink>
+            </MotionReveal>
           </div>
         </section>
 
@@ -480,20 +575,3 @@ export default function Home() {
     </>
   );
 }
-
-const conventionalAllocationFlow = [
-  "Capital Base",
-  "External Operating Team",
-  "Reporting Layer",
-  "Delayed Evidence",
-  "Next Capital Decision",
-];
-
-const williamsAllocationFlow = [
-  "Capital",
-  "Williams - Allocator + Operator",
-  "Build / Diagnose / Intervene",
-  "Operating Venture",
-  "Direct Evidence",
-  "Next Capital Decision",
-];
