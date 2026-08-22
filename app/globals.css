@@ -3598,14 +3598,19 @@ button {
     background: var(--background);
     border-top: 1px solid var(--line);
     display: block;
-    overflow: hidden;
+    max-height: calc(100vh - 74px);
+    max-height: calc(100dvh - 74px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .mobile-menu-links {
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding-bottom: 12px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
     padding-top: 12px;
   }
 
@@ -4012,14 +4017,19 @@ button {
     background: var(--background);
     border-top: 1px solid var(--line);
     display: block;
-    overflow: hidden;
+    max-height: calc(100vh - 74px);
+    max-height: calc(100dvh - 74px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .mobile-menu-links {
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding-bottom: 12px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
     padding-top: 12px;
   }
 
