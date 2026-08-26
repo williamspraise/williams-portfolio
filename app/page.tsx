@@ -31,11 +31,18 @@ import { essays } from "@/data/essays";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Williams Praise - Wealth Acceleration Through Capital Velocity",
+  title: "Williams Praise | Official Website & Identity Hub",
   description:
-    "Williams Praise is a Capital Allocator + Operator building the Williams Capital Allocation Engine around wealth acceleration, capital velocity, productive cycles, recovery discipline, and Shoppergetit operating evidence.",
+    "Official website of Williams Praise, the public professional identity of Williams Praise Emmanuel: systems thinker, founder of Pendulum HQ, product builder, capital allocator, and co-founder/operator associated with Shoppergetit.",
   path: "/",
   keywords: [
+    "Williams Praise Emmanuel",
+    "Williams Emmanuel Praise",
+    "Williams Praise official website",
+    "Williams Praise identity",
+    "Williams Praise founder of Pendulum HQ",
+    "Williams Praise co-founder of Shoppergetit",
+    "Pendulum HQ",
     "Williams Praise",
     "Williams Capital Allocation Engine",
     "Wealth Acceleration",
@@ -161,24 +168,29 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
               <MotionReveal className="lg:col-span-7">
                 <p className="eyebrow text-[var(--accent)]">
-                  Wealth Acceleration Through Productive Capital Velocity
+                  Official Website of Williams Praise
                 </p>
                 <h1 className="editorial-title-serif mb-7 text-[clamp(2.65rem,6vw,5.2rem)] leading-[1.02]">
-                  Return matters. So does how long your capital waited for it.
+                  Williams Praise.
+                  <span className="block text-[var(--accent)]">
+                    Systems thinker. Builder. Allocator.
+                  </span>
                 </h1>
                 <p className="editorial-paragraph mb-7 max-w-3xl text-[var(--foreground)]">
-                  Capital owners have finite time. A return that restores
-                  capital optionality sooner can create the possibility of
-                  another productive cycle, then another. The real question is
-                  not only what your capital can earn. It is how many productive
-                  cycles it can complete across the time available to you.
+                  This is the canonical website for Williams Praise, the public
+                  professional identity of Williams Praise Emmanuel, also
+                  indexed as Williams Emmanuel Praise. It connects the person,
+                  Pendulum HQ, the product work, the ventures, the systems
+                  thinking, the essays, and the capital allocation thesis into
+                  one public identity.
                 </p>
                 <div className="mb-8 border-l-2 border-[var(--accent)] bg-[var(--background-contrast)] px-6 py-5">
                   <p className="m-0 font-serif text-[1.05rem] leading-relaxed text-[var(--foreground)]">
-                    Williams Praise is a Capital Allocator + Operator building
-                    the Williams Capital Allocation Engine to grow capital
-                    through successful recurring allocation cycles, disciplined
-                    recovery, and evidence-led reallocation.
+                    Williams Praise is a Systems Thinker for Human Problems,
+                    founder of Pendulum HQ, product builder, technical product
+                    leader, and Capital Allocator + Operator. Shoppergetit and
+                    Pendulum School of Innovation sit within the Pendulum HQ
+                    ecosystem as operating ventures.
                   </p>
                 </div>
                 <div className="hero-actions flex flex-wrap gap-4">
@@ -199,7 +211,7 @@ export default function Home() {
                   <div className="relative overflow-hidden rounded border border-[var(--line)]">
                     <Image
                       src="/images/C208(1).jpg"
-                      alt="Williams Praise, Capital Allocator and Operator"
+                      alt="Williams Praise, public professional identity of Williams Praise Emmanuel"
                       width={1080}
                       height={1920}
                       className="aspect-[4/5] w-full object-cover"

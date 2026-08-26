@@ -6,6 +6,7 @@ export type NavigationLink = {
 
 export const navigationLinks: NavigationLink[] = [
   { label: "Home", href: "/" },
+  { label: "Identity", href: "/identity" },
   {
     label: "Capital",
     href: "/capital",

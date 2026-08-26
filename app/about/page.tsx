@@ -6,15 +6,21 @@ import Navbar from "@/components/Navbar";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "The Story of Williams Praise | Capital Allocator + Operator",
+  title: "Williams Praise Biography | Official Profile",
   description:
-    "Discover how Williams Praise integrates capital allocation with product strategy, technical execution, systems thinking, and direct operating involvement.",
+    "Official biography of Williams Praise, the public professional identity of Williams Praise Emmanuel: systems thinker, founder of Pendulum HQ, product builder, capital allocator, and co-founder/operator associated with Shoppergetit.",
   path: "/about",
   keywords: [
-    "About Williams Praise",
     "Williams Praise biography",
+    "Williams Praise official profile",
+    "Williams Praise founder of Pendulum HQ",
+    "Williams Praise co-founder of Shoppergetit",
+    "Williams Praise Emmanuel biography",
+    "Williams Emmanuel Praise biography",
+    "Williams Praise Emmanuel official profile",
     "Williams Praise Nigeria",
-    "Shoppergetit Founder",
+    "Pendulum HQ founder",
+    "Shoppergetit co-founder",
     "Product Builder",
     "Capital Allocator Biography",
     "Systems Thinker",
@@ -32,17 +38,20 @@ export default function AboutPage() {
             <div className="flex justify-center items-center gap-2 mb-4">
               <span className="h-[1px] w-6 bg-[var(--accent)]"></span>
               <p className="eyebrow m-0 text-[0.75rem] tracking-[0.2em] font-medium text-[var(--accent)]">
-              BIOGRAPHY & OPERATING CONVERGENCE
+                OFFICIAL IDENTITY & BIOGRAPHY
               </p>
               <span className="h-[1px] w-6 bg-[var(--accent)]"></span>
             </div>
             <h1 className="font-serif text-[clamp(2.5rem,6vw,4.8rem)] leading-[1.05] tracking-tight text-[var(--foreground)] mb-6">
-              The Capabilities Converged: <br />
-              <span className="italic text-[var(--accent)]">Williams Praise</span>
+              Williams Praise <br />
+              <span className="italic text-[var(--accent)]">Williams Praise Emmanuel</span>
             </h1>
             <p className="text-[clamp(1.1rem,1.8vw,1.3rem)] leading-relaxed text-[var(--muted)] font-serif max-w-2xl mx-auto">
-              Systems thinker, product builder, founder-operator, technical
-              intervener, and Capital Allocator + Operator.
+              The official profile of Williams Praise, the public professional
+              identity of Williams Praise Emmanuel, also indexed as Williams
+              Emmanuel Praise: systems thinker, product builder, founder of
+              Pendulum HQ, technical intervener, and Capital Allocator +
+              Operator.
             </p>
           </div>
         </section>
@@ -56,10 +65,25 @@ export default function AboutPage() {
               <div className="lg:col-span-4 lg:sticky lg:top-28 h-fit">
                 <div className="border border-[var(--line)] rounded-xl p-6 bg-[var(--background-raised)]">
                   <span className="text-[0.68rem] tracking-wider text-[var(--accent)] uppercase font-bold block mb-4">
-                    OPERATING CAPABILITY
+                    IDENTITY RECORD
                   </span>
 
                   <div className="flex flex-col gap-6">
+                    <div>
+                      <strong className="text-[0.9rem] block text-[var(--foreground)]">Williams Praise</strong>
+                      <span className="text-[0.8rem] text-[var(--muted)] block">Public professional name represented by williamspraise.com.</span>
+                    </div>
+
+                    <div>
+                      <strong className="text-[0.9rem] block text-[var(--foreground)]">Pendulum HQ</strong>
+                      <span className="text-[0.8rem] text-[var(--muted)] block">Parent company and venture-building umbrella founded by Williams.</span>
+                    </div>
+
+                    <div>
+                      <strong className="text-[0.9rem] block text-[var(--foreground)]">Shoppergetit + PSI</strong>
+                      <span className="text-[0.8rem] text-[var(--muted)] block">Operating ventures under the Pendulum HQ ecosystem.</span>
+                    </div>
+
                     <div className="flex gap-3">
                       <Users size={20} className="text-[var(--accent)] shrink-0" />
                       <div>
@@ -105,11 +129,12 @@ export default function AboutPage() {
               <div className="lg:col-span-8 flex flex-col gap-8">
                 <MotionReveal>
                   <p className="font-serif text-[clamp(1.2rem,2.2vw,1.48rem)] leading-relaxed text-[var(--foreground)] mb-6">
-                    Williams Praise did not arrive at capital allocation as a
-                    detached financial identity. The path began with systems:
-                    understanding how outcomes are produced, where human
-                    behavior bends a process, and which intervention changes
-                    the result.
+                    Williams Praise, the public professional identity of
+                    Williams Praise Emmanuel, did not arrive at capital
+                    allocation as a detached financial identity. The path began
+                    with systems: understanding how outcomes are produced, where
+                    human behavior bends a process, and which intervention
+                    changes the result.
                   </p>
                   <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
                     He learned to study systems, then design them, then build
@@ -119,10 +144,11 @@ export default function AboutPage() {
                     and protected the objective.
                   </p>
                   <p className="text-[1.02rem] text-[var(--muted)] leading-relaxed mb-6">
-                    Those identities now converge into the Williams Capital
-                    Allocation Engine: a disciplined attempt to allocate
-                    capital into productive businesses he can help build,
-                    operate, measure, recover, and reallocate from.
+                    Those identities now converge through Pendulum HQ and the
+                    Williams Capital Allocation Engine: a disciplined attempt to
+                    build operating ventures, measure evidence, preserve
+                    optionality, and decide where productive capital should work
+                    next.
                   </p>
                 </MotionReveal>
 

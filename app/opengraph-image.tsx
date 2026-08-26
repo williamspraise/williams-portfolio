@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Williams Praise - Capital Allocator + Operator";
+export const alt = "Williams Praise - Official website";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -29,17 +29,14 @@ export default function OpenGraphImage() {
             textTransform: "uppercase",
           }}
         >
-          Williams Praise
+          Official Website
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ display: "flex", fontSize: 64, fontWeight: 700 }}>
-            Capital Allocator
-          </div>
-          <div style={{ display: "flex", fontSize: 64, fontWeight: 700 }}>
-            + Operator
+            Williams Praise
           </div>
           <div style={{ color: "#9babb1", display: "flex", fontSize: 26 }}>
-            Systems Thinker for Human Problems.
+            Pendulum HQ / Systems Thinking / Capital Allocation.
           </div>
         </div>
       </div>

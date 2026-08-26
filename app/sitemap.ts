@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 
 const baseUrl = "https://williamspraise.com";
-const lastModified = new Date("2026-08-22");
+const lastModified = new Date("2026-08-26");
 
 const routes = [
   { path: "/", priority: 1, changeFrequency: "monthly" },
+  { path: "/identity", priority: 0.98, changeFrequency: "monthly" },
   { path: "/capital", priority: 0.95, changeFrequency: "monthly" },
   {
     path: "/capital/philosophy",
@@ -36,7 +37,7 @@ const routes = [
     priority: 0.8,
     changeFrequency: "monthly",
   },
-  { path: "/about", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/about", priority: 0.95, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
   { path: "/essays", priority: 0.8, changeFrequency: "weekly" },
   {

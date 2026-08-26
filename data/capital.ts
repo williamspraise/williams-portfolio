@@ -175,7 +175,7 @@ export const shoppergetitAllocation = {
 
 export const plannedAllocations = [
   {
-    title: "Williams Ecosystem allocation thesis",
+    title: "Pendulum HQ allocation thesis",
     status: "Planned" as CapitalStatus,
     text:
       "A future allocation map for ventures that share reusable software, distribution, trust, and operating knowledge.",

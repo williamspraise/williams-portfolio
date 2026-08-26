@@ -52,7 +52,8 @@ export const projects: Project[] = [
     title: "Shoppergetit - Urban Retail Infrastructure",
     shortTitle: "Shoppergetit",
     role: "Co-Founder & Technical Product Lead",
-    description: shoppergetitContent.shortPositioning,
+    description:
+      `A Pendulum HQ subsidiary and operating venture. ${shoppergetitContent.shortPositioning}`,
     ownership: [
       "Product strategy",
       "UX architecture",
@@ -112,11 +113,11 @@ export const projects: Project[] = [
         },
       ],
       context:
-        "Shoppergetit is urban retail infrastructure for predictable distribution. It connects local retailers, customer demand, and fulfilment through one intelligent commerce system.",
+        "Shoppergetit is a Pendulum HQ subsidiary and urban retail infrastructure venture for predictable distribution. It connects local retailers, customer demand, and fulfilment through one intelligent commerce system.",
       problem:
         "Cities already have retailers, inventory, and demand. The problem is fragmentation: product information, demand capture, transaction flow, quality control, fulfilment, and customer engagement often sit in disconnected places.",
       role:
-        "As Co-Founder and Technical Product Lead, I shaped the opportunity, product model, workflows, priorities, and release decisions. I translated marketplace requirements into experience and system logic, supervised technical execution, and aligned product decisions with capital and launch realities.",
+        "As Co-Founder and Technical Product Lead, I shaped the opportunity, product model, workflows, priorities, and release decisions within the Pendulum HQ ecosystem. I translated marketplace requirements into experience and system logic, supervised technical execution, and aligned product decisions with capital and launch realities.",
       constraints: [
         "Coordinating inventory already held by local retailers without requiring Shoppergetit to own that inventory itself.",
         "Balancing three operating surfaces: shopper, retailer, and admin workflows.",

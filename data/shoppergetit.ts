@@ -14,7 +14,7 @@ export const shoppergetitContent = {
   scalingClarification:
     "Shoppergetit is designed so customer growth does not require warehouse and headcount growth to increase proportionally at the same rate.",
   stage: "Live beta",
-  williamsRole: "Founder / operator",
+  williamsRole: "Co-founder / operator",
   validation:
     "Live Abuja beta with 300+ customer signups, 100+ completed orders, about 30% repeat purchase, and Platform V2 approximately 90% complete.",
   evidence: [

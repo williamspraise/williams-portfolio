@@ -6,15 +6,42 @@ import { shoppergetitContent } from "@/data/shoppergetit";
 
 export const siteUrl = "https://williamspraise.com";
 export const siteName = "Williams Praise";
-export const authorName = "Williams Praise";
+export const publicName = "Williams Praise";
+export const authorName = publicName;
+export const legalName = "Williams Praise Emmanuel";
+export const indexedNameVariant = "Williams Emmanuel Praise";
+export const nickname = "Liam";
+export const nativeName = "Kubiat";
+export const parentCompanyName = "Pendulum HQ";
+
+export const socialProfileUrls = [
+  "https://www.facebook.com/williams.praise.10/",
+  "https://linktr.ee/williamspraise",
+  "https://www.linkedin.com/in/iam-williams/",
+  "https://github.com/williamspraise",
+  "https://www.instagram.com/kku_by",
+  "https://www.tiktok.com/@williams.praise",
+  "https://shoppergetit.com",
+] as const;
 
 export const identityKeywords = [
   "Williams Praise",
   "Williams Emmanuel Praise",
   "Williams Praise Emmanuel",
   "Williams Praise Emmanual",
+  "Williams Praise Liam",
+  "Williams Liam",
+  "Liam Williams",
+  "Kubiat",
+  "Kubiat Williams",
+  "Williams Emmanuel Praise official website",
+  "Williams Praise Emmanuel official website",
+  "Williams Emmanuel Praise biography",
+  "Williams Praise Emmanuel biography",
+  "Williams Praise Emmanuel identity",
+  "Williams Emmanuel Praise identity",
   "Williams Praise tech founder",
-  "Williams Praise Shoppergetit founder",
+  "Williams Praise Shoppergetit co-founder",
   "Praise Williams",
   "William Praise",
   "WilliamsPraise",
@@ -27,7 +54,11 @@ export const coreSeoKeywords = [
   "Williams Praise official website",
   "Williams Praise official portfolio",
   "Williams Praise biography",
-  "Williams Praise founder of Shoppergetit",
+  "Williams Praise founder of Pendulum HQ",
+  "Williams Praise co-founder of Shoppergetit",
+  "Pendulum HQ founder Williams Praise",
+  "Pendulum HQ Shoppergetit",
+  "Pendulum HQ PSI",
   "Williams Praise portfolio",
   "Williams Praise website",
   "Williams Praise biography",
@@ -46,7 +77,8 @@ export const coreSeoKeywords = [
   "Nigerian entrepreneur",
   "Williams Praise technical product leader",
   "Williams Praise founder",
-  "Williams Ecosystem",
+  "Pendulum HQ",
+  "Pendulum HQ ecosystem",
   "Williams Praise",
   "Williams Praise Emmanuel",
   "Systems Thinker",
@@ -101,7 +133,7 @@ export const coreSeoKeywords = [
 ];
 
 export const canonicalIdentityDescription =
-  "Williams Praise, also known as Williams Emmanuel Praise, is a Nigeria-based Capital Allocator + Operator, Systems Thinker for Human Problems, founder-operator, product builder, technical product leader, and founder of Shoppergetit.";
+  "Williams Praise is the public professional identity of Williams Praise Emmanuel, also indexed as Williams Emmanuel Praise. He is a Nigeria-based Systems Thinker for Human Problems, founder of Pendulum HQ, product builder, technical product leader, Capital Allocator + Operator, and co-founder/operator associated with Shoppergetit.";
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
@@ -138,7 +170,7 @@ export function pageMetadata({
           url: "/opengraph-image",
           width: 1200,
           height: 630,
-          alt: "Williams Praise - Capital allocator, operator, systems thinker, and product builder",
+          alt: "Williams Praise - official website and identity hub",
         },
       ],
     },
@@ -157,18 +189,50 @@ export const personJsonLd = {
   "@type": "Person",
   "@id": `${siteUrl}/#person`,
   name: authorName,
-  givenName: "Williams",
-  familyName: "Praise",
-  alternateName: identityKeywords.filter((keyword) => keyword !== authorName),
+  additionalName: [legalName, nickname, nativeName],
+  alternateName: [
+    legalName,
+    indexedNameVariant,
+    nickname,
+    nativeName,
+    ...identityKeywords.filter(
+      (keyword) =>
+        keyword !== authorName &&
+        keyword !== legalName &&
+        keyword !== indexedNameVariant &&
+        keyword !== nickname &&
+        keyword !== nativeName,
+    ),
+  ],
   description: canonicalIdentityDescription,
   disambiguatingDescription:
-    "Williams Praise is the Capital Allocator + Operator, Systems Thinker for Human Problems, product builder, technical product leader, and Shoppergetit founder represented by williamspraise.com and the LinkedIn profile iam-williams.",
+    "Williams Praise is the public professional identity of Williams Praise Emmanuel, indexed on Facebook as Williams Emmanuel Praise and personally associated with the names Liam and Kubiat. He is represented by williamspraise.com, Linktree williamspraise, Facebook williams.praise.10, and LinkedIn iam-williams.",
   url: siteUrl,
   mainEntityOfPage: {
-    "@id": `${siteUrl}/about#profile`,
+    "@id": `${siteUrl}/identity#profile`,
   },
   image: absoluteUrl("/images/C208(1).jpg"),
   email: "mailto:williamspraise01@gmail.com",
+  identifier: [
+    {
+      "@type": "PropertyValue",
+      propertyID: "officialWebsite",
+      value: "williamspraise.com",
+      url: siteUrl,
+    },
+    {
+      "@type": "PropertyValue",
+      propertyID: "publicHandle",
+      value: "iam-williams",
+      url: "https://www.linkedin.com/in/iam-williams/",
+    },
+    {
+      "@type": "PropertyValue",
+      propertyID: "facebookUsername",
+      value: "williams.praise.10",
+      url: "https://www.facebook.com/williams.praise.10/",
+    },
+  ],
   homeLocation: {
     "@type": "Place",
     name: "Abuja, Nigeria",
@@ -186,24 +250,37 @@ export const personJsonLd = {
   ],
   worksFor: {
     "@type": "Organization",
-    "@id": `${siteUrl}/#williams-ecosystem`,
-    name: "Williams Ecosystem",
+    "@id": `${siteUrl}/#pendulum-hq`,
+    name: parentCompanyName,
     url: siteUrl,
   },
   founder: [
     {
       "@type": "Organization",
-      "@id": "https://shoppergetit.com/#organization",
-      name: "Shoppergetit",
-      url: "https://shoppergetit.com",
+      "@id": `${siteUrl}/#pendulum-hq`,
+      name: parentCompanyName,
+      url: siteUrl,
     },
   ],
   affiliation: [
     {
       "@type": "Organization",
+      "@id": `${siteUrl}/#pendulum-hq`,
+      name: parentCompanyName,
+      url: siteUrl,
+      description:
+        "Pendulum HQ is the venture-building parent company founded by Williams Praise.",
+    },
+    {
+      "@type": "Organization",
       "@id": "https://shoppergetit.com/#organization",
       name: "Shoppergetit",
       url: "https://shoppergetit.com",
+      parentOrganization: {
+        "@id": `${siteUrl}/#pendulum-hq`,
+      },
+      description:
+        "Shoppergetit is a Pendulum HQ subsidiary and operating venture associated with Williams Praise as co-founder/operator.",
     },
     {
       "@type": "Organization",
@@ -211,19 +288,16 @@ export const personJsonLd = {
       name: "Pendulum School of Innovation",
       alternateName: "PSI",
       url: "https://pendulumsi.com",
+      parentOrganization: {
+        "@id": `${siteUrl}/#pendulum-hq`,
+      },
+      description:
+        "Pendulum School of Innovation is a Pendulum HQ subsidiary focused on structured learning, mentorship, capability-building, and professional transformation.",
     },
     {
       "@type": "Organization",
       name: "Springboard",
       url: "https://www.springboard.com/",
-    },
-  ],
-  owns: [
-    {
-      "@type": "Brand",
-      "@id": `${siteUrl}/#williams-ecosystem`,
-      name: "Williams Ecosystem",
-      url: siteUrl,
     },
   ],
   knowsAbout: [
@@ -263,24 +337,48 @@ export const personJsonLd = {
       url: absoluteUrl("/ventures"),
     },
   ],
-  sameAs: [
-    "https://www.linkedin.com/in/iam-williams/",
-    "https://github.com/williamspraise",
-    "https://www.instagram.com/kku_by",
-    "https://www.tiktok.com/@williams.praise",
-    "https://shoppergetit.com",
-  ],
+  sameAs: socialProfileUrls,
 };
 
 export const profilePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "@id": `${siteUrl}/about#profile`,
-  url: absoluteUrl("/about"),
-  name: "About Williams Praise",
+  "@id": `${siteUrl}/identity#profile`,
+  url: absoluteUrl("/identity"),
+  name: "Williams Praise Official Identity",
   description: canonicalIdentityDescription,
   mainEntity: {
     "@id": `${siteUrl}/#person`,
+  },
+};
+
+export const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${siteUrl}/about#profile`,
+  url: absoluteUrl("/about"),
+  name: "Biography of Williams Praise",
+  description: canonicalIdentityDescription,
+  mainEntity: {
+    "@id": `${siteUrl}/#person`,
+  },
+};
+
+export const identityHomePageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/#webpage`,
+  url: siteUrl,
+  name: "Williams Praise - Official Website",
+  description: canonicalIdentityDescription,
+  mainEntity: {
+    "@id": `${siteUrl}/#person`,
+  },
+  about: {
+    "@id": `${siteUrl}/#person`,
+  },
+  isPartOf: {
+    "@id": `${siteUrl}/#website`,
   },
 };
 
@@ -290,14 +388,19 @@ export const websiteJsonLd = {
   "@id": `${siteUrl}/#website`,
   name: siteName,
   alternateName: [
+    "Williams Praise Official Website",
+    "Williams Praise Emmanuel",
     "Williams Emmanuel Praise",
+    "Liam",
+    "Kubiat",
     "Williams Praise Portfolio",
-    "Williams Ecosystem",
+    "Williams Praise Emmanuel Official Website",
+    "Pendulum HQ",
     "williamspraise.com",
   ],
   url: siteUrl,
   description:
-    "The official website and canonical identity hub of Williams Praise: capital allocation, operating systems, product work, ventures, systems thinking, essays, and original frameworks.",
+    "The official website and canonical identity hub of Williams Praise, the public professional identity of Williams Praise Emmanuel, also indexed as Williams Emmanuel Praise: Pendulum HQ, product work, ventures, systems thinking, essays, original frameworks, and capital allocation.",
   publisher: {
     "@id": `${siteUrl}/#person`,
   },
@@ -312,25 +415,34 @@ export const ventureGraphJsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": `${siteUrl}/#williams-ecosystem`,
-      name: "Williams Ecosystem",
+      "@id": `${siteUrl}/#pendulum-hq`,
+      name: parentCompanyName,
+      alternateName: ["Pendulum", "Pendulum HQ ecosystem"],
       url: siteUrl,
       founder: {
         "@id": `${siteUrl}/#person`,
       },
+      subOrganization: [
+        {
+          "@id": "https://shoppergetit.com/#organization",
+        },
+        {
+          "@id": `${siteUrl}/ventures#psi`,
+        },
+      ],
       description:
-        "The Williams Ecosystem connects Williams Praise's capital allocation thesis, product work, ventures, frameworks, essays, and public identity.",
+        "Pendulum HQ is the venture-building parent company founded by Williams Praise. Its ecosystem connects product work, operating ventures, frameworks, essays, public identity, and capital thinking.",
     },
     {
       "@type": "Organization",
       "@id": "https://shoppergetit.com/#organization",
       name: "Shoppergetit",
       url: "https://shoppergetit.com",
-      founder: {
-        "@id": `${siteUrl}/#person`,
+      parentOrganization: {
+        "@id": `${siteUrl}/#pendulum-hq`,
       },
       description:
-        `${shoppergetitContent.shortPositioning} ${shoppergetitContent.definition} ${shoppergetitContent.businessModel}`,
+        `Shoppergetit is a Pendulum HQ subsidiary and operating venture associated with Williams Praise as co-founder/operator. ${shoppergetitContent.shortPositioning} ${shoppergetitContent.definition} ${shoppergetitContent.businessModel}`,
     },
     {
       "@type": "Organization",
@@ -338,11 +450,11 @@ export const ventureGraphJsonLd = {
       name: "Pendulum School of Innovation",
       alternateName: "PSI",
       url: "https://pendulumsi.com",
-      contributor: {
-        "@id": `${siteUrl}/#person`,
+      parentOrganization: {
+        "@id": `${siteUrl}/#pendulum-hq`,
       },
       description:
-        "Pendulum School of Innovation is a learning and capability-building venture associated with Williams Praise, focused on structured learning, mentorship, cohort education, and professional transformation.",
+        "Pendulum School of Innovation is a Pendulum HQ subsidiary focused on structured learning, mentorship, capability-building, cohort education, and professional transformation.",
     },
     {
       "@type": "Brand",
@@ -350,10 +462,10 @@ export const ventureGraphJsonLd = {
       name: "Williams Content",
       url: absoluteUrl("/essays"),
       founder: {
-        "@id": `${siteUrl}/#person`,
+        "@id": `${siteUrl}/#pendulum-hq`,
       },
       description:
-        "Williams Content is the public thinking, essays, frameworks, and audience-development layer of Williams Praise.",
+        "Williams Content is the public thinking, essays, frameworks, and audience-development layer connected to Williams Praise and the Pendulum HQ ecosystem.",
     },
   ],
 };

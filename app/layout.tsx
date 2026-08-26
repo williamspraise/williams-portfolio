@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import {
+  aboutPageJsonLd,
+  authorName,
   coreSeoKeywords,
   creativeWorkGraphJsonLd,
+  identityHomePageJsonLd,
   personJsonLd,
   profilePageJsonLd,
+  socialProfileUrls,
   siteName,
   siteUrl,
   ventureGraphJsonLd,
@@ -11,9 +15,9 @@ import {
 } from "@/lib/seo";
 import "./globals.css";
 
-const title = "Williams Praise - Capital Allocator, Operator & Systems Thinker";
+const title = "Williams Praise - Official Website";
 const description =
-  "Official website of Williams Praise, also known as Williams Emmanuel Praise: Capital Allocator + Operator, Systems Thinker for Human Problems, founder of Shoppergetit, product builder, and technical product leader.";
+  "Official website of Williams Praise, the public professional identity of Williams Praise Emmanuel: Systems Thinker for Human Problems, founder of Pendulum HQ, product builder, technical product leader, and Capital Allocator + Operator.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -21,9 +25,9 @@ export const metadata: Metadata = {
   description,
   applicationName: siteName,
   keywords: coreSeoKeywords,
-  authors: [{ name: siteName, url: siteUrl }],
-  creator: siteName,
-  publisher: siteName,
+  authors: [{ name: authorName, url: siteUrl }],
+  creator: authorName,
+  publisher: authorName,
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -58,7 +62,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Williams Praise - Capital Allocator + Operator and Systems Thinker for Human Problems",
+        alt: "Williams Praise - official website and identity hub",
       },
     ],
   },
@@ -106,6 +110,14 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(aboutPageJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(identityHomePageJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd(websiteJsonLd) }}
         />
         <script
@@ -118,6 +130,9 @@ export default function RootLayout({
             __html: jsonLd(creativeWorkGraphJsonLd),
           }}
         />
+        {socialProfileUrls.map((url) => (
+          <link href={url} key={url} rel="me" />
+        ))}
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>

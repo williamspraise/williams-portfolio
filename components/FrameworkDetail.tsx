@@ -46,7 +46,7 @@ export default function FrameworkDetail({ framework }: FrameworkDetailProps) {
             examples, and applications.
           </p>
           <p>
-            The frameworks connect to the wider Williams Ecosystem: essays show
+            The frameworks connect to the wider Pendulum HQ ecosystem: essays show
             the thinking in public, allocation philosophy shows how the same
             thinking applies to capital, and Why Williams explains the trust
             architecture behind the operator.

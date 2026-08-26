@@ -16,13 +16,14 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Product Portfolio | Williams Praise",
   description:
-    "The operating craft behind Williams Praise as a capital allocator and operator: Shoppergetit urban retail infrastructure, AI mobility, education, healthtech, UX systems, mentorship, and startup execution.",
+    "The operating craft behind Williams Praise: Pendulum HQ, Shoppergetit urban retail infrastructure, AI mobility, education, healthtech, UX systems, mentorship, and startup execution.",
   path: "/portfolio",
   type: "profile",
   keywords: [
     "Williams Praise portfolio",
     "Williams Praise Product Builder",
-    "Williams Praise founder of Shoppergetit",
+    "Williams Praise founder of Pendulum HQ",
+    "Williams Praise co-founder of Shoppergetit",
     "Williams Praise Technical Product Leader",
     "Product Builder",
     "Technical Product Leader",
@@ -30,7 +31,7 @@ export const metadata = pageMetadata({
     "Technical Product Manager",
     "Product Strategist",
     "Founder-Operator portfolio",
-    "Shoppergetit founder",
+    "Shoppergetit co-founder",
     "UX systems",
     "0 to 1 product execution",
   ],

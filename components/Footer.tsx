@@ -30,27 +30,44 @@ const footerGroups = [
   {
     title: "Connect",
     links: [
+      { label: "Identity", href: "/identity" },
       { label: "Contact", href: "/contact" },
       { label: "Capital Partnership", href: "/capital/partnership" },
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/williams.praise.10/",
+        external: true,
+        identity: true,
+      },
+      {
+        label: "Linktree",
+        href: "https://linktr.ee/williamspraise",
+        external: true,
+        identity: true,
+      },
       {
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/iam-williams/",
         external: true,
+        identity: true,
       },
       {
         label: "GitHub",
         href: "https://github.com/williamspraise",
         external: true,
+        identity: true,
       },
       {
         label: "Instagram",
         href: "https://www.instagram.com/kku_by",
         external: true,
+        identity: true,
       },
       {
         label: "TikTok",
         href: "https://www.tiktok.com/@williams.praise",
         external: true,
+        identity: true,
       },
       { label: "Request Investment Memorandum", href: "/capital/partnership#memo" },
     ],
@@ -63,7 +80,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <strong>Williams Praise</strong>
-          <p>Capital Allocator + Operator / Systems Thinker</p>
+          <p>Founder of Pendulum HQ / Capital Allocator + Operator / Systems Thinker</p>
           <a href="mailto:williamspraise01@gmail.com">williamspraise01@gmail.com</a>
         </div>
         <div className="footer-links">
@@ -76,7 +93,7 @@ export default function Footer() {
                     href={link.href}
                     key={link.label}
                     target="_blank"
-                    rel="noreferrer"
+                    rel={link.identity ? "me noreferrer" : "noreferrer"}
                   >
                     {link.label}
                   </a>

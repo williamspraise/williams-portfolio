@@ -22,7 +22,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Why Williams Praise | Capital Allocator & Operator",
   description:
-    "Why Williams Praise is positioned as a capital allocator and operator: one strategic system combining capital allocation, direct operation, product execution, systems thinking, and Shoppergetit evidence.",
+    "Why Williams Praise is positioned as a capital allocator and operator: one strategic system combining capital allocation, Pendulum HQ, direct operation, product execution, systems thinking, and Shoppergetit evidence.",
   path: "/capital/why-williams",
   keywords: [
     "Why Williams Praise",
@@ -179,8 +179,9 @@ export default function WhyWilliamsCapitalPage() {
                 <p className="panel-kicker">Williams Praise</p>
                 <h2>Capital Allocator + Operator</h2>
                 <p>
-                  Founder-operator, product builder, technical product leader,
-                  systems thinker, and Shoppergetit founder.
+                  Founder of Pendulum HQ, product builder, technical product
+                  leader, systems thinker, and co-founder/operator associated
+                  with Shoppergetit.
                 </p>
               </div>
             </MotionReveal>

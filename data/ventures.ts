@@ -3,7 +3,8 @@ import { shoppergetitContent } from "@/data/shoppergetit";
 export const ventures = [
   {
     title: shoppergetitContent.name,
-    description: shoppergetitContent.shortPositioning,
+    description:
+      `A Pendulum HQ subsidiary and operating venture. ${shoppergetitContent.shortPositioning}`,
     stage: shoppergetitContent.stage,
     role: shoppergetitContent.williamsRole,
     validation: shoppergetitContent.validation,
@@ -30,7 +31,7 @@ export const ventures = [
   {
     title: "PSI / Pendulum School of Innovation",
     description:
-      "Talent infrastructure for structured learning, mentorship, capability-building, and professional transformation.",
+      "A Pendulum HQ subsidiary building talent infrastructure for structured learning, mentorship, capability-building, and professional transformation.",
     stage: "Operating product work",
     role: "Product strategy / CPO work",
     validation: "Live public education platform and product direction.",
@@ -51,7 +52,7 @@ export const ventures = [
     problem:
       "Some opportunities should not begin as isolated ideas. They should emerge from accumulated evidence, capacity, and readiness.",
     systemResponse:
-      "Future ventures remain part of the Williams Ecosystem while private allocation strategy stays reserved for qualified diligence.",
+      "Future ventures remain part of the Pendulum HQ ecosystem while private allocation strategy stays reserved for qualified diligence.",
     cta: "Start a Conversation",
     href: "/contact",
   },
