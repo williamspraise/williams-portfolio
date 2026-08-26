@@ -125,10 +125,10 @@ export default function IdentityPage() {
                 Williams Praise
               </h1>
               <p className="mx-auto mt-6 max-w-2xl font-serif text-[clamp(1.1rem,1.8vw,1.35rem)] leading-relaxed text-[var(--muted)]">
-                This page identifies Williams Praise, the public professional
-                identity of Williams Praise Emmanuel, also indexed as Williams
-                Emmanuel Praise. Pendulum HQ is the venture-building company
-                connected to his public work.
+                Williams Praise is a Systems Thinker for Human Problems,
+                founder-operator, product builder, technical product leader,
+                and Capital Allocator + Operator building the Williams
+                Capital Allocation Engine around productive capital velocity.
               </p>
               <div className="hero-actions mt-8 flex justify-center gap-4">
                 <ButtonLink href="/about">Read Biography</ButtonLink>
