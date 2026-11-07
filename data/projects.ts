@@ -48,6 +48,147 @@ export type Project = {
 // Screenshot paths are stable asset slots; replace the exported files without changing UI code.
 export const projects: Project[] = [
   {
+    slug: "williams-governance",
+    title: "Williams Governance — AI Governance & Decision Authorization",
+    shortTitle: "Williams Governance",
+    role: "Founder, Product Architect and Systems Designer",
+    description:
+      "An AI governance and decision-authorization system that keeps specialist intelligence separate from the authorization of consequential Capital + Time exposure. Built within the Pendulum HQ ecosystem.",
+    ownership: [
+      "Product direction",
+      "Decision-governance problem definition",
+      "Three-route product architecture (Governance, GTMR, SSR)",
+      "Capital + Time exposure boundary",
+      "Reality, evidence, uncertainty, and specialist handoff design",
+      "Product and runtime development direction",
+    ],
+    image: "/images/projects/williams-governance/cover.png",
+    imageAlt:
+      "Schematic of Williams Governance: three capability routes and the decision authorization boundary",
+    cta: "View Case Study",
+    externalLink: {
+      href: "https://governance.pendulumhq.com/",
+      label: "Visit live product",
+    },
+    caseStudy: {
+      status: "Live product — soft launched 2 October 2026",
+      sections: [
+        {
+          title: "Product thesis",
+          content:
+            "Intelligence can inform a decision. Governance determines whether consequential exposure is justified. Williams Governance is designed around the relationship between Reality, evidence, decision authority, and the commitment of Capital + Time. It does not assume every opportunity should be pursued or that every uncertainty can be removed. It makes the decision boundary explicit: what is known, what is not known, what is being proposed, what exposure is being requested, and what conditions govern the next move.",
+        },
+        {
+          title: "One product, three capability routes",
+          items: [
+            "Governance — consequential authorization. Examines the actual decision and evaluates whether the proposed commitment is justified, considering evidence, uncertainty, causal completeness, exposure, reversibility, and recovery. Possible dispositions include bounded release or a hold. A HOLD is a meaningful decision state; it is not an approval, rejection, or deployment.",
+            "GTMR — go-to-market intelligence. The Williams Go-to-Market Runtime constructs market-state and go-to-market intelligence to help investigate the market and conditions surrounding a commercial opportunity. It contributes specialist HOW and market intelligence; it does not independently authorize consequential Capital + Time exposure.",
+            "SSR — social-signal intelligence. The Williams Social Signal Runtime constructs specialist social-signal and communication intelligence from observable signals. It contributes specialist HOW; it does not replace Governance's authorization role.",
+          ],
+        },
+        {
+          title: "The governing separation",
+          content:
+            "Market-state and go-to-market intelligence (GTMR) and social-signal and communication intelligence (SSR) are separate from consequential decision authorization (Governance). A specialist may explain how to pursue an opportunity; Governance must still determine whether the proposed commitment is justified. Specialist access is not a prerequisite for Governance to be useful.",
+        },
+        {
+          title: "Decision workflow",
+          items: [
+            "Establish the real decision — identify the choice being made rather than answering a loosely framed prompt.",
+            "Reconstruct Reality — separate observed facts, claims, assumptions, unknowns, and evidence quality.",
+            "Identify specialist questions — determine whether go-to-market or social-signal intelligence would materially improve the decision.",
+            "Examine the proposed exposure — make the Capital + Time commitment explicit.",
+            "Test proportionality and reversibility — ask whether the proposed action is the smallest useful movement that preserves causal completeness and meaningful learning.",
+            "Determine the boundary — release a bounded action where justified, or hold when the evidence does not support further exposure.",
+            "Preserve the decision context — keep the reasoning, evidence, and boundaries available for subsequent review or specialist handoff.",
+          ],
+        },
+        {
+          title: "Specialist handoff",
+          content:
+            "Governance remains useful when a specialist route is unavailable. A user may work with a human specialist, another AI system, their own execution process, or a licensed Williams specialist capability. When a handoff is used, the context preserves the underlying Reality, the unresolved specialist question, Governance's findings, the directional suggestion (clearly marked as context rather than a specialist determination), and the Capital + Time boundary. The specialist independently constructs its specialist HOW; it does not silently inherit Governance's authority.",
+        },
+        {
+          title: "Product design principles",
+          items: [
+            "Keep Reality separate from interpretation — a coherent narrative is not proof.",
+            "Keep intelligence separate from authority — a specialist recommendation does not automatically authorize action.",
+            "Make exposure explicit — the cost of a decision includes both Capital and Time.",
+            "Prefer bounded movement — identify the smallest justified movement that can create useful reality without omitting what is causally necessary.",
+            "Preserve reversibility and recovery — account for what happens if the hypothesis fails or conditions change.",
+            "Do not force a specialist dependency — Governance remains useful under another execution route.",
+          ],
+        },
+      ],
+      context:
+        "Williams Governance is an AI governance and decision-authorization system designed to address the gap between receiving intelligent recommendations and deciding whether to commit real resources to them. AI systems can produce analysis, strategies, and recommendations, but a recommendation is not authorization. It does not, by itself, establish that the evidence is sufficient, that the proposed action is proportionate, or that the commitment of Capital + Time is justified. The product introduces a distinct decision-governance layer that examines the real decision, the available evidence, the proposed exposure, and the conditions under which action should proceed, remain on hold, or be bounded.",
+      problem:
+        "Organizations and builders increasingly use AI to reason about consequential choices: where to invest, what to build, which market to enter, what to prioritize, and when to act. The difficulty is not only generating an answer. It is deciding whether that answer deserves action. Questions remain distinct: What is actually happening in the world? Which claims are supported by current evidence? What remains uncertain? What is the smallest useful action to test the relevant hypothesis? How much Capital + Time would that action consume? What would justify proceeding, pausing, changing direction, or stopping? Who or what has authority to make the decision? Treating a persuasive AI output as permission to act collapses analysis, recommendation, and authorization into one step. Williams Governance was built to keep those functions distinct.",
+      role:
+        "Williams conceived and built the product direction and its governing distinctions. His work includes defining the decision-governance problem; separating specialist intelligence from consequential authorization; shaping the three-route product architecture; developing the Capital + Time exposure boundary; defining how Reality, evidence, uncertainty, and specialist handoffs should be preserved; directing product and runtime development within the Pendulum HQ ecosystem; and evaluating the system against consequential real-world decision cases.",
+      constraints: [
+        "Keep intelligence separate from authority so a specialist recommendation does not automatically authorize action.",
+        "Make exposure explicit — every decision cost includes both Capital and Time.",
+        "Prefer bounded movement over maximized activity.",
+        "Preserve reversibility and recovery if the hypothesis fails or conditions change.",
+        "Do not force a specialist dependency — Governance must remain useful under another execution route.",
+      ],
+      decisions: [
+        {
+          title: "One product with three routes, not three standalone products",
+          detail:
+            "Governance, GTMR, and SSR are presented as capability routes within a single product, preserving the distinction that GTMR constructs market-state intelligence, SSR constructs social-signal intelligence, and Governance authorizes Capital + Time exposure.",
+        },
+        {
+          title: "Authorization is a distinct layer from intelligence",
+          detail:
+            "The product keeps analysis, recommendation, and authorization separate rather than collapsing them into a single AI-generated answer.",
+        },
+        {
+          title: "HOLD as a first-class decision state",
+          detail:
+            "A hold where evidence does not justify further exposure is treated as a meaningful disposition, not an approval, rejection, or deployment.",
+        },
+        {
+          title: "No silent specialist authority",
+          detail:
+            "Specialist handoffs preserve context and findings; the specialist independently constructs its HOW and does not inherit Governance's authority.",
+        },
+      ],
+      execution: [
+        "Defined the decision-governance problem and its governing distinctions.",
+        "Shaped the three-route product architecture (Governance, GTMR, SSR).",
+        "Developed the Capital + Time exposure boundary.",
+        "Defined how Reality, evidence, uncertainty, and specialist handoffs should be preserved.",
+        "Directed product and runtime development within the Pendulum HQ ecosystem.",
+        "Evaluated the system against consequential real-world decision cases.",
+      ],
+      systemThinking:
+        "The architecture maintains three separate responsibilities. GTMR constructs specialist market-state and go-to-market understanding. SSR constructs specialist social-signal and communication understanding. Governance evaluates and bounds Capital + Time exposure. The decision workflow sequences a real-world decision through Reality reconstruction, optional specialist intelligence, exposure examination, proportionality and reversibility testing, boundary determination, and context preservation. Reality is kept separate from interpretation; intelligence is kept separate from authority.",
+      outcomes: [
+        "Williams Governance is a live product at https://governance.pendulumhq.com/.",
+        "Soft-launched 2 October 2026 within the Pendulum HQ ecosystem.",
+        "Product is built and live; the public case study links to the live product.",
+      ],
+      lessons: [
+        "An intelligent recommendation is not the same thing as permission to commit resources.",
+        "AI product architecture must govern the transition from intelligence to consequential action.",
+        "Explicit authority and exposure boundaries make a governance product inspectable and reviewable.",
+        "The work spans AI product architecture, decision systems, evidence-aware UX, runtime and capability design, product governance, and commercial and operational reasoning.",
+      ],
+      gallery: [
+        {
+          src: "/images/projects/williams-governance/cover.png",
+          alt: "Williams Governance schematic: three capability routes and the decision authorization boundary",
+        },
+        {
+          src: "/images/projects/williams-governance/decision-flow.svg",
+          alt: "Williams Governance governed decision workflow sequence",
+        },
+      ],
+    },
+  },
+  {
     slug: "shoppergetit",
     title: "Shoppergetit - Urban Retail Infrastructure",
     shortTitle: "Shoppergetit",
@@ -254,7 +395,7 @@ export const projects: Project[] = [
     shortTitle: "Pendulum School of Innovation",
     role: "Chief Product Officer / Product Strategy Lead",
     description:
-      "A cohort-based learning ecosystem turning work-ready design education into structured coursework, specialization, mentorship, and career-facing support.",
+      "A cohort-based learning ecosystem built around a curriculum corpus independently authored by Williams, spanning UX, Interaction Design, Product Management, research, and testing pathways, plus the digital learning platform and mentor/operator workflows he helped shape.",
     ownership: [
       "Product strategy",
       "Learning experience design",
@@ -271,12 +412,24 @@ export const projects: Project[] = [
     },
     caseStudy: {
       status: "Live public platform - product screen replacements in progress",
+      sections: [
+        {
+          title: "Curriculum architecture",
+          content:
+            "Williams independently authored the curriculum corpus, which covers progressive learning pathways: Elementary UX (foundations, problem-solving, design frameworks, research), Advanced UX (stakeholder management, prioritization, inclusive design), Professional UX (practice, presentation, leadership), Interaction Design, Product Management, Product/UX Research, Product/UX Testing, and Free Elementary. The archive shows conceptual instruction, curated resources, applied exercises, progressive complexity, a points-based assessment structure, and interval-locking progression rules.",
+        },
+        {
+          title: "Authorship and intellectual property",
+          content:
+            "Williams independently authored all curriculum materials in the supplied archive; no other person authored them. The curriculum documents identify Pendulum School of Innovation as the owner of the curriculum intellectual property. The portfolio distinguishes authorship (Williams) from institutional ownership (PSI) and product contribution (the learning platform and experience). Proprietary lessons, templates, and substantial curriculum text are not reproduced in this case study.",
+        },
+      ],
       context:
         "Pendulum School of Innovation positions design education around its Zirax 1.0 curriculum: a guided, cohort-based pathway built on critical thinking, planning, specialization, mentorship from field practitioners, technical advising, and job guidance. The product opportunity was to turn that educational promise into a coherent digital experience from application through learning delivery and mentor support.",
       problem:
         "PSI identifies three gaps in technology education: learners entering work without professional readiness, weak design-to-development alignment, and difficulty developing self-directed learning habits. A public enrollment site alone cannot solve those gaps; delivery needs a Learning Management System (LMS) and mentor workflow that make curriculum progress, feedback, intervention, and next steps visible.",
       role:
-        "As Chief Product Officer / Product Strategy Lead, I shaped the product direction across the public school experience, cohort onboarding, LMS learning journeys, mentor dashboard workflows, and the operational view needed to support learners through specialization and career readiness.",
+        "As Chief Product Officer / Product Strategy Lead, I independently authored the PSI curriculum corpus (Elementary, Advanced, and Professional UX; Interaction Design; Product Management; Product/UX Research; Product/UX Testing; and Free Elementary) and shaped the product direction across the public school experience, cohort onboarding, LMS learning journeys, mentor dashboard workflows, and the operational view needed to support learners through specialization and career readiness. The curriculum documents identify Pendulum School of Innovation as the intellectual-property owner; Williams is the curriculum author, not the IP owner.",
       constraints: [
         "Supporting learners at different stages, including specialization paths for more experienced designers.",
         "Turning mentorship and technical advising into consistent, trackable delivery workflows.",

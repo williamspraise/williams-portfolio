@@ -427,6 +427,9 @@ export const ventureGraphJsonLd = {
           "@id": "https://shoppergetit.com/#organization",
         },
         {
+          "@id": `${siteUrl}/ventures#williams-governance`,
+        },
+        {
           "@id": `${siteUrl}/ventures#psi`,
         },
       ],
@@ -455,6 +458,17 @@ export const ventureGraphJsonLd = {
       },
       description:
         "Pendulum School of Innovation is a Pendulum HQ subsidiary focused on structured learning, mentorship, capability-building, cohort education, and professional transformation.",
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/ventures#williams-governance`,
+      name: "Williams Governance",
+      url: "https://governance.pendulumhq.com/",
+      parentOrganization: {
+        "@id": `${siteUrl}/#pendulum-hq`,
+      },
+      description:
+        "Williams Governance is an AI governance and decision-authorization product within the Pendulum HQ ecosystem. It provides a decision-governance layer with three capability routes: Governance (consequential Capital + Time authorization), GTMR (go-to-market intelligence), and SSR (social-signal intelligence).",
     },
     {
       "@type": "Brand",

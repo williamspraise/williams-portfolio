@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="govCoverTitle govCoverDesc">
+  <title id="govCoverTitle">Williams Governance schematic</title>
+  <desc id="govCoverDesc">One product, three capability routes: GTMR and SSR construct specialist intelligence; Governance bounds Capital + Time exposure.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .line { fill: none; stroke: #eae4db; stroke-width: 1.5; }
+      .accent { fill: none; stroke: #b48e56; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .accent-fill { fill: #b48e56; }
+      .border { fill: none; stroke: #d3cac0; stroke-width: 1; }
+      .panel { fill: #fbf7f0; }
+      .text-fg { fill: #0c1219; font-family: "Plus Jakarta Sans", "Segoe UI Variable", "Segoe UI", Inter, sans-serif; font-size: 14px; }
+      .text-muted { fill: #536471; font-family: "Plus Jakarta Sans", "Segoe UI Variable", "Segoe UI", Inter, sans-serif; font-size: 12px; }
+      .text-serif { fill: #0c1219; font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif; font-size: 17px; font-weight: 600; }
+      .text-small-serif { fill: #0c1219; font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif; font-size: 13px; font-weight: 500; }
+      .tag { fill: #fbf7f0; stroke: #d3cac0; stroke-width: 1; rx: 8; ry: 8; }
+      .arrow { fill: none; stroke: #536471; stroke-width: 1.6; stroke-linecap: round; marker-end: url(#arr); }
+      .arrow.accent { stroke: #b48e56; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#536471" />
+    </marker>
+    <marker id="arrAcc" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#b48e56" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760" />
+  <rect class="panel" x="40" y="40" width="1120" height="680" rx="18" ry="18" />
+
+  <text x="80" y="86" class="text-serif">Williams Governance</text>
+  <text x="80" y="112" class="text-muted">One product · Three capability routes · One authorization boundary</text>
+
+  <!-- Left column: specialist intelligence routes -->
+  <text x="80" y="160" class="text-serif">Specialist intelligence</text>
+  <text x="80" y="182" class="text-muted">Constructs understanding. Does not authorize.</text>
+
+  <!-- GTMR -->
+  <rect x="80" y="210" width="330" height="150" class="tag" />
+  <rect x="80" y="210" width="4" height="150" class="accent-fill" />
+  <text x="120" y="240" class="text-serif">GTMR</text>
+  <text x="120" y="260" class="text-small-serif">Go-to-Market Runtime</text>
+  <text x="120" y="284" class="text-muted">Market-state and go-to-market intelligence.</text>
+  <text x="120" y="320" class="text-serif">Contributes</text>
+  <text x="120" y="340" class="text-serif">specialist HOW</text>
+
+  <!-- SSR -->
+  <rect x="80" y="390" width="330" height="150" class="tag" />
+  <rect x="80" y="390" width="4" height="150" class="accent-fill" />
+  <text x="120" y="420" class="text-serif">SSR</text>
+  <text x="120" y="440" class="text-small-serif">Social Signal Runtime</text>
+  <text x="120" y="464" class="text-muted">Social-signal and communication intelligence.</text>
+  <text x="120" y="500" class="text-serif">Contributes</text>
+  <text x="120" y="520" class="text-serif">specialist HOW</text>
+
+  <!-- Right column: Governance -->
+  <rect x="470" y="210" width="650" height="330" class="tag" />
+  <rect x="470" y="210" width="4" height="330" class="accent-fill" />
+  <text x="510" y="240" class="text-serif">Governance</text>
+  <text x="510" y="260" class="text-small-serif">Consequential decision authorization</text>
+  <text x="510" y="288" class="text-muted">Evaluates whether the proposed commitment of Capital + Time is justified.</text>
+  <text x="510" y="320" class="text-serif">Possible dispositions</text>
+  <text x="510" y="342" class="text-serif">Bounded release · Hold</text>
+  <text x="510" y="368" class="text-muted">A HOLD is a decision state, not approval, rejection, or deployment.</text>
+  <text x="510" y="400" class="text-serif">Input</text>
+  <text x="510" y="422" class="text-serif">Reality + evidence + proposed exposure</text>
+  <text x="510" y="452" class="text-serif">Output</text>
+  <text x="510" y="474" class="text-serif">Inspectable reasoning and boundary</text>
+
+  <!-- Arrows from specialists to Governance -->
+  <line x1="410" y1="285" x2="462" y2="285" class="arrow accent" />
+  <line x1="410" y1="465" x2="462" y2="465" class="arrow accent" />
+  <text x="420" y="272" class="text-muted" font-size="10">informs</text>
+  <text x="420" y="452" class="text-muted" font-size="10">informs</text>
+
+  <!-- Bottom note -->
+  <text x="80" y="700" class="text-serif">Decision sequence</text>
+  <text x="80" y="722" class="text-muted">Real decision → Reality reconstructed → specialist questions → exposure examined → boundary determined → disposition released or held.</text>
+
+  <!-- Key -->
+  <rect x="470" y="570" width="200" height="130" class="tag" />
+  <text x="510" y="598" class="text-serif">How to read</text>
+  <text x="510" y="622" class="text-muted">Intelligence (GTMR, SSR) informs.</text>
+  <text x="510" y="644" class="text-muted">Governance authorizes the exposure boundary.</text>
+  <text x="510" y="666" class="text-muted">Routes remain distinct; none replaces another.</text>
+</svg>

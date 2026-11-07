@@ -15,6 +15,20 @@ export const ventures = [
     href: "https://shoppergetit.com",
   },
   {
+    title: "Williams Governance",
+    description:
+      "AI governance and decision-authorization infrastructure within the Pendulum HQ ecosystem. One product with three capability routes: Governance (consequential authorization), GTMR (go-to-market intelligence), and SSR (social-signal intelligence).",
+    stage: "Live product — soft launched 2 October 2026",
+    role: "Founder, Product Architect and Systems Designer",
+    validation: "Live product at governance.pendulumhq.com",
+    problem:
+      "AI systems can generate recommendations, but a recommendation is not authorization. Organizations need a governance layer to decide whether to commit Capital + Time to consequential actions.",
+    systemResponse:
+      "Williams Governance keeps specialist intelligence separate from authorization. GTMR constructs market-state intelligence, SSR constructs social-signal intelligence, and Governance evaluates and bounds the proposed Capital + Time exposure.",
+    cta: "View Case Study",
+    href: "/work/williams-governance",
+  },
+  {
     title: "Williams Content",
     description:
       "Trust and distribution infrastructure built through essays, frameworks, public thinking, and audience development.",
